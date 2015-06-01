@@ -1,14 +1,11 @@
 #!/bin/bash
-
 if [ $# -le 1 -o $# -ge 3 ]; then
 	echo "ecp FROM TO"
 fi
 
-a="$1"; b="$2"
+for i in `ls | grep "$1"`; do
+	j=`echo "$i" | sed "s/$1/$2/"`
 
-for i in `ls | grep "$a"`; do
-	j=`echo "$i" | sed "s/$a/$b/"`
-
-	if [ -e $j ]; then echo "error: not replacing $f with $n, exiting" >/dev/stderr; exit 2; fi
+	if [ -e "$j" ]; then echo "error: not replacing $j with $i, exiting" >/dev/stderr; exit 2; fi
 	cp $i $j
 done
