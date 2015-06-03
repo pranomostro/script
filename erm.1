@@ -1,6 +1,6 @@
 .TH ERM 1
 .SH NAME
-\fBerm\fR \- rm | grep
+\fBerm\fR \- grep | xargs rm
 
 .SH SYNOPSIS
 \fBerm\fR PATTERN
@@ -9,7 +9,7 @@
 For every file in the current directory matching PATTERN (a basic regular expression), remove the file.
 
 .SH EXAMPLES
-\fBerm 'ata$'\fR removes every file ending with 'ata.
+\fBerm 'ata$'\fR removes every file ending with 'ata'.
 
 .SH STATUS
 0 on success and 1 when it prints the help message.
