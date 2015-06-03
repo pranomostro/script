@@ -4,5 +4,5 @@ if [ $# -le 0 -o $# -ge 2 ]; then
 fi
 
 for i in `ls | grep "$1"`; do
-	rm $i
+	if [ -f "$i" ]; then rm "$i"; fi
 done

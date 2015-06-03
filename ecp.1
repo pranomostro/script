@@ -10,7 +10,7 @@
 I takes two arguments: FROM is an expression that determines the files that have to be copied, TO is a sed-replacement expression for the target file. If the target already exists, ecp exits with an error message.
 
 .SH EXAMPLES
-\fBecp '\\(.*\\)\\.sh$' '\\1.1'\fR was used during the creation of ecp, and copies every file with the extension '.sh' to the the corresponding file with the extension '.1'. 
+\fBecp '\\(.*\\)\\.sh$' '\\1.1'\fR was used during the creation of ecp, and copies every file with the extension '.sh' to the the corresponding file with the extension '.1'.
 
 .SH STATUS
 0 on success, 1 when it prints the help message, and 2 if it is asked to replace an already existing file.
