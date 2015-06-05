@@ -7,8 +7,7 @@
 
 .SH DESCRIPTION
 \fBchan\fR is a utility to substitute regular expressions in files matching a regular expression.
-The first argument for \fBchan\fR is a basic regular expression for the files where the substitution should apply. The second argument specifies the ed-replacement-expression. FILES is an optional argument
-for a basic regular expression matching all the files where the substitution should apply.
+The first (optional) argument for \fBchan\fR is a basic regular expression for the files where the substitution should apply. For every match of FROM, it is replaced by the ed-replacement expression TO.
 
 .SH EXAMPLES
 \fBchan ".*\.asm" "\<\([0-9]A-Fa-f]\+\)h" "0x\1"\fR changes the style of the hexadecimal numbers in all file having the extension 'asm'.
