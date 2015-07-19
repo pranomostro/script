@@ -7,7 +7,9 @@
 
 .SH DESCRIPTION
 \fBemv\fR renames files based on regular expressions.
-I takes two arguments: FROM is a basic regular expression that determines the files that have to be renamed, TO is a sed-replacement expression for the target file.
+I takes two arguments: FROM is a basic regular expression that determines the
+files that have to be renamed, TO is a sed-replacement expression for the
+target file.
 
 .SH OPTIONS
 .TP
@@ -15,15 +17,19 @@ I takes two arguments: FROM is a basic regular expression that determines the fi
 overwrite existing files
 
 .SH EXAMPLES
-\fBemv '^a' 'm_&'\fR moves every file matching '^a' to a file with the same name with the prefix 'm_', so 'abaco.c' becomes 'm_abaco.c'.
+\fBemv '^a' 'm_&'\fR moves every file matching '^a' to a file with the same
+name with the prefix 'm_', so 'abaco.c' becomes 'm_abaco.c'.
 
 .SH STATUS
-0 on success, 1 when it prints the help message, 2 when given a bad option, and 3 if it is asked to replace an already existing file.
+0 on success, 1 when it prints the help message, 2 when given a bad option,
+and 3 if it is asked to replace an already existing file.
 
 .SH "SEE ALSO"
-\fBregex(7)\fR for the form of FROM, and \fBsed(1)\fR for the style of TO, \fBecp(1)\fR and \fBerm(1)\fR, and as an inspiration \fBzmv(1)\fR.
+\fBregex(7)\fR for the form of FROM, and \fBsed(1)\fR for the style of TO,
+\fBecp(1)\fR and \fBerm(1)\fR, and as an inspiration \fBzmv(1)\fR.
 .SH BUGS
 Emv only accepts basic regular expressions.
 
 .SH AUTHOR
-In the unlikely case of a (real) bug (or just tell me how great this is), just mail me: a.regenfuss@gmx.de (don't be shy!).
+In the unlikely case of a (real) bug (or just tell me how great this is), just
+mail me: a.regenfuss@gmx.de (don't be shy!).
