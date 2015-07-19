@@ -1,8 +1,8 @@
 #!/bin/bash
 
-a=`pwd`
+searchdir=${1:-"."}
 
-for i in `find "$1" -type l -print`; do
+for i in `find "$searchdir" -type l -print`; do
 
 	j=`basename "$i"`
 	k=`echo "$i" | sed "s/$j$//"`
@@ -15,5 +15,5 @@ for i in `find "$1" -type l -print`; do
 		echo "$i"
 	fi
 
-	cd "$a"
+	cd "$searchdir"
 done
