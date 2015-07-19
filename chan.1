@@ -6,14 +6,15 @@
 \fBchan\fR [FILES] FROM TO
 
 .SH DESCRIPTION
-\fBchan\fR is a utility to substitute regular expressions in files matching a regular expression.
-The first (optional) argument for \fBchan\fR is a basic regular expression for the files where
-the substitution should apply. For every match of FROM, it is replaced by the ed-replacement
+\fBchan\fR is a utility to substitute regular expressions in files matching a
+regular expression. The first (optional) argument for \fBchan\fR is a basic
+regular expression for the files where the substitution should apply. For every
+match of FROM, it is replaced by the ed-replacement
 expression TO.
 
 .SH EXAMPLES
-\fBchan ".*\.asm" "\\<\\([0-9]A-Fa-f]\+\\)h" "0x\\1"\fR changes the style of the hexadecimal
-numbers in all file having the extension 'asm'.
+\fBchan ".*\.asm" "\\<\\([0-9]A-Fa-f]\+\\)h" "0x\\1"\fR changes the style of
+the  hexadecimal numbers in all file having the extension 'asm'.
 
 .SH STATUS
 0 on success and 1 when it prints the help message.
@@ -22,8 +23,8 @@ numbers in all file having the extension 'asm'.
 Could be replaced with a simple for loop, but if you're too tired to
 this yourself everytime, chan could be the right thing for you.
 .P
-\fBregex(7)\fR is a good place to learn about basic and extended regular expressions,
-as well as \fBed(1)\fR.
+\fBregex(7)\fR is a good place to learn about basic and extended regular 
+expressions, as well as \fBed(1)\fR.
 
 .SH BUGS
 Normally, ed only accepts basic regular expressions, but extended
