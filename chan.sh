@@ -1,7 +1,7 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 if [ $# -le 1 -o $# -ge 4 ]; then
-	echo "chan [FILES] FROM TO"
+	echo "chan [FILES] FROM TO" >/dev/stderr
 	exit 1
 fi
 
