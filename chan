@@ -1,7 +1,6 @@
 #!/usr/bin/env rc
 
-switch($#*)
-{
+switch($#*){
 case 2
 	pattern=''
 	from=$1
@@ -16,6 +15,6 @@ case *
 }
 
 for(f in `{ls | grep $pattern})
-	echo -e 'H; ,s/'$from'/'$to'/g; wq' | ed $f
+	echo -e 'H\n ,s/'$from'/'$to'/g\n wq' | ed $f
 
 exit 0
