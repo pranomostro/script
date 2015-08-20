@@ -1,0 +1,18 @@
+#!/usr/bin/env rc
+
+if(test $#* -eq 1)
+	a=`{ls | grep $1}
+if not
+	a=`{ls}
+
+b=`{echo $a | wc -w}
+c=`{gen $b}
+
+for(d in `{seq 1 $b}){
+	if(test -e $c($d)){
+		echo 'error: not replacing '$c($d)' with '$a($d)', exiting' >[2=1]
+		exit 1
+	}
+
+	mv $a($d) $c($d)
+}
