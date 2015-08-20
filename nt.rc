@@ -1,8 +1,11 @@
 #!/usr/bin/env rc
 
+if(! ~ $1 '')
+	cd $1
+
 searchdir=`{pwd}
 
-for(item in `{find $searchdir -type l -print}){
+for(item in `{find . -type l -print}){
 	file=`{basename $item}
 	dir=`{echo $item | sed 's/'$file'$//'}
 

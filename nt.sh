@@ -1,8 +1,12 @@
 #!/bin/bash
 
-searchdir=${1:-`pwd`}
+if [ -n "$1" ]; then
+	cd "$1"
+fi
 
-for i in `find "$searchdir" -type l -print`; do
+searchdir=`pwd`
+
+for i in `find . -type l -print`; do
 
 	j=`basename "$i"`
 	k=`echo "$i" | sed "s/$j$//"`
