@@ -1,0 +1,31 @@
+#!/usr/bin/env rc
+
+if(test $#* -le -o $#* -ge 4){
+	echo 'emv [-t] FROM TO' >[2=1]
+	exit 1
+}
+
+switch($#*){
+case 2
+	from=$1
+	to=$2
+case 3
+	if(! ~ $1 '-t'){
+		echo 'error: flag '$1' not recognized' >[2=1]
+		exit 2
+	}
+	if not{
+		trust='1'
+		from=$2
+		to=$3
+	}
+}
+
+for(i in `{ls | grep $from}){
+	j=`{echo $i | sed 's/'$from'/'$to'/'}
+	if(test -e $j -a $trust != '1'){
+		echo 'error: not replacing '$j' with '$i', exiting' >[2=1]
+		exit 3
+	}
+	mv $i $j
+}
