@@ -1,6 +1,6 @@
 #!/bin/bash
 
-searchdir=${1:-"."}
+searchdir=${1:-`pwd`}
 
 for i in `find "$searchdir" -type l -print`; do
 

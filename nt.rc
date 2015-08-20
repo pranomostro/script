@@ -1,0 +1,17 @@
+#!/usr/bin/env rc
+
+searchdir=`{pwd}
+
+for(item in `{find $searchdir -type l -print}){
+	file=`{basename $item}
+	dir=`{echo $item | sed 's/'$file'$//'}
+
+	cd $dir
+
+	targ=`{ls -l $file | awk '{ print $11 }'}
+
+	if(test ! -e $targ)
+		echo $item
+
+	cd $searchdir
+}
