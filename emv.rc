@@ -1,10 +1,5 @@
 #!/usr/bin/env rc
 
-if(test $#* -le -o $#* -ge 4){
-	echo 'emv [-t] FROM TO' >[2=1]
-	exit 1
-}
-
 switch($#*){
 case 2
 	from=$1
@@ -19,6 +14,9 @@ case 3
 		from=$2
 		to=$3
 	}
+case *
+	echo 'emv [-t] FROM TO' >[2=1]
+	exit 1
 }
 
 for(i in `{ls | grep $from}){
