@@ -1,20 +1,16 @@
 #!/usr/bin/env rc
 
 switch($#*){
-case 2
-	pattern=''
+case [12]
+	echo 'chan FROM TO FILES' >[2=1]
+	exit 1
+case *
 	from=$1
 	to=$2
-case 3
-	pattern=$1
-	from=$2
-	to=$3
-case *
-	echo 'chan [FILES] FROM TO' >[2=1]
-	exit 1
+	shift 2
 }
 
-for(f in `{ls | grep $pattern})
-	echo -e 'H\n ,s/'$from'/'$to'/g\n wq' | ed $f
+for(file in $*)
+	echo -e 'H\n ,s/'$from'/'$to'/g\n wq' | ed $file
 
 exit 0
