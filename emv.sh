@@ -17,7 +17,8 @@ for i in `ls | grep "$from"`; do
 	j=`echo "$i" | sed "s/$from/$to/"`
 
 	if [ -e "$j" -a "$trust" != "1" ]; then
-		echo "error: not replacing $j with $i, exiting" >/dev/stderr; exit 3;
+		echo "error: not replacing $j with $i, exiting" 1>&2
+		exit 3
 	fi
 	mv "$i" "$j"
 done
