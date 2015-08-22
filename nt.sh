@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 if [ -n "$1" ]; then
 	cd "$1"
@@ -7,7 +7,6 @@ fi
 searchdir=`pwd`
 
 for i in `find . -type l -print`; do
-
 	j=`basename "$i"`
 	k=`echo "$i" | sed "s/$j$//"`
 
