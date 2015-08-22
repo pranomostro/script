@@ -3,24 +3,24 @@
 \fBmg\fR \- move to generic names
 
 .SH SYNOPSIS
-\fBmg\fR [PATTERN]
+\fBmg\fR [-t] FILES
 
 .SH DESCRIPTION
-\fBmg\fR moves every file in the current directory matching PATTERN to a unique
-generic name given by gen. If no PATTERN is given, every file is renamed.
+\fBmg\fR renames every of it's argument to a generic name. Unless given
+the option '-t', it doesn't replace already existing files.
 
 .SH EXAMPLES
-\fBmg '.*\.png'\fR gives all '.png' files in the current directory generic
+\fBmg *.png\fR gives all '.png' files in the current directory generic
 names.
 
 .SH STATUS
 0 on success and 1 when it doesn't replace an already existing file.
 
 .SH "SEE ALSO"
-PATTERN is a basic regular expression just as in \fBregex(7)\fR.
+gen(1).
 
 .SH BUGS
-It is dangerous and is only capable of handling basic regular expressions.
+\fBmg\fR needs an installed version of gen(1).
 
 .SH AUTHOR
 His e-mail address a.regenfuss@gmx.de
