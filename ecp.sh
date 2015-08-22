@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 case $# in
 2)	from="$1"; to="$2";;
