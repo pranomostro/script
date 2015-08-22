@@ -1,16 +1,17 @@
 #!/bin/bash
-if [ $# -le 1 -o $# -ge 4 ]; then
-	echo "emv [-t] FROM TO"
-fi
 
-if [ $# -eq 2 ]; then
-	from="$1"; to="$2";
-else
-	if [ "$1" != '-t' ]; then
-		echo "error: flag $1 not recognized, exiting" >/dev/stderr; exit 2;
+case $# in
+2)	from="$1"; to="$2";;
+3)	if [ "$1" != '-t' ]; then
+		echo "error: flag $1 not recognized, exiting" 1>&2
+		exit 2;
 	fi
 	trust="1"; from="$2"; to="$3"
-fi
+	;;
+*)	echo "emv [-t] FROM TO" 1>&2
+	exit 1
+	;;
+esac
 
 for i in `ls | grep "$from"`; do
 	j=`echo "$i" | sed "s/$from/$to/"`
