@@ -6,13 +6,13 @@
 \fBchan\fR FROM TO FILES
 
 .SH DESCRIPTION
-\fBchan\fR is a utility to substitute regular expressions in files matching a
-regular expression. For every match of FROM in FILES, it is replaced by the
-ed-replacement expression TO.
+\fBchan\fR is a utility to substitute regular expressions in FILES
+matching a regular expression. For every match of FROM in FILES, it
+is replaced by the ed-replacement expression TO.
 
 .SH EXAMPLES
-\fBchan "\\<\\([0-9]A-Fa-f]\+\\)h" "0x\\1"\ *.asm\fR changes the style of
-the  hexadecimal numbers in all file having the extension 'asm'.
+\fBchan "\\<\\([0-9]A-Fa-f]\+\\)h" "0x\\1"\ *.asm\fR changes the style
+of the  hexadecimal numbers in all file having the extension 'asm'.
 
 .SH STATUS
 0 on success and 1 when it prints the help message.
