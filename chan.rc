@@ -1,7 +1,7 @@
 #!/usr/bin/env rc
 
 switch($#*){
-case [12]
+case [012]
 	echo 'chan FROM TO FILES' >[2=1]
 	exit 1
 case *
@@ -10,7 +10,7 @@ case *
 	shift 2
 }
 
-for(file in $*)
+for(file)
 	echo -e 'H\n ,s/'$from'/'$to'/g\n wq' | ed $file
 
 exit 0
