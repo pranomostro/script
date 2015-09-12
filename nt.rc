@@ -1,5 +1,8 @@
 #!/usr/bin/env rc
 
+ifs='
+'
+
 if(! ~ $1 '')
 	cd $1
 
