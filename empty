@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+IFS='
+'
+
+cd ~/trash
+for i in `ls -A`; do rm -rf "$i"; done

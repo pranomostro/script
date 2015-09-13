@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+name=`date +"%Y%m%d"`
+
+if [ ! -e "/mnt/backup/$name.tar.gz" ];then
+	tar -czf /mnt/backup/"$name".tar.gz /home/adrian
+fi

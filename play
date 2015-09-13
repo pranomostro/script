@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+ogg123 -q "$@" &
+exit
