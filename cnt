@@ -1,0 +1,9 @@
+#!/usr/bin/env rc
+rwid=`{wattr w `{lsw -r}}
+rhgt=`{wattr h `{lsw -r}}
+cwid=`{wattr w `{pfw}}
+chgt=`{wattr h `{pfw}}
+
+crt=`{pfw}
+
+wmv `{echo 'scale=10;('$rwid'/2)-('$cwid'/2)' | bc} `{echo 'scale=10;('$rhgt'/2)-('$chgt'/2)' | bc} `{pfw}
