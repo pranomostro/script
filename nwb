@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+chwb -s 12 `pfw`
