@@ -1,2 +1,2 @@
-#!/usr/bin/env rc
+#!/usr/bin/env sh
 git log --'pretty=format:%ai' | awk '{ print $1 }' | sort | uniq -c | awk '{ print $1 }' | histo
