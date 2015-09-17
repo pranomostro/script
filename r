@@ -4,5 +4,5 @@ IFS='
 '
 
 for i in "$@"; do
-	mv "$i" ~/trash
+	mv -rf "$i" ~/trash
 done

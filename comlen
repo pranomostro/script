@@ -5,4 +5,4 @@ sed 's/^[^ ]* //' | sal |
 awk '{ print length($0) " " $0 }' |
 awk '{ print $1}' | uniq -c |
 sort -nr | awk '{ print $2 }' |
-tail -120 | histo
+tail -100 | histo

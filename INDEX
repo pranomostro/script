@@ -1,0 +1,18 @@
+9: script that launches a program from /usr/local/plan9/bin
+bns: adjusts the screen brightness
+bomb: fork bomb
+bu: _very_ simple backup utility
+cnt: center the current window, needs wmutils
+comlen: displays the most frequent commit lengths of the current
+	project. It was mostly written for fun and reveiled
+	something interesting, requires histo
+empty: removes every file from ~/trash
+nob: makes the window border size 0, requires wmutils
+nwb: makes a nicer window border, requires wmutils
+opus2flac: script that converts an opus file to a flac file,
+	requires opusdec and flac.
+pfm: displays the activity in the current repo, requires histo
+play: plays a flac file in the background, requires ogg123
+r: moves file(s) to ~/trash
+rip: rips a cd into a flac file, requires cdparanoia and flac
+tb: launches the Tor browser
