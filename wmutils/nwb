@@ -1,2 +1,2 @@
-#!/usr/bin/env sh
+#!/usr/bin/env rc
 chwb -s 12 `pfw`
