@@ -32,6 +32,9 @@ case '1'
 		y=`{wattr $src $win}
 		x=`{gr $y}
 	}
+case *
+	echo 'beau [-w|-h] [WIN]' >[2=1]
+	exit 1
 }
 
 wrs -a $x $y $win
