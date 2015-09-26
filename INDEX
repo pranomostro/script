@@ -1,4 +1,5 @@
 9: script that launches a program from /usr/local/plan9/bin
+beau: resizes a window conforming to the golden ratio
 bns: adjusts the screen brightness
 bomb: fork bomb
 bu: _very_ simple backup utility
@@ -7,6 +8,7 @@ comlen: displays the most frequent commit lengths of the current
 	project. It was mostly written for fun and reveiled
 	something interesting, requires histo
 empty: removes every file from ~/trash
+kcnt: little program that keeps a certain window centered until it is stopped.
 nob: makes the window border size 0, requires wmutils
 nwb: makes a nicer window border, requires wmutils
 opus2flac: script that converts an opus file to a flac file,
