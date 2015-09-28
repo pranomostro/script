@@ -14,7 +14,7 @@ for(item in `{find . -type l -print}){
 
 	cd $dir
 
-	targ=`{ls -l $file | awk '{ print $11 }'}
+	targ=`{readlink $file}
 
 	if(test ! -e $targ)
 		echo $item
