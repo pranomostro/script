@@ -1,5 +1,5 @@
 #!/usr/bin/env sh
-cd /mnt/mus/adrian/"$2"
+cd /mnt/mus/"$2"
 cdparanoia -q 1- "$1".wav
 flac "$1".wav -s
 rm "$1".wav
