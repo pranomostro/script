@@ -1,6 +1,0 @@
-#!/usr/bin/env rc
-
-while(true){
-	cnt $1
-	sleep 1
-}
