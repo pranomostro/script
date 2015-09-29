@@ -7,33 +7,23 @@ fn gr{
 switch($#*){
 case '0'
 	win=`{pfw}
-	src='h'
-	tgt='w'
-	y=`{wattr $src $win}
+	y=`{wattr 'h' $win}
 	x=`{gr $y}
-case '1'
+case '2'
+	win=$2
 	switch($1){
-	case '-w'
-		win=`{pfw}
-		src='w'
-		tgt='h'
-		x=`{wattr $src $win}
+	case 'w'
+		x=`{wattr 'w' $win}
 		y=`{gr $x}
-	case '-h'
-		win=`{pfw}
-		src='h'
-		tgt='w'
-		y=`{wattr $src $win}
+	case 'h'
+		y=`{wattr 'h' $win}
 		x=`{gr $y}
-	case 0x*
-		win=$1
-		src='h'
-		tgt='w'
-		y=`{wattr $src $win}
-		x=`{gr $y}
+	case *
+		echo $1' is not w or h, exiting' >[2=1]
+		exit 2
 	}
 case *
-	echo 'beau [-w|-h] [WIN]' >[2=1]
+	echo 'beau [w|h] [WIN]' >[2=1]
 	exit 1
 }
 
