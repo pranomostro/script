@@ -1,2 +1,13 @@
 #!/usr/bin/env rc
-chwb -s 0 `{pfw}
+
+switch($#*){
+case '0'
+	win=`{pfw}
+case '1'
+	win=$1
+case *
+	echo 'nob [WIN]' >[2=1]
+	exit 1
+}
+
+chwb -s 0 $win

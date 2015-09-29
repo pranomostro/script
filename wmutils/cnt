@@ -1,9 +1,18 @@
 #!/usr/bin/env rc
+
+switch($#*){
+case '0'
+	win=`{pfw}
+case '1'
+	win=$1
+case *
+	echo 'cnt [WIN]' >[2=1]
+	exit 1
+}
+
 rwid=`{wattr w `{lsw -r}}
 rhgt=`{wattr h `{lsw -r}}
-cwid=`{wattr w `{pfw}}
-chgt=`{wattr h `{pfw}}
+cwid=`{wattr w $win}
+chgt=`{wattr h $win}
 
-crt=`{pfw}
-
-wmv `{echo 'scale=10;('$rwid'/2)-('$cwid'/2)' | bc} `{echo 'scale=10;('$rhgt'/2)-('$chgt'/2)' | bc} `{pfw}
+wmv `{echo 'scale=10;('$rwid'/2)-('$cwid'/2)' | bc} `{echo 'scale=10;('$rhgt'/2)-('$chgt'/2)' | bc} $win
