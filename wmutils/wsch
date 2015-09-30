@@ -1,0 +1,39 @@
+#!/usr/bin/env rc
+#window size change
+
+switch($#*){
+case '0'
+	switch($0){
+	case *shriw*
+		scale='0.8'
+	case *grow*
+		scale='1.2'
+	case *
+		scale='1.2'
+	}
+	win=`{ pfw }
+case '1'
+	scale=$1
+	win=`{ pfw }
+case '2'
+	scale=$1
+	win=$2
+case *
+	echo $0' [SIZE] [WIN]' >[2=1]
+	exit 2
+}
+
+w=`{ wattr w $win }
+h=`{ wattr h $win }
+nw=`{ echo $scale'*'$w | bc }
+nh=`{ echo $scale'*'$h | bc }
+
+#use the absolute value here
+#also, fix wattr. it always shows 0 0 as positions for the
+#current window.
+nxp=`{echo `{wattr x $win}'+(('$nw'-'$w')/2)' | bc}
+nyp=`{echo `{wattr y $win}'+(('$nh'-'$h')/2)' | bc}
+
+wmv -a $nxp $nyp $win
+
+wrs -a $nw $nh $win
