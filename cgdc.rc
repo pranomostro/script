@@ -14,10 +14,8 @@ newer=`{mktemp /tmp/newerXXXXXX.tmp}
 
 fmod=`{stat --format'=%Y' $1}
 
-for(i in `{find $2 -type f})
-	echo $i >>$files
-for(i in `{cat $files})
-	stat --format'=%Y %n' $i | awk '$1>'$fmod' { sub($1 " ./", "", $0); print($0) }' >>$newer
+find $2 -type f >$files
+stat --format'=%Y %n' `{cat $files} | awk '$1>'$fmod' { sub($1 " ", "", $0); print($0) }' >>$newer
 
 for(i in `{cat $newer}){
 	dir=`{dirname $i}
@@ -26,4 +24,4 @@ for(i in `{cat $newer}){
 	cp -a $i $3/$dir/$base
 }
 
-rm $newer
+rm $newer $files
