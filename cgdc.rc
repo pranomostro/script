@@ -1,0 +1,14 @@
+#!/usr/bin/env rc
+#changed copy, copies only the files modified after FILE
+
+if(! ~ $#* '2' || ! test -f $1 || ! test -d $2){
+	echo 'cgdc FILE DIR' >[2=1]
+	exit 1
+}
+
+IFS='
+'
+
+fmod=`{stat --format'=%Y' $1}
+
+find $2 -type f | xargs stat --format'=%Y %n' | awk '$1>'$fmod' { sub($1 " ", "", $0); print($0) }'
