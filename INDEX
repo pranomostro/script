@@ -13,3 +13,4 @@ tb: launches the Tor browser
 
 cnt: center the current window, needs wmutils
 beau: resizes a window conforming to the golden ratio
+wsch: change window size without moving the middle of the window
