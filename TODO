@@ -1,0 +1,2 @@
+-fix the wmutils scripts so that they actually work
+-extend r so that it overwrites already existing directories in ~/trash

@@ -1,8 +1,0 @@
-#!/usr/bin/env sh
-
-git log --pretty=oneline |
-sed 's/^[^ ]* //' |
-awk '{ print length($0) " " $0 }' |
-awk '{ print $1}' | sort -n |
-uniq -c | sort -nr | awk '{ print $2 }' |
-head -100 | histo
