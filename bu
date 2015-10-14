@@ -11,5 +11,5 @@ if(test -f $name)
 mkdir tmp
 cgdc $last /home/adrian tmp
 
-tar -czf $name tmp
+tar -czf $name tmp/
 rm -rf tmp
