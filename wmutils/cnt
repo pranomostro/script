@@ -15,4 +15,4 @@ rhgt=`{wattr h `{lsw -r}}
 cwid=`{wattr w $win}
 chgt=`{wattr h $win}
 
-wmv `{echo 'scale=10;('$rwid'/2)-('$cwid'/2)' | bc} `{echo 'scale=10;('$rhgt'/2)-('$chgt'/2)' | bc} $win
+wmv `{echo '('$rwid'/2)-('$cwid'/2)' | bc} `{echo '('$rhgt'/2)-('$chgt'/2)' | bc} $win

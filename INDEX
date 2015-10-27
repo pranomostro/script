@@ -3,6 +3,8 @@ bns: adjusts the screen brightness
 bomb: fork bomb
 bu: _very_ simple backup utility
 empty: removes every file from ~/trash
+lg: line game, every none whitespace is translated to '_'. Guess the programming
+	language.
 opus2flac: script that converts an opus file to a flac file,
 	requires opusdec and flac.
 pfm: displays the activity in the current repo, requires histo

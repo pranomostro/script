@@ -27,4 +27,6 @@ case *
 	exit 1
 }
 
-wrs -a $x $y $win
+echo $x $y $win
+
+#wrs -a $x $y $win
