@@ -25,13 +25,13 @@ case *
 
 if(~ $win ""){
 	echo 'No focused window found, exiting' >[2=1]
+	exit 3
+}
 
 w=`{ wattr w $win }
 h=`{ wattr h $win }
-nw=`{ echo $scale'*'$w | bc }
-nh=`{ echo $scale'*'$h | bc }
-
-#use the absolute value here
+nw=`{ echo $scale'*'$w | bc | sed 's/\..*//' }
+nh=`{ echo $scale'*'$h | bc | sed 's/\..*//' }
 
 nxp=`{echo `{wattr x $win}'+(('$nw'-'$w')/2)' | bc}
 nyp=`{echo `{wattr y $win}'+(('$nh'-'$h')/2)' | bc}

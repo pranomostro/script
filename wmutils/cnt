@@ -12,6 +12,8 @@ case *
 
 if(~ $win ""){
 	echo 'No focused window found, exiting' >[2=1]
+	exit 3
+}
 
 rwid=`{wattr w `{lsw -r}}
 rhgt=`{wattr h `{lsw -r}}
