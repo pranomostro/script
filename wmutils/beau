@@ -27,4 +27,7 @@ case *
 	exit 1
 }
 
+if(~ $win ""){
+	echo 'No focused window found, exiting' >[2=1]
+
 wtp `{wattr x $win} `{wattr y $win} $x $y $win
