@@ -27,6 +27,4 @@ case *
 	exit 1
 }
 
-echo $x $y $win
-
-#wrs -a $x $y $win
+wtp `{wattr x $win} `{wattr y $win} $x $y $win
