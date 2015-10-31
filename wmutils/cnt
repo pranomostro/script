@@ -10,7 +10,7 @@ case *
 	exit 1
 }
 
-if(~ $win ""){
+if(~ $win ''){
 	echo 'No focused window found, exiting' >[2=1]
 	exit 3
 }
