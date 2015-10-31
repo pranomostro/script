@@ -1,0 +1,18 @@
+#!/usr/bin/env rc
+
+switch($#*){
+case '0'
+	win=`{pfw}
+case '1'
+	win=$1
+case *
+	echo 'big [WIN]' >[2=1]
+	exit 1
+}
+
+if(~ $win ''){
+	echo 'No focused window found, exiting' >[2=1]
+	exit 2
+}
+
+wtp $GAP $GAP `{echo `{wattr w `{lsw -r}}'-2*('$GAP'+'$BW')' | bc} `{echo `{wattr h `{lsw -r}}'-2*('$GAP'+'$BW')' | bc} $win
