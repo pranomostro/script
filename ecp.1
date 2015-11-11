@@ -1,31 +1,34 @@
 .TH ECP 1
 .SH NAME
-\fBecp\fR \- somehow extended cp
+ecp \- somehow extended cp
 
 .SH SYNOPSIS
-\fBecp\fR [-t] FROM TO
+ecp [-t] FROM TO
 
 .SH DESCRIPTION
-\fBecp\fR is a simple wrapper for cp, using basic regular expressions.
+ecp is a simple wrapper for cp, using basic regular expressions.
 I takes two arguments: FROM is an expression that determines the files
 that have to be copied, TO is a sed-replacement expression for the target file.
-.SH OPTIONS
 
+.SH OPTIONS
 .TP
-\fB\-t\fR
+.BI -t
 overwrite existing files
 
 .SH EXAMPLES
-\fBecp '\\(.*\\)\\.sh$' '\\1.1'\fR was used during the creation of ecp, and
-copies every file with the extension '.sh' to the the corresponding file with
-the extension '.1'.
+.TP
+.B ecp '\e(.*\e)\e.sh$' '\e1.1'
+was used during the creation of ecp, and copies every file with the extension
+'.sh' to the the corresponding file with the extension '.1'.
 
 .SH STATUS
 0 on success, 1 when it prints the help message, 2 when given a bad option,
 and 3 if it is asked to replace an already existing file.
 
-.SH "SEE ALSO"
-\fBregex(7)\fR for the form of FROM, and \fBsed(1)\fR for the style of TO,
+.SH SEE ALSO
+.IR regex(7),
+.IR sed(1),
+.IR emv(1)
 
 .SH AUTHOR
 Bug reports to a.regenfuss@gmx.de
