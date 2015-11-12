@@ -1,26 +1,27 @@
 .TH MG 1
 .SH NAME
-\fBmg\fR \- move to generic names
+mg \- move to generic names
 
 .SH SYNOPSIS
-\fBmg\fR [-t] FILES
+mg [-t] FILES
 
 .SH DESCRIPTION
-\fBmg\fR renames every of it's argument to a generic name. Unless given
+mg renames every of it's argument to a generic name. Unless given
 the option '-t', it doesn't replace already existing files.
 
 .SH EXAMPLES
-\fBmg *.png\fR gives all '.png' files in the current directory generic
-names.
+.TP
+.B mg *.png
+gives all '.png' files in the current directory generic names.
 
 .SH STATUS
 0 on success and 1 when it doesn't replace an already existing file.
 
-.SH "SEE ALSO"
-gen(1).
+.SH SEE ALSO
+.IR gen(1).
 
 .SH BUGS
-\fBmg\fR needs an installed version of gen(1).
+mg needs an installed version of gen(1).
 
 .SH AUTHOR
 His e-mail address a.regenfuss@gmx.de
