@@ -30,10 +30,12 @@ if(~ $win ''){
 
 w=`{ wattr w $win }
 h=`{ wattr h $win }
+x=`{ wattr x $win }
+y=`{ wattr y $win }
 nw=`{ echo $scale'*'$w | bc | sed 's/\..*//' }
 nh=`{ echo $scale'*'$h | bc | sed 's/\..*//' }
 
-nxp=`{echo `{wattr x $win}'+(('$nw'-'$w')/2)' | bc}
-nyp=`{echo `{wattr y $win}'+(('$nh'-'$h')/2)' | bc}
+nxp=`{echo $x'-('$nw'-'$w')/2' | bc}
+nyp=`{echo $y'-('$nh'-'$h')/2' | bc}
 
 wtp $nxp $nyp $nw $nh $win

@@ -18,3 +18,4 @@ beau: resizes a window conforming to the golden ratio
 barinfo: print system information so that it can be processed by lemonbar
 big: resize a window so that it leaves a gap of the correct width at the side
 wsch: change window size without moving the middle of the window
+barign: wait until X has fully started and then ignore the bar.

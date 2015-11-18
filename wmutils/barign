@@ -1,7 +1,10 @@
 #!/usr/bin/env rc
 
-sleep 1
+#wait until the bar has started
+while(~ `{lsw -a | wc -l} 0)
+	sleep 0.1
 
+#ignore all bars
 for(i in `{lsw -a}){
 	if(~ `{wname $i } 'bar')
 		ignw -s $i
