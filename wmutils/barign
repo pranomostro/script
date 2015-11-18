@@ -1,0 +1,8 @@
+#!/usr/bin/env rc
+
+sleep 1
+
+for(i in `{lsw -a}){
+	if(~ `{wname $i } 'bar')
+		ignw -s $i
+}
