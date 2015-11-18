@@ -1,5 +1,6 @@
 #!/usr/bin/env rc
 while(true){
+#TODO: make this use less RAM.
 	echo -n ' brightness:' `{cat /sys/class/backlight/radeon_bl0/brightness} '  |   '
 	echo -n 'battery:' `{acpi | field 4 | sed 's/,$//'} '  |   '
 	echo -n 'date:' `{date +'%Y-%m-%d'} '  |   '
@@ -7,4 +8,5 @@ while(true){
 	echo -n 'metrictime:' `{echo '('`{date +'%H'}'*3600+' `{date +'%M'}'*60+' `{date +'%S'} ')/86.4' | bc} '  |   '
 	echo -n 'usedram:' `{free -h | sed '1d; $d' | field 3} '  |   '
 	echo 'load:' `{cat /proc/loadavg | field 1}
+	sleep 0.3
 }
