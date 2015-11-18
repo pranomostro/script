@@ -5,6 +5,6 @@ while(true){
 	echo -n 'date:' `{date +'%Y-%m-%d'} '  |   '
 	echo -n 'time:' `{date +'%H:%M:%S'} '  |   '
 	echo -n 'metrictime:' `{echo '('`{date +'%H'}'*3600+' `{date +'%M'}'*60+' `{date +'%S'} ')/86.4' | bc} '  |   '
-	echo -n 'freeram:' `{free -h | sed '1d; $d' | field 4} '  |   '
+	echo -n 'usedram:' `{free -h | sed '1d; $d' | field 3} '  |   '
 	echo 'load:' `{cat /proc/loadavg | field 1}
 }
