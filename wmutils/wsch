@@ -38,4 +38,12 @@ nh=`{ echo $scale'*'$h | bc | sed 's/\..*//' }
 nxp=`{echo $x'-('$nw'-'$w')/2' | bc}
 nyp=`{echo $y'-('$nh'-'$h')/2' | bc}
 
+rw=`{wattr w `{lsw -r}}
+rh=`{wattr h `{lsw -r}}
+
+if(test $nxp -lt 0) nxp=0
+if(test $nyp -lt 0) nyp=0
+if(test $nw -gt $rw) nw=$rw
+if(test $nh -gt $rh) nh=$rw
+
 wtp $nxp $nyp $nw $nh $win
