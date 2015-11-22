@@ -1,0 +1,28 @@
+#!/usr/bin/env rc
+
+ifs='
+'
+
+exts=(mp3 mp4 m4a ogg flac wav)
+
+for (i in `{ls}){
+	j=`{
+		echo $i |
+		tr 'A-Z' 'a-z' |
+		tr ' -' '_' |
+		tr -d ',[]^!<>=&{}*?()-:#$|~`+%"' |
+		sed 's/__\+/_/g' |
+		sed 's/^[0-9][0-9]_//'
+	}
+	mv $i $j
+}
+
+for (i in `{ls}){
+	cd $i
+	for(j in $exts){
+		for(k in `{find . -regex '\.'$j'$'}){
+			echo $k
+		}
+	}
+	cd ..
+}
