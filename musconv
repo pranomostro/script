@@ -1,27 +1,50 @@
 #!/usr/bin/env rc
 
+fn sane{
+	echo $1 |
+	tr 'A-Z' 'a-z' |
+	tr ' -' '_' |
+	tr -d ',\[\]^!<>=&{}*?()\-:#$|~`+%"' |
+	sed 's/^[0-9][0-9]//' |
+	sed 's/__\+/_/g' |
+	sed 's/^_//'
+}
+
 ifs='
 '
 
-exts=(mp3 mp4 m4a ogg flac wav)
+#TODO: mp4
 
-for (i in `{ls}){
-	j=`{
-		echo $i |
-		tr 'A-Z' 'a-z' |
-		tr ' -' '_' |
-		tr -d ',[]^!<>=&{}*?()-:#$|~`+%"' |
-		sed 's/__\+/_/g' |
-		sed 's/^[0-9][0-9]_//'
-	}
+exts=(mp3 m4a ogg wav)
+
+for(i in `{ls}){
+	j=`{sane $i}
 	mv $i $j
 }
 
-for (i in `{ls}){
+for(i in `{ls}){
 	cd $i
 	for(j in $exts){
-		for(k in `{find . -regex '\.'$j'$'}){
-			echo $k
+		for(k in `{fds . | grep -a '\.'$j'$'})
+			mv $k `{sane `{basename $k}}
+	}
+	cd ..
+}
+
+for(i in `{ls}){
+	cd $i
+	for(j in $exts){
+		for(k in `{ls *.$j >[2]/dev/null}){
+			switch($j){
+			case 'mp3'
+				new=`{echo $k | sed 's/\.mp3$/flac/'}
+				ffmpeg -i $k -f flac $new
+			case 'm4a'
+				int=`{echo $k | sed 's/\.m4a$/wav/'}
+				new=`{echo $k | sed 's/\.m4a$/flac/'}
+				ffmpeg -i $k -f wav $int
+				ffmpeg -i $int -f flac $new
+			}
 		}
 	}
 	cd ..
