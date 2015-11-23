@@ -7,7 +7,7 @@ lg: line game, every none whitespace is translated to '_'.
 	Guess the programming language.
 musconv: rename and restructure files to a certain standard,
 	convert music files to flac, delete the others.
-	requires ffmpeg
+	requires ffmpeg und fds
 opus2flac: script that converts an opus file to a flac file.
 	requires opusdec and flac.
 pfm: displays the activity in the current repo.
