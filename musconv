@@ -37,11 +37,11 @@ for(i in `{ls}){
 		for(k in `{ls *.$j >[2]/dev/null}){
 			switch($j){
 			case 'mp3'
-				new=`{echo $k | sed 's/\.mp3$/flac/'}
+				new=`{echo $k | sed 's/\.mp3$/.flac/'}
 				ffmpeg -i $k -f flac $new
 			case 'm4a'
-				int=`{echo $k | sed 's/\.m4a$/wav/'}
-				new=`{echo $k | sed 's/\.m4a$/flac/'}
+				int=`{echo $k | sed 's/\.m4a$/.wav/'}
+				new=`{echo $k | sed 's/\.m4a$/.flac/'}
 				ffmpeg -i $k -f wav $int
 				ffmpeg -i $int -f flac $new
 			}
