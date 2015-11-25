@@ -1,2 +1,3 @@
 -write an alternative to closest which is better and wraps around the screen
 -write 'space' that looks for the biggest free rectangle on the screen
+-add pprz, which makes a screenshot ~30 min
