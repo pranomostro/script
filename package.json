@@ -7,5 +7,5 @@
 	"install": "make",
 	"makefile": "makefile",
 	"keywords": ["copy", "changed", "utility", "files"],
-	"src": ["cgdc.rc"]
+	"src": ["cgdc"]
 }
