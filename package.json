@@ -1,0 +1,11 @@
+{
+	"name": "chan",
+	"version": "0.2",
+	"repo": "scharlatan/chan",
+	"description": "change strings in files, with regular expressions",
+	"license": "MIT",
+	"install": "make",
+	"makefile": "makefile",
+	"keywords": ["change", "regular expression", "utility"],
+	"src": ["chan"]
+}
