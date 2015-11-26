@@ -1,0 +1,11 @@
+{
+	"name": "cgdc",
+	"version": "0.1.",
+	"repo": "scharlatan/",
+	"description": "copy files that were changed",
+	"license": "MIT",
+	"install": "make",
+	"makefile": "makefile",
+	"keywords": ["copy", "changed", "utility", "files"],
+	"src": ["cgdc.rc"]
+}
