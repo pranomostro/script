@@ -1,0 +1,11 @@
+{
+	"name": "efm",
+	"version": "0.3",
+	"repo": "scharlatan/efm",
+	"description": "handle batches of files with regular expressions",
+	"license": "MIT",
+	"install": "make",
+	"makefile": "makefile",
+	"keywords": ["file management", "regular expressions", "batch"],
+	"src": ["ecp", "emv"]
+}
