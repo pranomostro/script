@@ -1,1 +1,0 @@
--if readlink does not print anything, echo the link file.
