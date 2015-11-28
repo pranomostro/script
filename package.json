@@ -1,0 +1,11 @@
+{
+	"name": "nt",
+	"version": "0.2",
+	"repo": "scharlatan/nt",
+	"description": "find broken symlinks",
+	"license": "MIT",
+	"install": "make",
+	"makefile": "makefile",
+	"keywords": ["linting", "symlinks", "broken"],
+	"src": ["nt"]
+}
