@@ -10,7 +10,7 @@ searchdir=`{pwd}
 
 for(item in `{find . -type l -print}){
 	file=`{basename $item}
-	dir=`{echo $item | sed 's/'$file'$//'}
+	dir=`{dirname $item}
 
 	cd $dir
 
