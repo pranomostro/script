@@ -12,7 +12,7 @@ case *
 
 if(~ $win ''){
 	echo 'No focused window found, exiting' >[2=1]
-	exit 3
+	exit 2
 }
 
 rwid=`{wattr w `{lsw -r}}
