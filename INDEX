@@ -12,6 +12,8 @@ opus2flac: script that converts an opus file to a flac file.
 	requires opusdec and flac.
 pfm: displays the activity in the current repo.
 	requires histo
+pprz: make a screenshot around every half an hour, silently
+	requires scrot.
 play: plays a flac file in the background.
 	requires ogg123
 rip: rips a cd into a flac file.

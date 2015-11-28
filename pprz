@@ -1,0 +1,7 @@
+#!/usr/bin/env rc
+
+while(true){
+	waittime=`{echo `{date +'%N'}'%1200+600' | bc}
+	sleep $waittime
+	scrot -z '%Y%m%d.png'
+}
