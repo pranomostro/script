@@ -1,7 +1,7 @@
 #!/usr/bin/env rc
 #TODO: make this use less RAM.
 
-sep='  |   '
+sep=' |  '
 
 while(true){
 	echo -n ' brightness:' `{cat /sys/class/backlight/radeon_bl0/brightness} $sep
@@ -10,6 +10,18 @@ while(true){
 	echo -n 'time:' `{date +'%H:%M:%S'} $sep
 	echo -n 'metrictime:' `{echo '('`{date +'%H'}'*3600+' `{date +'%M'}'*60+' `{date +'%S'} ')/86.4' | bc} $sep
 	echo -n 'usedram:' `{free -h | sed '1d; $d' | field 3} $sep
-	echo 'load:' `{cat /proc/loadavg | field 1}
+	echo -n 'load:' `{cat /proc/loadavg | field 1} $ sep
+	echo 'play:' `{
+		cd /proc/`{
+			ps -A |
+			grep 'ogg123' |
+			field 1
+		}^/fd;
+		readlink * |
+		grep '^/mnt/mus' |
+		sed 's/^\/mnt\/mus\/[^\/]\+\///' |
+		sed 's/\.flac$//' |
+		sed 's/\(.................................\).*/\1.../'
+	}
 	sleep 0.3
 }
