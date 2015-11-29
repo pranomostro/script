@@ -12,16 +12,17 @@ while(true){
 	echo -n 'usedram:' `{free -h | sed '1d; $d' | field 3} $sep
 	echo -n 'load:' `{cat /proc/loadavg | field 1} $ sep
 	echo 'play:' `{
-		cd /proc/`{
-			ps -A |
-			grep 'ogg123' |
-			field 1
-		}^/fd;
-		readlink * |
-		grep '^/mnt/mus' |
-		sed 's/^\/mnt\/mus\/[^\/]\+\///' |
-		sed 's/\.flac$//' |
-		sed 's/\(.................................\).*/\1.../'
+		oggproc=`{ps -A | grep 'ogg123' | field 1}
+		if(! ~ $oggproc ''){
+			cd /proc/$oggproc/fd;
+			readlink * |
+			grep '^/mnt/mus' |
+			sed 's/^\/mnt\/mus\/[^\/]\+\///' |
+			sed 's/\.flac$//' |
+			sed 's/\(.................................\).*/\1.../'
+		}
+		if not
+			echo -n 'nothing'
 	}
-	sleep 0.3
+	sleep 0.4
 }
