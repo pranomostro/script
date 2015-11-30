@@ -3,6 +3,7 @@ bns: adjusts the screen brightness
 bomb: fork bomb
 bu: _very_ simple backup utility
 empty: removes every file from ~/trash
+ic [REGEX]: returns 0 if the input contains REGEX, and 1 if not
 lg: line game, every none whitespace is translated to '_'.
 	Guess the programming language.
 musconv: rename and restructure files to a certain standard,
@@ -26,5 +27,4 @@ barinfo: print system information so that it can be processed by lemonbar
 beau: resizes a window conforming to the golden ratio
 big: resize a window so that it leaves a gap of the correct width at the side
 cnt: center the current window, needs wmutils
-imw: prints 'yes' if the given window is a 'main' window, and no if not
 wsch: change window size without moving the middle of the window
