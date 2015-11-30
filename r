@@ -3,6 +3,11 @@
 IFS='
 '
 
+if [ "$#" -le '1' ]; then
+	echo 'r FILES' 2>&1
+	exit 1
+fi
+
 for i in "$@"; do
 	if [ -d $i ]; then
 		/usr/bin/rm -rf ~/trash/"$i"

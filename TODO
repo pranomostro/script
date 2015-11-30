@@ -1,4 +1,3 @@
 -write an alternative to closest which is better and wraps around the screen
 -write 'space' that looks for the biggest free rectangle on the screen
--make the wmutils scripts window-border agnostic
 -write musmenu, using dmenu to choose from the music that should be played

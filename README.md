@@ -15,7 +15,7 @@ The wmutils/ directory contains some wmutils specific scripts.
 Descriptions
 ============
 
-9 PROGRAM: script that launches a program from /usr/local/plan9/bin
+9 PROGRAM [ARGS]: script that launches a program from /usr/local/plan9/bin
 bns NEW: adjusts the screen brightness
 bomb: fork bomb
 bu: _very_ simple backup utility
@@ -27,15 +27,15 @@ lg [FILES]: line game, every none whitespace is translated to '_'.
 musconv: rename and restructure files to a certain standard,
 	convert music files to flac, delete the others.
 	requires ffmpeg und fds
-opus2flac [FILE]: script that converts an opus file to a flac file.
+opus2flac FILE: script that converts an opus file to a flac file.
 	requires opusdec and flac.
-pfm: displays the activity in the current repo.
+pfm: displays the activity in the current git repo.
 	requires histo
 pprz: make a screenshot around every half an hour, silently
 	requires scrot.
-play [FILES]: plays a flac file in the background.
+play FILES: plays a flac file in the background.
 	requires ogg123
-rip FILENAME DIR: rips a cd into a flac file.
+rip NAME DIR: rips a cd into a flac file.
 	requires cdparanoia and flac
 r FILES: moves file(s) to ~/trash
 tb: launches the Tor browser

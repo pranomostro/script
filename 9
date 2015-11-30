@@ -1,5 +1,9 @@
 #!/usr/bin/env sh
 
-a=$1
-shift
-exec /usr/local/plan9/bin/$a $@
+if [ "$#" -le '1' ]; then
+	echo '9 PROGRAM [ARGS]' 2>&1
+	exit 1
+fi
+
+a="$1"; shift
+exec /usr/local/plan9/bin/"$a" $@

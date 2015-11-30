@@ -1,3 +1,9 @@
 #!/usr/bin/env sh
+
+if [ "$#" -le '1' ]; then
+	echo 'play FILES' 2>&1
+	exit 1
+fi
+
 ogg123 -q "$@" 2&>/dev/null &
 exit

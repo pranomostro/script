@@ -1,4 +1,10 @@
 #!/usr/bin/env sh
+
+if [ "$#" -ne '2' ]; then
+	echo 'opus2flac FILE' 2>&1
+	exit 1
+fi
+
 opusdec "$1".opus "$1".wav 2>/dev/null
 flac "$1".wav "$1".flac 2>/dev/null
 r "$1".wav "$1".opus
