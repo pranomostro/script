@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 
-if [ "$#" -ne '3' ]; then
+if [ "$#" -ne '2' ]; then
 	echo 'rip NAME DIR' 2>&1
 	exit 1
 fi

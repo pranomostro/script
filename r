@@ -3,7 +3,7 @@
 IFS='
 '
 
-if [ "$#" -le '1' ]; then
+if [ "$#" -le '0' ]; then
 	echo 'r FILES' 2>&1
 	exit 1
 fi
