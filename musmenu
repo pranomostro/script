@@ -4,6 +4,7 @@ chosen=`{fds /mnt/mus |
 	grep -a -E '\.flac$' |
 	sed 's/\/mnt\/mus\/[a-z]\+\/\(.*\)$/\1/' |
 	sed 's/\.flac$//' |
+	sort |
 	dmenu -b -nf black -nb white -sb '#6c71c4' -fn 'Liberation Mono:pixelsize=16:antialias=true:autohint=false'}
 
 play `{fds /mnt/mus | grep -a -E $chosen^'\.flac$'}
