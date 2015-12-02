@@ -18,7 +18,8 @@ while(true){
 			readlink * |
 			grep '^/mnt/mus' |
 			sed 's/^\/mnt\/mus\/[^\/]\+\///' |
-			sed 's/\.flac$//'
+			sed 's/\.flac$//' |
+			sed 's/\(....................................................\).*$/\1.../'
 		}
 		if not
 			echo -n 'nothing'
