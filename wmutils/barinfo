@@ -6,6 +6,7 @@ sep=' |  '
 while(true){
 	echo -n ' brightness:' `{cat /sys/class/backlight/radeon_bl0/brightness} $sep
 	echo -n 'battery:' `{acpi | field 4 | sed 's/,$//'} $sep
+	echo -n 'volume:' `{amixer -M get Master | grep '%' | field 5 | tr -d '\n[]' | sed 's/^[0-9]\+%/&-/'} $sep
 	echo -n 'date:' `{date +'%Y-%m-%d'} $sep
 	echo -n 'time:' `{date +'%H:%M:%S'} $sep
 	echo -n 'metrictime:' `{echo '('`{date +'%H'}'*3600+' `{date +'%M'}'*60+' `{date +'%S'} ')/86.4' | bc} $sep
