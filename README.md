@@ -27,7 +27,7 @@ Well, it is done by
 
 	make
 
-which installs efm in /usr/local.
+which installs efm to /usr/local.
 
 License
 -------
