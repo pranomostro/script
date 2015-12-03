@@ -13,7 +13,7 @@ this if you don't want anybody to use this?
 Good question. I like oranges.
 
 Requirements
-============
+------------
 
 You need the plan 9 shell rc, the standard unix
 shell sh (for the makefile) and some version of make installed.
@@ -21,12 +21,15 @@ A coreutils similar software should be installed as well,
 but emv and ecp are very modest with that.
 
 Installation
-============
+------------
 
 Well, it is done by
+
 	make
 
+which installs efm in /usr/local.
+
 License
-=======
+-------
 
 MIT.
