@@ -1,5 +1,5 @@
-Purpose of this
-===============
+Small scripts
+=============
 
 These are just some little scripts that do not deserve becoming
 own programs. In a very distant future, it is possible that I will
@@ -13,7 +13,7 @@ Some of these are very specialised, some quite general.
 The wmutils/ directory contains some wmutils specific scripts.
 
 Descriptions
-============
+------------
 
 * 9 PROGRAM [ARGS]: script that launches a program from /usr/local/plan9/bin
 * bns NEW: adjusts the screen brightness
@@ -48,13 +48,13 @@ Descriptions
 * wsch [SIZE] [WIN]: change window size without moving the middle of the window
 
 Requirements
-============
+------------
 
 Generally, some base utilities (coreutils, sbase+ubase) are required.
-Many of these scripts are written for rc, the plan 9 shell.
+Many of these scripts are written in the rc scripting language, the plan 9 shell.
 It is needed as well.
 
 Installation
-============
+------------
 
-Just copy these into the corresponding directories.
+Just copy these into your path.
