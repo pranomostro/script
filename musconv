@@ -23,7 +23,7 @@ for(i in `{ls}){
 for(i in `{ls}){
 	cd $i
 	for(j in $exts){
-		for(k in `{fds . | grep -a '\.'$j'$'})
+		for(k in `{fds . | grep '\.'$j'$'})
 			mv $k `{sane `{basename $k}}
 	}
 	cd ..

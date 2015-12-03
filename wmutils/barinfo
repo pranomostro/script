@@ -16,7 +16,7 @@ while(true){
 		if(! ~ $oggproc ''){
 			cd /proc/$oggproc/fd;
 			readlink * |
-			grep -a '^/mnt/mus' |
+			grep '^/mnt/mus' |
 			sed 's/^\/mnt\/mus\/[^\/]\+\///' |
 			sed 's/\.flac$//' |
 			sed 's/\(....................................................\).*$/\1.../'
