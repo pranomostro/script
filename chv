@@ -1,0 +1,9 @@
+#!/usr/bin/env rc
+
+if(! ~ $#* '1'){
+	echo 'chv [-+]NUM' >[2=1]
+	exit 1
+}
+
+cur=`{amixer -M get Master | tail -1 | awk '{ print $5 }' | tr -dc '0-9'}
+amixer -M set Master `{echo $cur^$1 | bc}^'%' >[2=1] >/dev/null

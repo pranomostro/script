@@ -20,6 +20,7 @@ Descriptions
 * bomb: fork bomb
 * bu: _very_ simple backup utility
 	depends on cgdc
+* chv [+-]NUM: increase/decrease the current audio output volume for NUM percent
 * empty: removes every file from ~/trash
 * ic REGEX: returns 0 if the input contains REGEX, and 1 if not
 * lg [FILES]: line game, every none whitespace is translated to '_'.
