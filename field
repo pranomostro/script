@@ -1,0 +1,8 @@
+#!/usr/bin/env sh
+
+if [ $# '!=' 1 ]; then
+	echo 'field NUM' 2>&1
+	exit 1
+fi
+
+awk "{ print \$$1 }"
