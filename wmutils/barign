@@ -7,7 +7,7 @@ while(~ `{lsw -a | wc -l} 0)
 #ignore all bars
 for(i in `{lsw -a}){
 	if(~ `{wname $i } 'bar'){
-		chwb -s 2 -c 0x6c71c4 $i
+		chwb -s 2 -c 0x000000 $i
 		ignw -s $i
 	}
 }

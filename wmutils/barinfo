@@ -1,7 +1,7 @@
 #!/usr/bin/env rc
 #TODO: make this use less RAM.
 
-sep=' |  '
+sep=' | '
 
 while(true){
 	echo -n ' brightness:' `{cat /sys/class/backlight/radeon_bl0/brightness} $sep
@@ -25,5 +25,5 @@ while(true){
 		if not
 			echo -n 'nothing'
 	}
-	sleep 0.4
+	sleep 0.2
 }
