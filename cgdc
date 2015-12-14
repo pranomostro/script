@@ -15,7 +15,8 @@ newer=`{mktemp /tmp/newerXXXXXX.tmp}
 fmod=`{stat --format'=%Y' $1}
 
 find $2 -type f >$files
-stat --format'=%Y %n' `{cat $files} | awk '$1>'$fmod' { sub($1 " ", "", $0); print($0) }' >>$newer
+stat --format'=%Y %n' `{cat $files} |
+awk '$1>'$fmod' { sub($1 " ", "", $0); print($0) }' >>$newer
 
 for(i in `{cat $newer}){
 	dir=`{dirname $i}
