@@ -29,6 +29,8 @@ Descriptions
 * musconv: rename and restructure files to a certain standard,
 	convert music files to flac, delete the others.
 	requires ffmpeg und fds
+* must: compile a program with musl and tcc, not working yet
+	requires tcc and musl
 * opus2flac FILE: script that converts an opus file to a flac file.
 	requires opusdec and flac.
 * pfm: displays the activity in the current git repo.

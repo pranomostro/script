@@ -1,0 +1,3 @@
+#!/usr/bin/env rc
+
+tcc -I/usr/lib/musl/include -L/usr/lib/musl/lib -lc $*
