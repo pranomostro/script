@@ -26,7 +26,6 @@ Descriptions
 	Needs the '{}' regex notation, tested with sbase sed and GNU sed 4.2.2
 * empty: removes every file from ~/trash
 * field NUM: print the NUM'th field of every input line.
-* ic REGEX: returns 0 if the input contains REGEX, and 1 if not
 * lg [FILES]: line game, every none whitespace is translated to '_'.
 	Guess the programming language.
 * musconv: rename and restructure files to a certain standard,
