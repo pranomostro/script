@@ -1,0 +1,12 @@
+#!/usr/bin/env rc
+
+switch($#*){
+case '0'
+	len='80'
+case '1'
+	len=$1
+case *
+	echo 'ell [LEN]' >[2=1]
+}
+
+sed '/.\{'$len',\}/s/^\(.\{1,'$len'\}\).*/\1…/'

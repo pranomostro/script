@@ -21,6 +21,9 @@ Descriptions
 * bu: _very_ simple backup utility
 	depends on cgdc
 * chv [+-]NUM: increase/decrease the current audio output volume for NUM percent
+* ell [LEN]: print the first NUM chars of every input line, substitute the rest
+	with '…'.
+	Needs the '{}' regex notation, tested with sbase sed and GNU sed 4.2.2
 * empty: removes every file from ~/trash
 * field NUM: print the NUM'th field of every input line.
 * ic REGEX: returns 0 if the input contains REGEX, and 1 if not
