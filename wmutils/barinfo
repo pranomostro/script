@@ -20,7 +20,7 @@ while(true){
 			grep '^/mnt/mus' |
 			sed 's/^\/mnt\/mus\/[^\/]\+\///' |
 			sed 's/\.flac$//' |
-			sed 's/\(....................................................\).*$/\1.../'
+			ell 60
 		}
 		if not
 			echo -n 'nothing'

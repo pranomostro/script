@@ -3,14 +3,7 @@
 
 switch($#*){
 case '0'
-	switch($0){
-	case *shriw*
-		scale='0.8'
-	case *grow*
-		scale='1.2'
-	case *
-		scale='1.2'
-	}
+	scale='1.2'
 	win=`{pfw}
 case '1'
 	scale=$1

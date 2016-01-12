@@ -46,8 +46,11 @@ Descriptions
 * r FILES: moves file(s) to ~/trash
 * tb: launches the Tor browser
 
+wmutils scripts:
+
 * barign: wait until X has fully started and then ignore the bar.
 * barinfo: print system information so that it can be processed by lemonbar
+	is system specific with the brightness, depends on ell
 * beau [w|h] [WIN]: resizes a window conforming to the golden ratio
 * big [WIN]: resize a window so that it leaves a gap of the correct width at the side
 * cnt [WIN]: center the current window, needs wmutils
@@ -59,6 +62,7 @@ Requirements
 Generally, some base utilities (coreutils, sbase+ubase) are required.
 Many of these scripts are written in the rc scripting language, the plan 9 shell.
 It is needed as well.
+The wmutils scripts need wmutils/core installed, barign needs wmutils/opt (for wname).
 
 Installation
 ------------
