@@ -10,13 +10,14 @@ while(true){
 	echo -n 'date:' `{date +'%Y-%m-%d'} $sep
 	echo -n 'time:' `{date +'%H:%M:%S'} $sep
 	echo -n 'metrictime:' `{echo '('`{date +'%H'}'*3600+' `{date +'%M'}'*60+' `{date +'%S'} ')/86.4' | bc} $sep
-	echo -n 'usedram:' `{free -h | sed '1d; $d' | field 3} $sep
+	echo -n 'usedram:' `{free -m | sed '1d; 3d' | field 3} $sep
 	echo -n 'load:' `{cat /proc/loadavg | field 1} $ sep
 	echo 'play:' `{
 		oggproc=`{ps -A | grep 'ogg123' | field 1}
 		if(! ~ $oggproc ''){
 			cd /proc/$oggproc/fd;
-			readlink * |
+			ls |
+			xargs -n 1 readlink |
 			grep '^/mnt/mus' |
 			sed 's/^\/mnt\/mus\/[^\/]\+\///' |
 			sed 's/\.flac$//' |
@@ -25,5 +26,4 @@ while(true){
 		if not
 			echo -n 'nothing'
 	}
-	sleep 0.2
 }
