@@ -26,4 +26,5 @@ while(true){
 		if not
 			echo -n 'nothing'
 	}
+	sleep 1
 }
