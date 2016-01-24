@@ -11,6 +11,6 @@ case *
 }
 
 for(file)
-	echo -e 'H\n ,s/'$from'/'$to'/g\n wq' | ed $file
+	echo -e ',s/'$from'/'$to'/g\nw\nq' | ed $file
 
 exit 0
