@@ -19,5 +19,3 @@ for(c in `{seq 1 $#*}){
 	}
 	mv $*($c) $nam($c)
 }
-
-exit 0
