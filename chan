@@ -1,7 +1,12 @@
 #!/usr/bin/env rc
 
+#okay, this is a bit bad.
+#posix does not seem to define embedding a % in printf,
+#gnu does this, sbase does not. what a world.
+#i'll just do it, it's much more sane
+
 fn escape{
-	echo $* | sed 's/\\/\\\\/g'
+	echo $* | sed 's/\\/\\\\/g; s/%/%%/g'
 }
 
 switch($#*){
@@ -17,4 +22,3 @@ case *
 for(file)
 	printf ',s/'$from'/'$to'/g\nw\nq\n'
 
-exit 0
