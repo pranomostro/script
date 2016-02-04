@@ -63,8 +63,15 @@ Generally, some base utilities (coreutils, sbase+ubase) are required.
 Many of these scripts are written in the rc scripting language, the plan 9 shell.
 It is needed as well.
 The wmutils scripts need wmutils/core installed, barign needs wmutils/opt (for wname).
+The scripts should be all posix conforming, the sh scripts were tested
+with bash and mksh.
 
 Installation
 ------------
 
 Just copy these into your path.
+
+License
+=======
+
+./COPYING
