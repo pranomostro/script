@@ -1,0 +1,17 @@
+#!/usr/bin/env rc
+
+if(test -z $"*){
+	echo 'gm ACTION' >[2=1]
+	exit 1
+}
+
+cd /usr/local/src
+
+curr=`{pwd}
+
+for(i in `{cat sources}){
+	cd $i
+	echo $i
+	eval $"*
+	cd $curr
+}

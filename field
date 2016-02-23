@@ -1,8 +1,8 @@
-#!/usr/bin/env sh
+#!/usr/bin/env rc
 
-if [ $# '!=' 1 ]; then
-	echo 'field NUM' 2>&1
+if(! ~ $#* '1'){
+	echo 'field NUM' >[2=1]
 	exit 1
-fi
+}
 
-awk "{ print \$$1 }"
+awk '{ print $'$1' }'

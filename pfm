@@ -1,2 +1,8 @@
-#!/usr/bin/env sh
-git log --'pretty=format:%ai' | awk '{ print $1 }' | sort | uniq -c | awk '{ print $1 }' | head -150 | histo
+#!/usr/bin/env rc
+git log --'pretty=format:%ai' |
+awk '{ print $1 }' |
+sort |
+uniq -c |
+awk '{ print $1 }' |
+head -150 |
+stag

@@ -1,7 +1,8 @@
-#!/usr/bin/env sh
+#!/usr/bin/env rc
 
-IFS='
+ifs='
 '
 
-cd ~/trash
-for i in `ls -A`; do rm -rf "$i"; done
+cd /home/adrian/trash
+for(i in `{ls -A})
+	rm -rf $i

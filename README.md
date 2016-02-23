@@ -15,6 +15,7 @@ The wmutils/ directory contains some wmutils specific scripts.
 Descriptions
 ------------
 
+* 4img: script that downloads a bunch of images currently on /b/, requires curl
 * 9 PROGRAM [ARGS]: script that launches a program from /usr/local/plan9/bin
 * bns NEW: adjusts the screen brightness
 * bomb: fork bomb
@@ -26,6 +27,7 @@ Descriptions
 	Needs the '{}' regex notation, tested with sbase sed and GNU sed 4.2.2
 * empty: removes every file from ~/trash
 * field NUM: print the NUM'th field of every input line.
+* gm ACTION: Perform ACTION in every git repo in the file sources in /usr/local/src.
 * lg [FILES]: line game, every none whitespace is translated to '_'.
 	Guess the programming language.
 * musconv: rename and restructure files to a certain standard,
@@ -36,7 +38,7 @@ Descriptions
 * opus2flac FILE: script that converts an opus file to a flac file.
 	requires opusdec and flac.
 * pfm: displays the activity in the current git repo.
-	requires histo
+	requires [stag](https://www.github.com/seenaburns/stag)
 * pprz: make a screenshot around every half an hour, silently
 	requires scrot.
 * play FILES: plays a flac file in the background.
@@ -63,8 +65,6 @@ Generally, some base utilities (coreutils, sbase+ubase) are required.
 Many of these scripts are written in the rc scripting language, the plan 9 shell.
 It is needed as well.
 The wmutils scripts need wmutils/core installed, barign needs wmutils/opt (for wname).
-The scripts should be all posix conforming, the sh scripts were tested
-with bash and mksh.
 
 Installation
 ------------

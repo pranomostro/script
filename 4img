@@ -1,0 +1,17 @@
+#!/usr/bin/env rc
+
+for(i in `{curl https://boards.4chan.org/b/ |
+		grep -o '<a href="[^"]*"' |
+		sed 's/^<a href="//; s/"$//' |
+		grep '^thread' |
+		sed 's/\(thread\/[0-9]\+\).*/\1/' |
+		sort | uniq})
+	curl https://boards.4chan.org/b/$i |
+	grep -o '<a href="[^"]*"' |
+	sed 's/^<a href="//; s/"$//' |
+	grep -e '\.jpg$' -e '\.png$' -e '\.jpeg$' -e '\.webm$' -e '\.gif$' |
+	sed 's/^\/\///' >>imgs
+
+for(i in `{cat imgs})
+	if(! test -e `{basename $i})
+		curl $i >`{basename $i}
