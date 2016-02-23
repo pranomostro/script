@@ -1,16 +1,15 @@
 #!/usr/bin/env rc
 
-IFS='
+ifs='
 '
 
-if [ "$#" -le '0' ]; then
-	echo 'r FILES' 2>&1
+if(test -z $"*){
+	echo 'r FILES' >[2=1]
 	exit 1
-fi
+}
 
-for i in "$@"; do
-	if [ -d $i ]; then
-		/usr/bin/rm -rf ~/trash/"$i"
-	fi
-	mv -f "$i" ~/trash
-done
+for(i){
+	if(test -d $i)
+		/usr/bin/rm -rf /home/adrian/trash/$i
+	mv -f $i /home/adrian/trash
+}
