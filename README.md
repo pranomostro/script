@@ -45,6 +45,7 @@ Descriptions
 	requires ogg123
 * rip NAME DIR: rips a cd into a flac file.
 	requires cdparanoia and flac
+* sts [ARGS]: starts an instance of the sam text editor in the background
 * r FILES: moves file(s) to ~/trash
 * tb: launches the Tor browser
 
