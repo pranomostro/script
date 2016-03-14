@@ -1,5 +1,8 @@
 #!/usr/bin/env rc
 
+ifs='
+'
+
 switch($#*){
 case 2
 	from=$1
