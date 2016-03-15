@@ -19,7 +19,8 @@ Descriptions
 * 9 PROGRAM [ARGS]: script that launches a program from /usr/local/plan9/bin
 * bns NEW: adjusts the screen brightness
 * bomb: fork bomb
-* bu: _very_ simple backup utility
+* bu: _very_ simple backup utility, just copy+archive+compress file changed since
+	the last backup. Make a full backup every month.
 	depends on cgdc
 * chv [+-]NUM: increase/decrease the current audio output volume for NUM percent
 * ell [LEN]: print the first NUM chars of every input line, substitute the rest

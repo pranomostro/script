@@ -9,7 +9,11 @@ if(test -f $name -o -d /mnt/backup/tmp)
 	exit 0
 
 mkdir tmp
-cgdc $last /home/adrian tmp
+
+if(~ `{date +'%d'} '01')
+	cp /home/adrian/* tmp
+if not
+	cgdc $last /home/adrian tmp
 
 tar -czf $name tmp/
 rm -rf tmp
