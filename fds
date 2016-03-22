@@ -1,0 +1,3 @@
+#!/usr/bin/env rc
+
+du -a $1 | sed 's/[0-9]\+	//' | sed '$d'

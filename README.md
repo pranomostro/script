@@ -27,6 +27,7 @@ Descriptions
 	with '…'.
 	Needs the '{}' regex notation, tested with sbase sed and GNU sed 4.2.2
 * empty: removes every file from ~/trash
+* fds: print the flattened directory structure
 * field NUM: print the NUM'th field of every input line.
 * gm ACTION: Perform ACTION in every git repo in the file sources in /usr/local/src.
 * lg [FILES]: line game, every none whitespace is translated to '_'.
@@ -46,6 +47,7 @@ Descriptions
 	requires ogg123
 * rip NAME DIR: rips a cd into a flac file.
 	requires cdparanoia and flac
+* sal: sort the input lines after their length
 * sts [ARGS]: starts an instance of the sam text editor in the background
 * r FILES: moves file(s) to ~/trash
 * tb: launches the Tor browser
