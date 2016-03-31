@@ -34,7 +34,7 @@ Descriptions
 * lg [FILES]: line game, every none whitespace is translated to '_'.
 	Guess the programming language.
 * musconv: rename and restructure files to a certain standard,
-	convert music files to flac, delete the others.
+	convert music files to ogg, delete the others.
 	requires ffmpeg und fds
 * must: compile a program with musl and tcc, not working yet
 	requires tcc and musl
@@ -44,10 +44,10 @@ Descriptions
 	requires [stag](https://www.github.com/seenaburns/stag)
 * pprz: make a screenshot around every half an hour, silently
 	requires scrot.
-* play FILES: plays a flac file in the background.
+* play FILES: plays a ogg file in the background.
 	requires ogg123
-* rip NAME DIR: rips a cd into a flac file.
-	requires cdparanoia and flac
+* rip NAME DIR: rips a cd into a ogg file.
+	requires cdparanoia and oggenc
 * sal: sort the input lines after their length
 * sts [ARGS]: starts an instance of the sam text editor in the background
 * r FILES: moves file(s) to ~/trash

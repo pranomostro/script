@@ -20,7 +20,7 @@ while(true){
 			xargs -n 1 readlink |
 			grep '^/mnt/mus' |
 			sed 's/^\/mnt\/mus\/[^\/]\+\///' |
-			sed 's/\.flac$//' |
+			sed 's/\.ogg$//' |
 			ell 34
 		}
 		if not

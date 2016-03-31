@@ -13,7 +13,7 @@ fn sane{
 ifs='
 '
 
-exts=(mp3 m4a ogg wav)
+exts=(mp3 m4a flac wav)
 
 for(i in `{ls}){
 	j=`{sane $i}
@@ -35,13 +35,13 @@ for(i in `{ls}){
 		for(k in `{ls *.$j >[2]/dev/null}){
 			switch($j){
 			case 'mp3'
-				new=`{echo $k | sed 's/\.mp3$/.flac/'}
-				ffmpeg -i $k -f flac $new
+				new=`{echo $k | sed 's/\.mp3$/.ogg/'}
+				ffmpeg -i $k -f ogg $new
 			case 'm4a'
 				int=`{echo $k | sed 's/\.m4a$/.wav/'}
-				new=`{echo $k | sed 's/\.m4a$/.flac/'}
+				new=`{echo $k | sed 's/\.m4a$/.ogg/'}
 				ffmpeg -i $k -f wav $int
-				ffmpeg -i $int -f flac $new
+				ffmpeg -i $int -f ogg $new
 			}
 		}
 	}

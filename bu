@@ -11,7 +11,7 @@ if(test -f $name -o -d /mnt/backup/tmp)
 mkdir tmp
 
 if(~ `{date +'%d'} '01')
-	cp /home/adrian/* tmp
+	cp -r /home/adrian/* tmp
 if not
 	cgdc $last /home/adrian tmp
 

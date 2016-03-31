@@ -1,10 +1,10 @@
 #!/usr/bin/env rc
 
 chosen=`{fds /mnt/mus |
-	grep -E '\.flac$' |
+	grep -E '\.ogg$' |
 	sed 's/\/mnt\/mus\/[a-z]\+\/\(.*\)$/\1/' |
-	sed 's/\.flac$//' |
+	sed 's/\.ogg$//' |
 	sort |
 	dmenu -b -nf black -nb white -sb '#6c71c4' -fn 'Liberation Mono:pixelsize=16:antialias=true:autohint=false'}
 
-play `{fds /mnt/mus | grep -E $chosen^'\.flac$'}
+play `{fds /mnt/mus | grep -E $chosen^'\.ogg$'}
