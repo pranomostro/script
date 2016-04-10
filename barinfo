@@ -18,8 +18,8 @@ while(true){
 			cd /proc/$oggproc/fd;
 			ls |
 			xargs -n 1 readlink |
-			grep '^/mnt/mus' |
-			sed 's/^\/mnt\/mus\/[^\/]\+\///' |
+			grep '\.ogg$' |
+			xargs basename |
 			sed 's/\.ogg$//' |
 			ell 34
 		}
