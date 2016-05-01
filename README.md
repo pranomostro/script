@@ -52,6 +52,8 @@ Descriptions
 * sts [ARGS]: starts an instance of the sam text editor in the background
 * r FILES: moves file(s) to ~/trash
 * tb: launches the Tor browser
+* tlc FILE: Show the change of linecount of a file in the current
+	git repo over time, requires tac, git and stag
 
 wmutils scripts:
 

@@ -1,0 +1,18 @@
+#!/usr/bin/env rc
+
+switch($#*){
+case '1'
+	f=$1
+case *
+	echo 'tlc FILE' >[2=1]
+}
+
+t=`{mktemp '/tmp/XXXXXX.tlc'}
+
+for(i in `{git log --pretty'=oneline' | awk '{ print($1) }'}){
+	git show $i:$f >[2]/dev/null | wc -l
+} | grep -v 0 >>$t
+
+tac <$t | stag
+
+rm $t
