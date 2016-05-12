@@ -1,5 +1,4 @@
 #!/usr/bin/env rc
-#TODO: make this use less RAM.
 
 sep=' | '
 
