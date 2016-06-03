@@ -24,8 +24,9 @@ Descriptions
 	the last backup. Make a full backup every month.
 	depends on [cgdc](https://github.com/scharlatan/cgdc)
 * chv [+-]NUM: increase/decrease the current audio output volume for NUM percent
+* cts: select a mail address from /etc/contct, needs dmenu.
 * dec: simple script for decrypting pgp data.
-	Needs gpg2.
+	Needs gpg2 and cts.
 * enc: simple script for encrypting an e-mail for somebody.
 	Needs gpg2 as well.
 * ell [LEN]: print the first NUM chars of every input line, substitute the rest
