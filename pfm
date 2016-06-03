@@ -4,5 +4,4 @@ awk '{ print $1 }' |
 sort |
 uniq -c |
 awk '{ print $1 }' |
-head -150 |
-stag
+head -150

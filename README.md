@@ -41,7 +41,6 @@ Descriptions
 * opus2flac FILE: script that converts an opus file to a flac file.
 	requires opusdec and flac.
 * pfm: displays the activity in the current git repo.
-	requires [stag](https://www.github.com/seenaburns/stag)
 * pprz: make a screenshot around every half an hour, silently
 	requires scrot.
 * play FILES: plays a ogg file in the background.
@@ -53,7 +52,7 @@ Descriptions
 * r FILES: moves file(s) to ~/trash
 * tb: launches the Tor browser
 * tlc FILE: Show the change of linecount of a file in the current
-	git repo over time, requires tac, git and stag
+	git repo over time, requires tac, git
 
 wmutils scripts:
 
