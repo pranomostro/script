@@ -6,7 +6,7 @@ if(~ $1 '-t'){
 }
 
 if(~ $#* 0){
-	echo 'mg [-t] FILES' >[2=1]
+	echo 'mg [-t] FILES' >[1=2]
 	exit 1
 }
 
@@ -14,7 +14,7 @@ nam=`{gen $#*}
 
 for(c in `{seq 1 $#*}){
 	if(! ~ $trust '1' && test -e $nam($c)){
-		echo 'error: not replacing '$nam($c)', exiting' >[2=1]
+		echo 'error: not replacing '$nam($c)', exiting' >[1=2]
 		exit 2
 	}
 	mv $*($c) $nam($c)
