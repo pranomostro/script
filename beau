@@ -19,16 +19,16 @@ case '2'
 		y=`{wattr 'h' $win}
 		x=`{gr $y}
 	case *
-		echo $1' is not w or h, exiting' >[2=1]
+		echo $1' is not w or h, exiting' >[1=2]
 		exit 2
 	}
 case *
-	echo 'beau [w|h] [WIN]' >[2=1]
+	echo 'beau [w|h] [WIN]' >[1=2]
 	exit 1
 }
 
 if(~ $win ''){
-	echo 'No focused window found, exiting' >[2=1]
+	echo 'No focused window found, exiting' >[1=2]
 	exit 3
 }
 

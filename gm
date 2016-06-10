@@ -1,7 +1,7 @@
 #!/usr/bin/env rc
 
 if(test -z $"*){
-	echo 'gm ACTION' >[2=1]
+	echo 'gm ACTION' >[1=2]
 	exit 1
 }
 

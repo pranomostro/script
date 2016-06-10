@@ -6,12 +6,12 @@ case '0'
 case '1'
 	win=$1
 case *
-	echo 'cnt [WIN]' >[2=1]
+	echo 'cnt [WIN]' >[1=2]
 	exit 1
 }
 
 if(~ $win ''){
-	echo 'No focused window found, exiting' >[2=1]
+	echo 'No focused window found, exiting' >[1=2]
 	exit 2
 }
 

@@ -1,7 +1,7 @@
 #!/usr/bin/env rc
 
 if(test $#* -ne '2'){
-	echo 'rip NAME DIR' >[2=1]
+	echo 'rip NAME DIR' >[1=2]
 	exit 1
 }
 

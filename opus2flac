@@ -1,10 +1,10 @@
 #!/usr/bin/env rc
 
 if(test $#* -ne '1'){
-	echo 'opus2flac FILE' >[2=1]
+	echo 'opus2flac FILE' >[1=2]
 	exit 1
 }
 
-opusdec $1.opus $1.wav >/dev/null >[2=1]
-flac $1.wav $1.flac >/dev/null >[2=1]
+opusdec $1.opus $1.wav >/dev/null >[1=2]
+flac $1.wav $1.flac >/dev/null >[1=2]
 r $1.wav $1.opus

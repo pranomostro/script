@@ -4,7 +4,7 @@ switch($#*){
 case '1'
 	f=$1
 case *
-	echo 'tlc FILE' >[2=1]
+	echo 'tlc FILE' >[1=2]
 	exit 1
 }
 
