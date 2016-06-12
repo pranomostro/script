@@ -5,7 +5,7 @@ ifs='
 
 switch($#*){
 case [012]
-	echo 'chan FROM TO FILES' >[2=1]
+	echo 'chan FROM TO FILES' >[1=2]
 	exit 1
 case *
 	from=`{echo $1 | sed 's/\\/\\\\/g; s/%/%%/g'}
