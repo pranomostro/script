@@ -6,18 +6,23 @@ mg \- move to generic names
 mg [-t] FILES
 
 .SH DESCRIPTION
-mg renames every of it's argument to a generic name. Unless given
-the option '-t', it doesn't replace already existing files.
+mg renames every of it's argument to a generic name.
+
+.SH OPTIONS
+.TP
+.BI \-t
+replace existing files without asking (warning: dangerous).
 
 .SH EXAMPLES
 .TP
 .B mg *.png
+.TP
 gives all '.png' files in the current directory generic names.
 
 .SH STATUS
 0 on success and 1 when it doesn't replace an already existing file.
 
-.SH SEE ALSO
+.SH "SEE ALSO"
 .IR gen(1).
 
 .SH BUGS
