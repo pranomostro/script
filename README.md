@@ -22,7 +22,7 @@ Descriptions
 * bomb: fork bomb
 * bu: _very_ simple backup utility, just copy+archive+compress file changed since
 	the last backup. Make a full backup every month.
-	depends on [cgdc](https://github.com/scharlatan/cgdc)
+	depends on [cgdc](https://github.com/pranomostro/cgdc)
 * chv [+-]NUM: increase/decrease the current audio output volume for NUM percent
 * cts: select a mail address from $HOME/etc/cntct/list, needs dmenu.
 * dec: simple script for decrypting pgp data.
