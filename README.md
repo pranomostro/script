@@ -14,7 +14,7 @@ Not more, not less, not pg.
 Requirements
 ------------
 
-* [gen](https://www.github.com/scharlatan/gen)
+* [gen](https://www.github.com/pranomostro/gen)
 * make
 * rc (the plan 9 shell)
 
