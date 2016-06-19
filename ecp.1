@@ -16,9 +16,12 @@ that have to be copied, TO is a sed-replacement expression for the target file.
 overwrite existing files.
 
 .SH EXAMPLES
-.TP
-.B ecp '\e(.*\e)\e.sh$' '\e1.1'
-.TP
+.PP
+.fi
+.RS
+$ ecp '\e(.*\e)\e.sh$' '\e1.1'
+.RE
+.fi
 was used during the creation of ecp, and copies every file with the
 extension '.sh' to the the corresponding file with the extension '.1'.
 
