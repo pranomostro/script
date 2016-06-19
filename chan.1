@@ -11,9 +11,12 @@ matching a regular expression. For every match of FROM in FILES, it
 is replaced by the ed-replacement expression TO.
 
 .SH EXAMPLES
-.TP
-.B chan '\e<\e([0-9A-Fa-f]\e+\e)h' '0x\e1' *.asm
-.TP
+.PP
+.fi
+.RS
+$ chan '\e<\e([0-9A-Fa-f]\e+\e)h' '0x\e1' *.asm
+.RE
+.fi
 changes the style of the  hexadecimal numbers in all files having the extension 'asm'.
 
 .SH STATUS
