@@ -5,5 +5,5 @@ if(! ~ $#* '1'){
 	exit 1
 }
 
-cur=`{amixer -M get Master | tail -1 | awk '{ print $5 }' | tr -dc '0-9'}
+cur=`{amixer -M get Master | tail -1 | awk '{ print $4 }' | tr -dc '0-9'}
 amixer -M set Master `{echo $cur^$1 | bc}^'%' >[1=2] >/dev/null
