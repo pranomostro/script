@@ -3,5 +3,5 @@
 while(true){
 	waittime=`{echo `{date +'%N'}'%1200+600' | bc}
 	sleep $waittime
-	scrot -z '/usr/local/scrots/pprz/%Y%m%d%H%M%S.png'
+	xscreenshot | bzip2 > '/usr/local/scrots/pprz/'`{date '+%Y%m%d%H%M%S'}'.ff.bz2'
 }

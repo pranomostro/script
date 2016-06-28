@@ -47,7 +47,7 @@ Descriptions
 	requires opusdec and flac.
 * pfm: displays the activity in the current git repo.
 * pprz: make a screenshot around every half an hour, silently
-	requires scrot.
+	requires xscreenshot.
 * play FILES: plays a ogg file in the background.
 	requires ogg123
 * rip NAME DIR: rips a cd into a ogg file.
