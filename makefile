@@ -12,3 +12,5 @@ install: $(TARGET)
 uninstall:
 	cd $(PREFIX)/bin/ && rm -f ecp emv
 	cd $(PREFIX)/share/man/man1 && rm -f ecp.1 emv.1
+
+.PHONY: all install uninstall
