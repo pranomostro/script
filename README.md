@@ -55,6 +55,7 @@ Descriptions
 * sal: sort the input lines after their length
 * shp: send an email with the last commit to the suckless hackers mailing list,
 	uses git send-mail
+* srf: surf with cleaning $home afterwards
 * sts [ARGS]: starts an instance of the sam text editor in the background
 * r FILES: moves file(s) to ~/trash
 * tb: launches the Tor browser

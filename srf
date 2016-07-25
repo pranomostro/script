@@ -1,0 +1,6 @@
+#!/usr/bin/env rc
+
+surf $*
+
+r ~/.cache/*
+fds ~ | grep webkit | xargs r
