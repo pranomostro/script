@@ -2,5 +2,5 @@
 
 surf $*
 
-r ~/.cache/*
-fds ~ | grep webkit | xargs r
+r $HOME/.cache/*
+fds $HOME | grep webkit | xargs r
