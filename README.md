@@ -10,7 +10,6 @@ Until then, this is the most accurate description of what these
 shell scripts do.
 
 Some of these are very specialised, some quite general.
-The wmutils/ directory contains some wmutils specific scripts.
 
 Descriptions
 ------------
