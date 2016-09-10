@@ -2,7 +2,7 @@
 
 fn die{
 	rm $files $newer
-	exit 1
+	exit 2
 }
 
 fn sigint{ die }; fn sighup{ die }; fn sigalrm{ die }; fn sigfpe{ die }
