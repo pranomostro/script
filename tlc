@@ -1,5 +1,12 @@
 #!/usr/bin/env rc
 
+fn die{
+	rm $t
+	exit 2
+}
+
+fn sigint{ die }; fn sighup{ die }; fn sigalrm{ die }; fn sigfpe{ die }
+
 switch($#*){
 case '1'
 	f=$1
