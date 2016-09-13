@@ -26,12 +26,12 @@ Descriptions
 * cts: select a mail address from $HOME/etc/cntct/list, needs dmenu.
 * dec: simple script for decrypting pgp data.
 	Needs gpg2 and cts.
-* enc: simple script for encrypting an e-mail for somebody.
-	Needs gpg2 as well.
 * ell [LEN]: print the first NUM chars of every input line, substitute the rest
 	with '...'.
 	Needs the '{}' regex notation, tested with sbase sed and GNU sed 4.2.2
 * empty: removes every file from ~/trash
+* enc: simple script for encrypting an e-mail for somebody.
+	Needs gpg2 as well
 * fds: print the flattened directory structure
 * field NUM: print the NUM'th field of every input line.
 * gm ACTION: Perform ACTION in every git repo in the file sources in /usr/local/src.
@@ -40,15 +40,14 @@ Descriptions
 * musconv: rename and restructure files to a certain standard,
 	convert music files to ogg, delete the others.
 	requires ffmpeg und fds
-* must: compile a program with musl and tcc, not working yet
-	requires tcc and musl
 * opus2flac FILE: script that converts an opus file to a flac file.
 	requires opusdec and flac.
 * pfm: displays the activity in the current git repo.
-* pprz: make a screenshot around every half an hour, silently
-	requires xscreenshot.
 * play FILES: plays a ogg file in the background.
 	requires ogg123
+* pprz: make a screenshot around every half an hour, silently
+	requires xscreenshot.
+* r FILES: mv files to ~/trash
 * rip NAME DIR: rips a cd into a ogg file.
 	requires cdparanoia and oggenc
 * sal: sort the input lines after their length
@@ -56,7 +55,6 @@ Descriptions
 	uses git send-mail
 * srf: surf with cleaning $home afterwards
 * sts [ARGS]: starts an instance of the sam text editor in the background
-* r FILES: moves file(s) to ~/trash
 * tb: launches the Tor browser
 * tlc FILE: Show the change of linecount of a file in the current
 	git repo over time, requires tac, git
