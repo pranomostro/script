@@ -1,7 +1,0 @@
-#!/usr/bin/env rc
-
-surf $*
-
-empty
-r $HOME/.cache/*
-fds $HOME | grep webkit | xargs r
