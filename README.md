@@ -67,6 +67,8 @@ wmutils scripts:
 * big [WIN]: resize a window so that it leaves a gap of the correct width at the side
 * cnt [WIN]: center the current window, needs wmutils
 * wsch [SIZE] [WIN]: change window size without moving the middle of the window
+* zug: map/unmap windows by their names from dmenu
+	requires dmenu
 
 Requirements
 ------------

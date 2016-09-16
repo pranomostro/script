@@ -1,0 +1,34 @@
+#!/usr/bin/env rc
+
+fn die{
+        rm $t
+        exit 2
+}
+
+fn sigint{ die }; fn sighup{ die }; fn sigalrm{ die }; fn sigfpe{ die }
+
+fn allw{
+	lsw
+	lsw -u
+}
+
+fn selw{
+	t=`{mktemp '/tmp/XXXXXX.tlc'}
+	for(i in `{allw}){
+		printf $i': ' >>$t
+		wname $i >>$t || printf '\n' >>$t
+	}
+	dmenu -l 10 -nf black -nb white -sb '#ffb405' -fn 'envypn-15:pixelsize=15:antialias=false:autohint=false' <$t |
+	awk -F: '{ print($1) }'
+	rm $t
+}
+
+w=`{selw}
+
+if(~ $w '')
+	exit 1
+
+if(wattr m $w)
+	mapw -t $w
+if(! wattr m $w)
+	mapw -m $w
