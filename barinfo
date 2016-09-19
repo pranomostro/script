@@ -20,7 +20,7 @@ while(true){
 			grep '\.ogg$' |
 			xargs basename |
 			sed 's/\.ogg$//' |
-			ell 34
+			ell 40
 		}
 		if not
 			echo -n 'nothing'
