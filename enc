@@ -5,8 +5,8 @@ rec=`{cts}
 if(test -z $rec)
 	exit 1
 
-if(! gpg2 --fingerprint $rec)
-	if(! st -e gpg2 --keyserver pgp.mit.edu --search-keys $rec)
+if(! gpg2 --fingerprint $rec >/dev/null >[2=1])
+	if(! st -e gpg2 --yes --keyserver pgp.mit.edu --search-keys $rec)
 		exit 2
 
 gpg2 -easq -r $rec
