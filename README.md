@@ -21,7 +21,7 @@ Descriptions
 * bomb: Fork bomb.
 * bu: _Very_ simple backup utility, just copy+archive+compress the files changed since
 	the last backup. Make a full backup every month.
-	Depends on [cgdc](https://github.com/pranomostro/cgdc)
+	Depends on [cgdc](https://github.com/pranomostro/cgdc).
 * chv [+-]NUM: Increase/decrease the current audio output volume for NUM percent.
 * cts: Select a mail address from the available pgp keys, needs dmenu.
 * dec: Simple script for decrypting pgp data. Needs gpg2.
