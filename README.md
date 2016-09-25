@@ -14,61 +14,59 @@ Some of these are very specialised, some quite general.
 Descriptions
 ------------
 
-* 4img: script that downloads a bunch of images currently on /b/, requires curl
-	the unsafest way of browsing 4chan currently known to man.
-* 9 PROGRAM [ARGS]: script that launches a program from /usr/local/plan9/bin
-* bns NEW: adjusts the screen brightness
-* bomb: fork bomb
-* bu: _very_ simple backup utility, just copy+archive+compress the files changed since
+* 4img: Script that downloads a bunch of images currently on /b/, requires curl.
+	The unsafest way of browsing 4chan currently known to humanity.
+* 9 PROGRAM [ARGS]: Script that launches a program from /usr/local/plan9/bin.
+* bns NEW: Adjusts the screen brightness.
+* bomb: Fork bomb.
+* bu: _Very_ simple backup utility, just copy+archive+compress the files changed since
 	the last backup. Make a full backup every month.
-	depends on [cgdc](https://github.com/pranomostro/cgdc)
-* chv [+-]NUM: increase/decrease the current audio output volume for NUM percent
-* cts: select a mail address from $HOME/etc/cntct/list, needs dmenu.
-* dec: simple script for decrypting pgp data.
+	Depends on [cgdc](https://github.com/pranomostro/cgdc)
+* chv [+-]NUM: Increase/decrease the current audio output volume for NUM percent.
+* cts: Select a mail address from the available pgp keys, needs dmenu.
+* dec: Simple script for decrypting pgp data. Needs gpg2.
+* ell [LEN]: Print the first NUM chars of every input line, substitute the rest
+	with '...'. Needs the '{}' regex notation, tested with sbase sed and GNU sed 4.2.2.
+* empty: Removes every file from ~/trash.
+* enc: Simple script for encrypting an e-mail for somebody.
 	Needs gpg2 and cts.
-* ell [LEN]: print the first NUM chars of every input line, substitute the rest
-	with '...'.
-	Needs the '{}' regex notation, tested with sbase sed and GNU sed 4.2.2
-* empty: removes every file from ~/trash
-* enc: simple script for encrypting an e-mail for somebody.
-	Needs gpg2 as well
-* fds: print the flattened directory structure
-* field NUM: print the NUM'th field of every input line.
+* fds: Print the flattened directory structure.
+* field NUM: Print the NUM'th field of every input line.
 * gm ACTION: Perform ACTION in every git repo in the file sources in /usr/local/src.
-* lg [FILES]: line game, every none whitespace is translated to '_'.
+* lg [FILES]: Line game, every none whitespace is translated to '_'.
 	Guess the programming language.
-* musconv: rename and restructure files to a certain standard,
+* musconv: Rename and restructure files to a certain standard,
 	convert music files to ogg, delete the others.
-	requires ffmpeg und fds
-* opus2flac FILE: script that converts an opus file to a flac file.
-	requires opusdec and flac.
-* pfm: displays the activity in the current git repo.
-* play FILES: plays a ogg file in the background.
-	requires ogg123
-* pprz: make a screenshot around every half an hour, silently
-	requires xscreenshot.
-* r FILES: mv files to ~/trash
-* rip NAME DIR: rips a cd into a ogg file.
-	requires cdparanoia and oggenc
-* sal: sort the input lines after their length
-* shp: send an email with the last commit to the suckless hackers mailing list,
-	uses git send-mail
-* sts [ARGS]: starts an instance of the sam text editor in the background
-* tb: launches the Tor browser
+	Requires ffmpeg und fds.
+* opus2flac FILE: Script that converts an opus file to a flac file.
+	Requires opusdec and flac.
+* pfm: Displays the activity in the current git repo.
+* play FILES: Plays a ogg file in the background.
+	Requires ogg123.
+* pprz: Make a screenshot around every half an hour, silently.
+	Requires xscreenshot.
+* r FILES: Move FILES to ~/trash.
+* rip NAME DIR: Rips a cd into a ogg file.
+	Requires cdparanoia and oggenc.
+* sal: Sort the input lines after their length.
+* shp: Send an email with the last commit to the suckless hackers mailing list.
+	Uses git send-mail.
+* sts [ARGS]: Starts an instance of the sam text editor in the background.
+* tb: Launches the Tor browser.
 * tlc FILE: Show the change of linecount of a file in the current
-	git repo over time, requires tac, git
+	git repo over time. Requires tac, git.
 
 wmutils scripts:
 
-* barign: wait until X has fully started and then ignore the bar.
-* barinfo: print system information so that it can be processed by lemonbar
-	is system specific with the brightness, depends on ell
-* beau [w|h] [WIN]: resizes a window conforming to the golden ratio
-* big [WIN]: resize a window so that it leaves a gap of the correct width at the side
-* cnt [WIN]: center the current window, needs wmutils
-* wsch [SIZE] [WIN]: change window size without moving the middle of the window
-* zug: map/unmap windows by their names from dmenu
-	requires dmenu
+* barign: Wait until X has fully started and then ignore the bar.
+* barinfo: Print system information so that it can be processed by lemonbar.
+	Is system specific with the brightness, depends on ell.
+* beau [w|h] [WIN]: Resizes a window conforming to the golden ratio.
+* big [WIN]: Resize a window so that it leaves a gap of the correct width at the side.
+* cnt [WIN]: Center the current window, needs wmutils.
+* wsch [SIZE] [WIN]: Change window size without moving the middle of the window.
+* zug: Map/Unmap windows by their names from dmenu.
+	Requires dmenu.
 
 Requirements
 ------------
