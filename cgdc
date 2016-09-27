@@ -31,4 +31,4 @@ for(i in `{cat $newer}){
 	cp -a $i $3/$dir/$base
 }
 
-rm $file $newer
+rm $files $newer
