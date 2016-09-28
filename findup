@@ -1,0 +1,18 @@
+#!/usr/bin/env rc
+
+if(! ~ $#* '1'){
+	echo 'findup name' >[1=2]
+	exit 1
+}
+
+fil=$1
+
+while(! test -e $1){
+	fil='../'^$fil
+	cd ..
+	if(~ `{pwd} '/')
+		exit 2
+}
+
+fil='./'^$fil
+echo $fil

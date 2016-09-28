@@ -32,6 +32,8 @@ Descriptions
 	Needs gpg2 and cts.
 * fds: Print the flattened directory structure.
 * field NUM: Print the NUM'th field of every input line.
+* findup NAME: Print the full relative path of NAME in the parent directories.
+	Return 2 if the file does not exist.
 * gm ACTION: Perform ACTION in every git repo in the file sources in /usr/local/src.
 * lg [FILES]: Line game, every none whitespace is translated to '_'.
 	Guess the programming language.
