@@ -4,5 +4,4 @@ ifs='
 '
 
 cd /home/adrian/trash
-for(i in `{ls -A})
-	rm -rf $i
+rm -rf *
