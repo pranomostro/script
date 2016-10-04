@@ -1,0 +1,10 @@
+#!/usr/bin/env rc
+
+fn up{
+	curl -F 'sprunge=<-' http://sprunge.us
+}
+
+if(test $#* -ge 1)
+	cat $* | up
+if not
+	up

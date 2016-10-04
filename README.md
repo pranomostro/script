@@ -57,6 +57,8 @@ Descriptions
 * tb: Launches the Tor browser.
 * tlc FILE: Show the change of linecount of a file in the current
 	git repo over time. Requires tac, git.
+* up [FILES]: puts FILES, concatenated, to sprunge.us, otherwise
+	uses stdin.
 
 wmutils scripts:
 
