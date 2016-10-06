@@ -35,6 +35,10 @@ Descriptions
 * findup NAME: Print the full relative path of NAME in the parent directories.
 	Return 2 if the file does not exist.
 * gm ACTION: Perform ACTION in every git repo in the file sources in /usr/local/src.
+* ircjoin SERVER:CHANNEL[:CHANNEL]: Start ii for the servers, join the channels on
+	the servers with the nickname pranomostro.
+	Requires [ii](http://tools.suckless.org/ii) and take from
+	[fields](https://github.com/pranomostro/fields)
 * lg [FILES]: Line game, every none whitespace is translated to '_'.
 	Guess the programming language.
 * musconv: Rename and restructure files to a certain standard,

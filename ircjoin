@@ -1,0 +1,15 @@
+#!/usr/bin/env rc
+
+if(test -z $"*){
+	echo 'ircjoin SERVER:CHANNEL[:CHANNEL]' >[1=2]
+	exit 1
+}
+
+for(i){
+	server=`{echo $i | awk -F: '{ print($1) }'}
+	channels=`{echo $i | tr : ' ' | take 2-}
+	ii -s $server -n pranomostro &
+	sleep 1
+	for(c in $channels)
+		echo '/j '$c >$home/irc/$server/in
+}
