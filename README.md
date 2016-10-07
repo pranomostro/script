@@ -44,8 +44,6 @@ Descriptions
 * musconv: Rename and restructure files to a certain standard,
 	convert music files to ogg, delete the others.
 	Requires ffmpeg und fds.
-* opus2flac FILE: Script that converts an opus file to a flac file.
-	Requires opusdec and flac.
 * pfm: Displays the activity in the current git repo.
 * play FILES: Plays a ogg file in the background.
 	Requires ogg123.
@@ -67,11 +65,15 @@ Descriptions
 wmutils scripts:
 
 * barign: Wait until X has fully started and then ignore the bar.
+	Needs the variable SB (small border) to be set.
 * barinfo: Print system information so that it can be processed by lemonbar.
 	Is system specific with the brightness, depends on ell.
 * beau [w|h] [WIN]: Resizes a window conforming to the golden ratio.
 * big [WIN]: Resize a window so that it leaves a gap of the correct width at the side.
 * cnt [WIN]: Center the current window, needs wmutils.
+* note: Reads one line from the input, displays it as a note
+	in the left lower corner of the screen.
+	Depends on dzen2, needs the variable SB (small border) set.
 * wsch [SIZE] [WIN]: Change window size without moving the middle of the window.
 * zug: Map/Unmap windows by their names from dmenu.
 	Requires dmenu.

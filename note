@@ -1,0 +1,24 @@
+#!/usr/bin/env rc
+
+curr=`{pfw}
+before=`{mktemp /tmp/note.XXXXXX}
+after=`{mktemp /tmp/note.XXXXXX}
+
+h=16
+w=`{echo `{wattr w `{lsw -r}}'-('$SG'+2*'$SB')' | bc}
+y=`{echo `{wattr h `{lsw -r}}'-('$h'+2*'$SB')' | bc}
+
+lsw -a | sort >$before
+data=`{read}
+echo $data | dzen2 -p 32 -bg '#ffffff' -fg '#000000' -fn $FONT -x $SG -y $y -w $w &
+sleep 0.1
+
+lsw -a | sort >$after
+
+dwin=`{diff $before $after | grep '^>' | awk '{ print($2) }'}
+chwb -s $SB -c '0xcc1111' $dwin
+ignw -s $dwin
+
+focus $curr
+
+rm $before $after
