@@ -24,7 +24,7 @@ while(true){
 		}
 		if(test -e /tmp/sad-sock){
 			id=`{echo 'status songid' | nc -U /tmp/sad-sock | head -1 | awk '{ print($2) }'}
-			echo 'playlist' | nc -U /tmp/sad-sock | grep '^'$id | awk '{ print($2) }' |
+			echo 'playlist' | nc -U /tmp/sad-sock | grep '^'$id':' | awk '{ print($2) }' |
 			xargs basename | sed 's/\.ogg$//' | ell 40
 		}
 		if not
