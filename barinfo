@@ -22,7 +22,7 @@ while(true){
 			sed 's/\.ogg$//' |
 			ell 40
 		}
-		if(test -e /tmp/sad-sock){
+		if(test -e /tmp/sad-sock && ! ~ 'stop' `{echo 'status playback' | nc -U /tmp/sad-sock | awk '{ print($2) }'} ){
 			id=`{echo 'status songid' | nc -U /tmp/sad-sock | head -1 | awk '{ print($2) }'}
 			echo 'playlist' | nc -U /tmp/sad-sock | grep '^'$id':' | awk '{ print($2) }' |
 			xargs basename | sed 's/\.ogg$//' | ell 40
