@@ -1,6 +1,6 @@
 #!/usr/bin/env rc
 
-sep=' | '
+sep=' |  '
 
 while(true){
 	echo -n ' brightness:' `{cat /sys/class/backlight/radeon_bl0/brightness} $sep
@@ -12,7 +12,10 @@ while(true){
 	echo -n 'usedram:' `{free -m | sed '1d; 3d' | field 3} $sep
 	echo -n 'load:' `{cat /proc/loadavg | field 1} $ sep
 	echo 'play:' `{
+		ae=''
+		pbs=''
 		oggproc=`{ps -A | grep 'ogg123' | field 1}
+		pbs=`{test -e /tmp/sad-sock && echo 'status playback' | nc -U /tmp/sad-sock | awk '{ print($2) }'}
 		if(! ~ $oggproc ''){
 			cd /proc/$oggproc/fd;
 			ls |
@@ -21,14 +24,16 @@ while(true){
 			xargs basename |
 			sed 's/\.ogg$//' |
 			ell 40
+			ae='1'
 		}
-		if(test -e /tmp/sad-sock && ! ~ 'stop' `{echo 'status playback' | nc -U /tmp/sad-sock | awk '{ print($2) }'} ){
+		if(! ~ $pbs '' && ! ~ $pbs 'stop' && ! ~ $ae '1'){
 			id=`{echo 'status songid' | nc -U /tmp/sad-sock | head -1 | awk '{ print($2) }'}
 			echo 'playlist' | nc -U /tmp/sad-sock | grep '^'$id':' | awk '{ print($2) }' |
 			xargs basename | sed 's/\.ogg$//' | ell 40
+			ae='1'
 		}
-		if not
-			echo -n nothing
+		if(! ~ $ae '1')
+			echo nothing
 	}
 	sleep 1
 }
