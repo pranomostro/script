@@ -17,7 +17,7 @@ if(! ~ $oggproc ''){
 if(! ~ $pbs '' && ! ~ $pbs 'stop' && ! ~ $ae '1'){
 	id=`{echo 'status songid' | nc -U /tmp/sad-sock | head -1 | awk '{ print($2) }'}
 	echo 'playlist' | nc -U /tmp/sad-sock | grep '^'$id':' | awk '{ print($2) }' |
-	xargs basename | sed 's/\.ogg$//' | ell 36
+	xargs basename | sed 's/\.ogg$//' | ell 42
 	ae='1'
 }
 if(! ~ $ae '1')
