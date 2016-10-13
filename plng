@@ -1,0 +1,24 @@
+#!/usr/bin/env rc
+
+ae=''
+pbs=''
+oggproc=`{ps -A | grep 'ogg123' | field 1}
+pbs=`{test -S /tmp/sad-sock && echo 'status playback' | nc -U /tmp/sad-sock | awk '{ print($2) }'}
+if(! ~ $oggproc ''){
+	cd /proc/$oggproc/fd;
+	ls |
+	xargs -n 1 readlink |
+	grep '\.ogg$' |
+	xargs basename |
+	sed 's/\.ogg$//' |
+	ell 40
+	ae='1'
+}
+if(! ~ $pbs '' && ! ~ $pbs 'stop' && ! ~ $ae '1'){
+	id=`{echo 'status songid' | nc -U /tmp/sad-sock | head -1 | awk '{ print($2) }'}
+	echo 'playlist' | nc -U /tmp/sad-sock | grep '^'$id':' | awk '{ print($2) }' |
+	xargs basename | sed 's/\.ogg$//' | ell 36
+	ae='1'
+}
+if(! ~ $ae '1')
+	echo nothing

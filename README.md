@@ -47,6 +47,7 @@ Descriptions
 * pfm: Displays the activity in the current git repo.
 * play FILES: Plays a ogg file in the background.
 	Requires ogg123.
+* plng: Print the music that is played at the moment. Depends on ell.
 * pprz: Make a screenshot around every half an hour, silently.
 	Requires xscreenshot.
 * r FILES: Move FILES to ~/trash.
@@ -66,8 +67,6 @@ wmutils scripts:
 
 * barign: Wait until X has fully started and then ignore the bar.
 	Needs the variable SB (small border) to be set.
-* barinfo: Print system information so that it can be processed by lemonbar.
-	Is system specific with the brightness, depends on ell.
 * beau [w|h] [WIN]: Resizes a window conforming to the golden ratio.
 * big [WIN]: Resize a window so that it leaves a gap of the correct width at the side.
 * cnt [WIN]: Center the current window, needs wmutils.
