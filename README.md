@@ -14,7 +14,7 @@ Some of these are very specialised, some quite general.
 Descriptions
 ------------
 
-* 4img: Script that downloads a bunch of images currently on /b/, requires curl.
+* 4img [BOARD]: Script that downloads a bunch of images currently on BOARD, requires curl.
 	The unsafest way of browsing 4chan currently known to humanity.
 * 9 PROGRAM [ARGS]: Script that launches a program from /usr/local/plan9/bin.
 * bns NEW: Adjusts the screen brightness.
