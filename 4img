@@ -15,3 +15,5 @@ for(i in `{curl https://boards.4chan.org/b/ |
 for(i in `{cat imgs})
 	if(! test -e `{basename $i})
 		curl $i >`{basename $i}
+
+rm imgs
