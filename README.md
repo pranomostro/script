@@ -57,7 +57,8 @@ Descriptions
 * shp: Send an email with the last commit to the suckless hackers mailing list.
 	Uses git send-mail.
 * sts [ARGS]: Starts an instance of the sam text editor in the background.
-* tb: Launches the Tor browser.
+* taknot NOTES: add NOTES to the note file for the current month, or create it.
+	Makes assumptions about the layout of the filesystem.
 * tlc FILE: Show the change of linecount of a file in the current
 	git repo over time. Requires tac, git.
 * up [FILES]: puts FILES, concatenated, to sprunge.us, otherwise

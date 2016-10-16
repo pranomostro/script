@@ -1,0 +1,15 @@
+#!/usr/bin/env rc
+
+if(test $#* -lt 1){
+	echo 'taknot [NOTES]' >[1=2]
+	exit 1
+}
+
+ifs='
+'
+
+curr=$HOME/proj/extra/site/notes/`{date '+%Y%m.md'}
+test -f $curr || printf '[up](./index.md), [top](../index.md)\n------------------------------------\n\n' >$curr
+
+for(i)
+	printf '3a\n* %s\n.\nwq\n' $i | ed $curr
