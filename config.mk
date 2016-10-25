@@ -23,7 +23,6 @@ field	\
 gm	\
 lg	\
 musconv	\
-musmenu	\
 note	\
 pfm	\
 play	\
