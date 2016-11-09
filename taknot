@@ -14,7 +14,7 @@ test -f $curr || printf '[up](./index.md), [top](../index.md)\n-----------------
 for(i)
 	printf '3a\n* %s\n.\nwq\n' $i | ed $curr
 
-make
 cd $HOME/proj/extra/site/
+make
 spm show gmail >/dev/null
-git commit -Sam 'n'
+git commit -S -a -m 'n'
