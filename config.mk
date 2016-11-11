@@ -5,7 +5,6 @@ PREFIX=/usr/local
 TARGET=4img	\
 9	\
 barign	\
-barinfo	\
 beau	\
 big	\
 bns	\
@@ -20,20 +19,24 @@ empty	\
 enc	\
 fds	\
 field	\
+findup	\
 gm	\
+ircjoin	\
 lg	\
 musconv	\
 note	\
 pfm	\
 play	\
+plng	\
 pprz	\
 r	\
 rip	\
 sal	\
 shp	\
 sts	\
-tb	\
+taknot	\
 tlc	\
-wsch	\
+tmpimg	\
 up	\
-zug
+wsch	\
+zug	\

@@ -61,6 +61,8 @@ Descriptions
 	Makes assumptions about the layout of the filesystem.
 * tlc FILE: Show the change of linecount of a file in the current
 	git repo over time. Requires tac, git.
+* tmpimg [URLS]: view images temporarily, delete them after viewing.
+	Needs curl.
 * up [FILES]: puts FILES, concatenated, to sprunge.us, otherwise
 	uses stdin.
 

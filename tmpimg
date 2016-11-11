@@ -1,0 +1,10 @@
+#!/usr/bin/env rc
+
+t=`{mktemp /tmp/XXXXXX.img}
+
+for(i){
+	curl $i >$t
+	meh $t
+}
+
+rm $t
