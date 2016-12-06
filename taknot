@@ -15,6 +15,6 @@ for(i)
 	printf '3a\n* %s\n.\nwq\n' $i | ed $curr
 
 cd $HOME/proj/extra/site/
-make
 spm show gmail >/dev/null
 git commit -S -a -m 'n'
+git push
