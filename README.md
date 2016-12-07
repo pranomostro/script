@@ -80,6 +80,11 @@ wmutils scripts:
 * zug: Map/Unmap windows by their names from dmenu.
 	Requires dmenu.
 
+ratox scripts:
+
+* dwfn: create a directory friends with symlinks to the friend directories named
+	after the linked friends name
+
 Requirements
 ------------
 

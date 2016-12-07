@@ -14,6 +14,7 @@ chv	\
 cnt	\
 cts	\
 dec	\
+dwfn	\
 ell	\
 empty	\
 enc	\
