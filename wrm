@@ -1,0 +1,23 @@
+#!/usr/bin/env rc
+
+tail -f a &
+
+tp=$apid
+
+fn die{
+	kill $tp
+	exit 2
+}
+
+fn sigint{ die }; fn sighup{ die }; fn sigalrm{ die }; fn sigfpe{ die }; fn sigkill { die }; fn sigterm{ die }
+
+while(true){
+	echo -n '= '
+	l=`{read}
+	if(test -n $l){
+		echo $l | sed 's/^/self: /' >> a
+		echo $l >b
+	}
+}
+
+die

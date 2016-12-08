@@ -82,8 +82,12 @@ wmutils scripts:
 
 ratox scripts:
 
+* burca BACKUPDIR: back up ratox communications in BACKUPDIR, encrypted and signed with
+	pgp. Depends on gpg2.
 * dwfn: create a directory friends with symlinks to the friend directories named
 	after the linked friends name
+* wrm: read messages for ratox to text_in and append them to text_out. Does not work atm
+	because 9base rc segfaults on it.
 
 Requirements
 ------------

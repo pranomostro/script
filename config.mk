@@ -10,6 +10,7 @@ big	\
 bns	\
 bomb	\
 bu	\
+burca	\
 chv	\
 cnt	\
 cts	\
@@ -39,5 +40,6 @@ taknot	\
 tlc	\
 tmpimg	\
 up	\
+wrm	\
 wsch	\
 zug	\
