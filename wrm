@@ -1,6 +1,6 @@
 #!/usr/bin/env rc
 
-tail -f a &
+tail -f text_out &
 
 tp=$apid
 
@@ -15,8 +15,8 @@ while(true){
 	echo -n '= '
 	l=`{read}
 	if(test -n $l){
-		echo $l | sed 's/^/self: /' >> a
-		echo $l >b
+		echo $l | sed 's/^/self: /' >> text_out
+		echo $l >text_in
 	}
 }
 
