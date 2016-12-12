@@ -76,6 +76,8 @@ wmutils scripts:
 * note: Reads one line from the input, displays it as a note
 	in the left lower corner of the screen.
 	Depends on dzen2, needs the variable SB (small border) set.
+* wrm OUT IN: read messages for ii/ratox to IN and append them to OUT. Does not work atm
+	because 9base rc segfaults on sigint.
 * wsch [SIZE] [WIN]: Change window size without moving the middle of the window.
 * zug: Map/Unmap windows by their names from dmenu.
 	Requires dmenu.
@@ -86,9 +88,6 @@ ratox scripts:
 	pgp. Depends on gpg2.
 * dwfn: create a directory friends with symlinks to the friend directories named
 	after the linked friends name
-* wrm: read messages for ratox to text_in and append them to text_out. Does not work atm
-	because 9base rc segfaults on sigint, and because test returns true on zero
-	and non-zero with a single newline.
 
 Requirements
 ------------

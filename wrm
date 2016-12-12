@@ -1,6 +1,11 @@
 #!/usr/bin/env rc
 
-tail -f text_out &
+if(! ~ $#* 2){
+	echo 'wrm OUT IN' >[1=2]
+	exit 1
+}
+
+tail -f $1 &
 
 tp=$apid
 
@@ -15,8 +20,8 @@ while(true){
 	echo -n '= '
 	l=`{read}
 	if(test -n $l){
-		echo $l | sed 's/^/self: /' >> text_out
-		echo $l >text_in
+		echo $l | sed 's/^/self: /' >> $1
+		echo $l >$2
 	}
 	if(test -z $l)
 		die
