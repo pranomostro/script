@@ -18,6 +18,6 @@ while(true){
 		echo $l | sed 's/^/self: /' >> text_out
 		echo $l >text_in
 	}
+	if(test -z $l)
+		die
 }
-
-die

@@ -87,7 +87,8 @@ ratox scripts:
 * dwfn: create a directory friends with symlinks to the friend directories named
 	after the linked friends name
 * wrm: read messages for ratox to text_in and append them to text_out. Does not work atm
-	because 9base rc segfaults on it.
+	because 9base rc segfaults on sigint, and because test returns true on zero
+	and non-zero with a single newline.
 
 Requirements
 ------------
