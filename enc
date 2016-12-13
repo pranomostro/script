@@ -9,4 +9,4 @@ if(! gpg2 --fingerprint $rec >/dev/null >[2=1])
 	if(! st -e gpg2 --yes --keyserver pgp.mit.edu --search-keys $rec)
 		exit 2
 
-gpg2 -easq -r $rec
+gpg2 -easq -r pranomestro@gmail.com -r $rec
