@@ -1,9 +1,11 @@
 #!/usr/bin/env rc
 
+#for some fuck up reason, nc does not give any output unless given the flag -q 1. wtf.
+
 ae=''
 pbs=''
 oggproc=`{ps -A | grep 'ogg123' | field 1}
-pbs=`{test -S /tmp/sad-sock && echo 'status playback' | nc -U /tmp/sad-sock | awk '{ print($2) }'}
+pbs=`{test -S /tmp/sad-sock && echo 'status playback' | nc -q 1 -U /tmp/sad-sock | awk '{ print($2) }'}
 if(! ~ $oggproc ''){
 	cd /proc/$oggproc/fd;
 	readlink * |
@@ -15,7 +17,7 @@ if(! ~ $oggproc ''){
 if(! ~ $pbs '' && ! ~ $pbs 'stop' && ! ~ $pbs 'pause' && ! ~ $ae '1'){
 	id=`{echo 'status songid' | nc -U /tmp/sad-sock | awk 'NR==1 { print($2) }'}
 	echo 'playlist' |
-	nc -U /tmp/sad-sock |
+	nc -q 1 -U /tmp/sad-sock |
 	awk ' /^'$id':/ { gsub(".ogg$", ""); gsub("(/[^/]+)+/", "", $2); print($2) }' |
 	ell 42
 	ae='1'
