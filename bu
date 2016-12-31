@@ -15,5 +15,9 @@ if(~ `{date +'%d'} '01')
 if not
 	cgdc $last /home/adrian tmp
 
+test -f tmp/home/adrian/.gnupg/random_seed && rm tmp/home/adrian/.gnupg/random_seed
+test -f tmp/.gnupg/random_seed && rm tmp/.gnupg/random_seed
+
 tar -czf $name tmp/
+chmod 0600 $name
 rm -rf tmp
