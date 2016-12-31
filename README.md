@@ -34,6 +34,8 @@ Descriptions
 * field NUM: Print the NUM'th field of every input line.
 * findup NAME: Print the full relative path of NAME in the parent directories.
 	Return 2 if the file does not exist.
+* gitpost: Show an overview for the current git projects in the directory tree
+	Requires git
 * gm ACTION: Perform ACTION in every git repo in the file sources in /usr/local/src.
 * ircjoin SERVER:CHANNEL[:CHANNEL]: Start ii for the servers, join the channels on
 	the servers with the nickname pranomostro.

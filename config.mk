@@ -22,6 +22,7 @@ enc	\
 fds	\
 field	\
 findup	\
+gitpost	\
 gm	\
 ircjoin	\
 lg	\

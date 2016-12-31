@@ -1,0 +1,14 @@
+#!/usr/bin/env rc
+
+cd /home/$USER/proj
+
+for(i in `{ls}){
+	cd $i
+	for(j in `{ls}){
+		cd $j
+		echo -n $j': '
+		git st
+		cd ..
+	}
+	cd ..
+}
