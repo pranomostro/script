@@ -13,3 +13,5 @@ for(i){
 	for(c in $channels)
 		echo '/j '$c >$home/irc/$server/in
 }
+
+tail -f `{echo $* | tr ' ' '\n' | awk -F: '{ for(i=2; i<=NF; i++) print("irc/" $1 "/" $i "/out") }'}

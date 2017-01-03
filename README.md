@@ -38,7 +38,8 @@ Descriptions
 	Requires git
 * gm ACTION: Perform ACTION in every git repo in the file sources in /usr/local/src.
 * ircjoin SERVER:CHANNEL[:CHANNEL]: Start ii for the servers, join the channels on
-	the servers with the nickname pranomostro.
+	the servers with the nickname pranomostro (and then tail -f's the out files
+	on the terminal.
 	Requires [ii](http://tools.suckless.org/ii) and take from
 	[fields](https://github.com/pranomostro/fields)
 * lg [FILES]: Line game, every none whitespace is translated to '_'.
