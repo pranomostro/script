@@ -18,7 +18,7 @@ fn selw{
 		printf $i': ' >>$t
 		wname $i >>$t || printf '\n' >>$t
 	}
-	dmenu -l 10 -nf black -nb white -sb '#ffb405' -fn 'envypn-15:pixelsize=15:antialias=false:autohint=false' <$t |
+	dmenu -l 10 -nf black -nb white -sb '#ffb405' -fn 'monospace:size:8' <$t |
 	awk -F: '{ print($1) }'
 	rm $t
 }
