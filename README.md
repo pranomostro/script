@@ -112,4 +112,4 @@ and
 License
 =======
 
-./COPYING
+./LICENSE
