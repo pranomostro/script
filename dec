@@ -1,3 +1,3 @@
 #!/usr/bin/env rc
 
-gpg2 -daq
+gpg2 --yes -daq

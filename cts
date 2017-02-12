@@ -1,6 +1,6 @@
 #!/usr/bin/env rc
 
-gpg2 -k --with-colons |
+gpg2 --yes -kq --with-colons |
 grep '^uid' |
 awk -F: '{ print($10) }' |
 sort |
