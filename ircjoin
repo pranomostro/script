@@ -14,4 +14,6 @@ for(i){
 		echo '/j '$c >$home/irc/$server/in
 }
 
+sleep 1
+
 tail -f `{echo $* | tr ' ' '\n' | awk -F: '{ for(i=2; i<=NF; i++) print("irc/" $1 "/" $i "/out") }'}
