@@ -9,7 +9,7 @@ Also, take a look at the [man-page](nt.1).
 Requirements
 ------------
 
-* rc (the plan 9 shell)
+* rc (the plan9 shell)
 * make
 * standard unix userland utilities
 
