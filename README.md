@@ -15,7 +15,7 @@ Good question. I like oranges.
 Requirements
 ------------
 
-You need the plan 9 shell rc, the standard unix
+You need the plan9 shell rc, the standard unix
 shell sh (for the makefile) and some version of make installed.
 A coreutils similar software should be installed as well,
 but emv and ecp are very modest with that.
