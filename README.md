@@ -37,11 +37,11 @@ Descriptions
 * gitpost: Show an overview for the current git projects in the directory tree
 	Requires git
 * gm ACTION: Perform ACTION in every git repo in the file sources in /usr/local/src.
-* ircjoin SERVER:CHANNEL[:CHANNEL]: Start ii for the servers, join the channels on
-	the servers with the nickname pranomostro (and then tail -f's the out files
-	on the terminal.
-	Requires [ii](http://tools.suckless.org/ii) and take from
-	[fields](https://github.com/pranomostro/fields)
+* ircjoin SERVER:[PORT]:[CRYPT]:CHANNEL[:CHANNEL]: Start ii for the servers, join
+	the channels onthe servers with the nickname pranomostro (and then tail-f's
+	the out files on the terminal. Use PORT when given, as well as CRYPT for ii.
+	These two options works with the [ii-ssl patch](http://tools.suckless.org/ii/patches/ssl).
+	Requires [ii](http://tools.suckless.org/ii)
 * lg [FILES]: Line game, every none whitespace is translated to '_'.
 	Guess the programming language.
 * musconv: Rename and restructure files to a certain standard,

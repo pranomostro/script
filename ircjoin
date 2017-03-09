@@ -6,14 +6,21 @@ if(test -z $"*){
 }
 
 for(i){
-	server=`{echo $i | awk -F: '{ print($1) }'}
-	channels=`{echo $i | tr : ' ' | take 2-}
-	ii -s $server -n pranomostro &
+	server=`{echo $i | cut -d: -f 1}
+	port=`{echo $i | cut -d: -f 2}
+	crypt=`{echo $i | cut -d: -f 3}
+
+	ii -s $server -n pranomostro `{test $port && printf '-p %s' $port} `{test $crypt && printf '-e %s' $crypt} &
+
 	sleep 1
-	for(c in $channels)
-		echo '/j '$c >$home/irc/$server/in
+
+	ifs=':'
+	for(c in `{echo $i | cut -d: -f 4- | tr -d '\n'})
+		echo '/j '$c '> irc/'$server'/in'
+	ifs='
+'
 }
 
 sleep 1
 
-tail -f `{echo $* | tr ' ' '\n' | awk -F: '{ for(i=2; i<=NF; i++) print("irc/" $1 "/" $i "/out") }'}
+tail -f `{echo $* | tr ' ' '\n' | awk -F: '{ for(i=4; i<=NF; i++) print("irc/" $1 "/" $i "/out") }'}
