@@ -11,12 +11,16 @@ for(i){
 	crypt=`{echo $i | cut -d: -f 3}
 
 	ii -s $server -n pranomostro `{test $port && printf '-p %s' $port} `{test $crypt && printf '-e %s' $crypt} &
+}
 
-	sleep 1
-
+for(i){
+	server=`{echo $i | cut -d: -f 1}
 	ifs=':'
-	for(c in `{echo $i | cut -d: -f 4- | tr -d '\n'})
-		echo '/j '$c '> irc/'$server'/in'
+		ifs=':'
+	for(c in `{echo $i | cut -d: -f 4- | tr -d '\n'}){
+		echo '/j '$c >irc/$server/in
+		sleep 1
+	}
 	ifs='
 '
 }
