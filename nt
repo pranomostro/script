@@ -1,0 +1,23 @@
+#!/usr/bin/env rc
+
+ifs='
+'
+
+if(! ~ $1 '')
+	cd $1
+
+searchdir=`{pwd}
+
+for(item in `{find . -type l -print}){
+	file=`{basename $item}
+	dir=`{dirname $item}
+
+	cd $dir
+
+	targ=`{readlink $file}
+
+	if(test ! -e $targ)
+		echo $item
+
+	cd $searchdir
+}

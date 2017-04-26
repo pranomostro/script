@@ -1,0 +1,21 @@
+.TH NT 1
+.SH NAME
+nt \- find broken symlinks
+
+.SH SYNOPSIS
+nt [DIR]
+
+.SH DESCRIPTION
+nt searches for broken symbolic links recursively in
+the directory DIR, if not provided, the current directory.
+
+.SH BUGS
+Symbolic links are horrible, I sure there are some corner cases that
+are not covered with this program.
+
+.SH "SEE ALSO"
+.IR find(1),
+.IR readlink(1).
+
+.SH AUTHOR
+This is a 13.65% project by pranomestro@gmail.com.
