@@ -1,0 +1,32 @@
+#!/usr/bin/env rc
+
+ifs='
+'
+
+switch($#*){
+case 2
+	from=$1
+	to=$2
+case 3
+	if(! ~ $1 '-t'){
+		echo 'error: flag '$1' not recognized' >[1=2]
+		exit 2
+	}
+	if not{
+		trust='1'
+		from=$2
+		to=$3
+	}
+case *
+	echo 'ecp [-t] FROM TO' >[1=2]
+	exit 1
+}
+
+for(i in `{ls | grep $from}){
+	j=`{echo $i | sed 's/'$from'/'$to'/'}
+	if(! ~ $trust '1' && test -e $j){
+		echo 'error: not replacing '$j' with '$i', exiting' >[1=2]
+		exit 3
+	}
+	cp $i $j
+}
