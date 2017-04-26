@@ -1,0 +1,17 @@
+.TH CGDC 1
+.SH NAME
+cgdc - changed copy
+
+.SH SYNOPSIS
+cgdc FILE SRC DEST
+
+.SH DESCRIPTION
+cgdc copies all files recursively from the directory SRC with a
+more recent modification time that FILE to the directory
+DEST, while preserving the access rights and the directory structure.
+
+.SH STATUS
+0 when everything is alright, 1 when it prints the usage and 2 when it dies because of a signal.
+
+.SH AUTHOR
+pranomestro@gmail.com
