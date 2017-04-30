@@ -5,4 +5,4 @@ if (! ~ $#* '1'){
 	exit 1
 }
 
-echo $* >/sys/devices/pci0000:00/0000:00:01.0/drm/card0/card0-eDP-1/radeon_bl0/brightness
+echo $* >'/sys/devices/pci0000:00/0000:00:01.0/drm/card0/card0-eDP-1/radeon_bl0/brightness'

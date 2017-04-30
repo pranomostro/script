@@ -36,12 +36,12 @@ for(i in `{find -maxdepth 1 -type d | sed '/^\.$/d'}){
 			switch($j){
 			case 'mp3'
 				new=`{echo $k | sed 's/\.mp3$/.ogg/'}
-				ffmpeg -i $k -f ogg $new
+				ffmpeg -i $k -f 'ogg' $new
 			case 'm4a'
 				int=`{echo $k | sed 's/\.m4a$/.wav/'}
 				new=`{echo $k | sed 's/\.m4a$/.ogg/'}
-				ffmpeg -i $k -f wav $int
-				ffmpeg -i $int -f ogg $new
+				ffmpeg -i $k -f 'wav' $int
+				ffmpeg -i $int -f 'ogg' $new
 			}
 		}
 	}

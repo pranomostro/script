@@ -1,22 +1,24 @@
 #!/usr/bin/env rc
 
-if(test -z $"*){
-	echo 'ircjoin SERVER:CHANNEL[:CHANNEL]' >[1=2]
+if(test -lt $#* 2){
+	echo 'ircjoin NICK SERVER:CHANNEL[:CHANNEL]' >[1=2]
 	exit 1
 }
+
+nick=$1
+shift
 
 for(i){
 	server=`{echo $i | cut -d: -f 1}
 	port=`{echo $i | cut -d: -f 2}
 	crypt=`{echo $i | cut -d: -f 3}
 
-	ii -s $server -n pranomostro `{test $port && printf '-p %s' $port} `{test $crypt && printf '-e %s' $crypt} &
+	ii -s $server -n $nick `{test $port && printf '-p %s' $port} `{test $crypt && printf '-e %s' $crypt} &
 }
 
 for(i){
 	server=`{echo $i | cut -d: -f 1}
 	ifs=':'
-		ifs=':'
 	for(c in `{echo $i | cut -d: -f 4- | tr -d '\n'}){
 		echo '/j '$c >irc/$server/in
 		sleep 1

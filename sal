@@ -1,2 +1,3 @@
 #!/usr/bin/env rc
+
 awk '{ print length($0) " " $0 }' | sort -n | sed 's/^[0-9]\+ //'

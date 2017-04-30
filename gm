@@ -1,17 +1,17 @@
 #!/usr/bin/env rc
 
-if(test -z $"*){
-	echo 'gm ACTION' >[1=2]
+if(test -ne $#* '3'){
+	echo 'gm ACTION SRCDIR SRCFILE' >[1=2]
 	exit 1
 }
 
-cd /usr/local/src
+cd $2
 
 curr=`{pwd}
 
-for(i in `{cat sources}){
+for(i in `{cat $3}){
 	cd $i
 	echo $i
-	eval $"*
+	eval $1
 	cd $curr
 }

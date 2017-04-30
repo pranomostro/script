@@ -1,9 +1,9 @@
 #!/usr/bin/env rc
 
-if(! ~ $#* '1'){
+if(! ~ $#* '1' || ! expr $1 ':' '[+-][0-9]\+' >/dev/null){
 	echo 'chv [-+]NUM' >[1=2]
 	exit 1
 }
 
-cur=`{amixer -M get Master | tail -1 | awk '{ print $4 }' | tr -dc '0-9'}
+cur=`{amixer -M get Master | tail -1 | awk '{ print($4) }' | tr -dc '0-9'}
 amixer -M set Master `{echo $cur^$1 | bc}^'%' >[1=2] >/dev/null

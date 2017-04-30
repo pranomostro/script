@@ -1,4 +1,5 @@
 #!/usr/bin/env rc
+
 git log --'pretty=format:%ai' |
 awk '{ print $1 }' |
 sort |

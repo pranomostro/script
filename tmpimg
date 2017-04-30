@@ -1,6 +1,6 @@
 #!/usr/bin/env rc
 
-t=`{mktemp /tmp/XXXXXX.img}
+t=`{mktemp /tmp/XXXXXX.tmpimg}
 
 for(i){
 	curl $i >$t

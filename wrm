@@ -1,5 +1,7 @@
 #!/usr/bin/env rc
 
+#this script is not good because when rc receives sigint in `{read}, it crashes with a segfault.
+
 if(! ~ $#* 2){
 	echo 'wrm OUT IN' >[1=2]
 	exit 1

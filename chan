@@ -3,15 +3,14 @@
 ifs='
 '
 
-switch($#*){
-case [012]
+if(test $#* -le '2'){
 	echo 'chan FROM TO FILES' >[1=2]
 	exit 1
-case *
-	from=`{echo $1 | sed 's/\\/\\\\/g; s/%/%%/g'}
-	to=`{echo $2 | sed 's/\\/\\\\/g; s/%/%%/g'}
-	shift 2
 }
+
+from=`{echo $1 | sed 's/\\/\\\\/g; s/%/%%/g'}
+to=`{echo $2 | sed 's/\\/\\\\/g; s/%/%%/g'}
+shift 2
 
 for(file)
 	printf ',s/'$"from'/'$"to'/g\nw\nq\n' | ed $file

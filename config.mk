@@ -11,13 +11,17 @@ bns	\
 bomb	\
 bu	\
 burca	\
+cgdc	\
+chan	\
 chv	\
 cnt	\
 cts	\
 dec	\
 dwfn	\
+ecp	\
 ell	\
 empty	\
+emv	\
 enc	\
 fds	\
 field	\
@@ -27,7 +31,9 @@ gm	\
 ircjoin	\
 lg	\
 musconv	\
+mvg	\
 note	\
+nt	\
 pfm	\
 play	\
 plng	\

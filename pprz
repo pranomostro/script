@@ -1,7 +1,12 @@
 #!/usr/bin/env rc
 
+if(test $#* -ne 1){
+	echo 'pprz DIR' >[1=2]
+	exit 1
+}
+
 while(true){
 	waittime=`{echo `{date +'%N'}'%1200+600' | bc}
 	sleep $waittime
-	xscreenshot | bzip2 > '/usr/local/scrots/pprz/'^`{date '+%Y%m%d%H%M%S'}^'.ff.bz2'
+	xscreenshot | bzip2 > $1^`{date -Iseconds}^'.ff.bz2'
 }

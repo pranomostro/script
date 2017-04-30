@@ -10,6 +10,6 @@ if(test -z $"*){
 
 for(i){
 	if(test -d $i)
-		/usr/bin/rm -rf /home/adrian/trash/$i
-	mv -f $i /home/adrian/trash
+		/usr/bin/rm -rf /home/$USER/trash/$i
+	mv -f $i /home/$USER/trash
 }

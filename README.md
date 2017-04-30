@@ -1,15 +1,11 @@
 Small scripts
 =============
 
-These are just some little scripts that do not deserve becoming
-own programs. In a very distant future, it is possible that I will
-write some proper documentation for them (man-pages) and
-in installation script (a makefile).
+This repo contains small and short shell scripts for simplifying daily tasks on
+the command line, and ranges from long one-liners to compact, but more complex
+solutions (all under 50 lines long).
 
-Until then, this is the most accurate description of what these
-shell scripts do.
-
-Some of these are very specialised, some quite general.
+--------- MDOCIFY THIS ----------------------
 
 Descriptions
 ------------
@@ -21,7 +17,6 @@ Descriptions
 * bomb: Fork bomb.
 * bu: _Very_ simple backup utility, just copy+archive+compress the files changed since
 	the last backup. Make a full backup every month.
-	Depends on [cgdc](https://github.com/pranomostro/cgdc).
 * chv [+-]NUM: Increase/decrease the current audio output volume for NUM percent.
 * cts: Select a mail address from the available pgp keys, needs dmenu.
 * dec: Simple script for decrypting pgp data. Needs gpg2.
@@ -92,20 +87,51 @@ ratox scripts:
 * dwfn: create a directory friends with symlinks to the friend directories named
 	after the linked friends name
 
+-------------------------------------------
+
 Requirements
 ------------
 
-Generally, some base utilities (coreutils, sbase+ubase) are required.
-Many of these scripts are written in the rc scripting language, the plan 9 shell.
-It is needed as well.
-The wmutils scripts need wmutils/core installed, barign needs wmutils/opt (for wname).
+Generally, the standard base utilities
+([coreutils](https://www.gnu.org/software/coreutils/coreutils.html),
+[sbase](http://git.suckless.org/sbase)
+and[ubase](http://git.suckless.org/ubase)) are required.
+Nearly all of these scripts are written in the rc
+shell scripting language, the plan 9 shell, which is
+available in [9base](http://git.suckless.org/9base),
+[plan9port](https://swtch.com/plan9port/) or [an independent
+reimplementation](https://github.com/rakitzis/rc) (although some scripts
+might not work with that one since it has some differences from the
+original plan9 version, which I prefer).
+* [amixer](https://linux.die.net/man/1/amixer) is needed for chv
+* [awk](https://www.gnu.org/software/gawk/) is required for cgdc, chv, cts, field. ircjoin, note, pfm, plng, sal, tlc and zug.
+* [bc](https://www.gnu.org/software/bc/) is required for beau, big, chv, cnt, note, pprz and wsch.
+* [bzip2](http://bzip.org/) is needed for pprz.
+* [cdparanoia](https://xiph.org/paranoia/) is required for rip.
+* [curl](https://curl.haxx.se/) is required by 4img, tmping and up.
+* [dmenu](http://git.suckless.org/dmenu) is needed for cts and zug.
+* [dzen2](https://github.com/robm/dzen) is needed for note.
+* [ffmpeg](https://ffmpeg.org/) is needed for musconv.
+* [gen](https://github.com/pranomostro/gen) is required for mg.
+* [git](https://git-scm.com/) is required for gitpost, pfm, shp taknot and tlc.
+* [gpg2](https://gnupg.org/) is needed by burca, cts, dec and enc.
+* [gzip](http://www.gzip.org/) is needed for bu.
+* [ii](http://git.suckless.org/ii) with the [ssl patch](http://tools.suckless.org/ii/patches/ssl) is needed by ircjoin.
+* [meh](https://github.com/jhawthorn/meh) is required for tmpimg.
+* [nc](http://nc110.sourceforge.net/) is needed for plng.
+* [oggenc](https://xiph.org/downloads/) is also needed for rip.
+* [ratox](http://git.z3bra.org/ratox/log.html) is required for burca and dwfn.
+* [sam](http://sam.cat-v.org/) is needed for sts.
+* [wmutils core](https://github.com/wmutils/core) is required for barign, beau, big, cnt, note, wsch and zug.
+* [wmutils opt](https://github.com/wmutils/opt) is needed for barign and zug.
+* [xscreenshot](http://git.2f30.org/xscreenshot/log.html) is needed for ppprz.
 
 Installation
 ------------
 
     make
 
-and
+and for uninstalling
 
     make uninstall
 

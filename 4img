@@ -1,28 +1,38 @@
 #!/usr/bin/env rc
 
+fn die{
+	rm $imgs
+	exit 2
+}
+
+fn sigint{ die }; fn sighup{ die }; fn sigalrm{ die }; fn sigfpe{ die }
+
 if(test $#* -gt 1){
-	echo '4iimg [BOARD]' >[1=2]
+	echo '4img [BOARD]' >[1=2]
 	exit 1
 }
+
 if(test $#* -eq 1)
 	board=$1
 if not
 	board='b'
 
-for(i in `{curl https://boards.4chan.org/$board/ |
+imgs=`{mktemp '/tmp/XXXXXX.4img'}
+
+for(i in `{curl 'https://boards.4chan.org/'$board'/' |
 		grep -o '<a href="[^"]*"' |
 		sed 's/^<a href="//; s/"$//' |
 		grep '^thread' |
 		sed 's/\(thread\/[0-9]\+\).*/\1/' |
 		sort | uniq})
-	curl https://boards.4chan.org/$board/$i |
+	curl 'https://boards.4chan.org/'$board'/'$i |
 	grep -o '<a href="[^"]*"' |
 	sed 's/^<a href="//; s/"$//' |
 	grep -e '\.jpg$' -e '\.png$' -e '\.jpeg$' -e '\.webm$' -e '\.gif$' |
-	sed 's/^\/\///' >>imgs
+	sed 's/^\/\///' >>$imgs
 
-for(i in `{cat imgs})
+for(i in `{cat $imgs})
 	if(! test -e `{basename $i})
 		curl $i >`{basename $i}
 
-rm imgs
+rm $imgs

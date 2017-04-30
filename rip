@@ -5,7 +5,7 @@ if(test $#* -ne '2'){
 	exit 1
 }
 
-cd /mnt/mus/$2
+cd $2
 
 cdparanoia -q 1- $1.wav
 oggenc $1.wav

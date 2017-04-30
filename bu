@@ -2,23 +2,26 @@
 
 cd /mnt/backup
 
-name=`{date +'%Y%m%d'.tar.gz}
-last=`{stat --format'=%Y %n' * | sort -n | sed -n '$s/[0-9]\+ //; $p'}
+name=`{date '+%Y-%m-%d'.tar.gz}
+last=`{stat --format'=%Y %n' * | sort -n | awk 'END { print($2) }'}
+month=`{date '+%m'}
+lastmonth=`{echo $last | sed 's/^[0-9]\+-\([0-9]\+\).*/\1/'}
 
 if(test -f $name || test -d /mnt/backup/tmp)
 	exit 0
 
 mkdir tmp
 
-if(~ `{date +'%d'} '01')
-	cp -r /home/adrian/ tmp
+if(! ~ $month $lastmonth)
+	cp -R /home/$USER/ tmp/
 if not
-	cgdc $last /home/adrian tmp
+	cgdc $last /home/$USER/ /mnt/backup/tmp/
 
-test -f tmp/home/adrian/.gnupg/random_seed && rm tmp/home/adrian/.gnupg/random_seed
-test -f tmp/adrian/.gnupg/random_seed && rm tmp/adrian/.gnupg/random_seed
 test -f tmp/.gnupg/random_seed && rm tmp/.gnupg/random_seed
 
-tar -czf $name tmp/
-chmod 0600 $name
+cd tmp
+tar -czf $name *
+mv $name ..
+cd ..
 rm -rf tmp
+chmod 0600 $name

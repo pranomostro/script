@@ -13,7 +13,7 @@ fn allw{
 }
 
 fn selw{
-	t=`{mktemp '/tmp/XXXXXX.tlc'}
+	t=`{mktemp '/tmp/XXXXXX.zug'}
 	for(i in `{allw}){
 		printf $i': ' >>$t
 		wname $i >>$t || printf '\n' >>$t
