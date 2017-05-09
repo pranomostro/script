@@ -9,7 +9,7 @@ case 2
 	to=$2
 case 3
 	if(! ~ $1 '-t'){
-		echo 'error: flag '$1' not recognized' >[1=2]
+		echo 'error: flag '$1' not recognized, exiting' >[1=2]
 		exit 2
 	}
 	if not{

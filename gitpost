@@ -1,13 +1,13 @@
 #!/usr/bin/env rc
 
-cd /home/$USER/proj
+cd $HOME/proj
 
 for(i in `{ls}){
 	cd $i
 	for(j in `{ls}){
 		cd $j
 		echo -n $j': '
-		git st
+		git status --short --branch
 		cd ..
 	}
 	cd ..

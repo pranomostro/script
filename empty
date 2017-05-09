@@ -3,5 +3,5 @@
 ifs='
 '
 
-cd /home/$USER/trash
+cd $HOME/trash
 rm -rf *

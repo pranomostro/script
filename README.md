@@ -93,9 +93,9 @@ Requirements
 ------------
 
 Generally, the standard base utilities
-([coreutils](https://www.gnu.org/software/coreutils/coreutils.html),
+([coreutils](https://www.gnu.org/software/coreutils/coreutils.html)
 [sbase](http://git.suckless.org/sbase)
-and[ubase](http://git.suckless.org/ubase)) are required.
+and [ubase](http://git.suckless.org/ubase)) are required.
 Nearly all of these scripts are written in the rc
 shell scripting language, the plan 9 shell, which is
 available in [9base](http://git.suckless.org/9base),
@@ -138,4 +138,4 @@ and for uninstalling
 License
 =======
 
-./LICENSE
+See [LICENSE](./LICENSE).

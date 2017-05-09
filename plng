@@ -1,11 +1,19 @@
 #!/usr/bin/env rc
 
-#this takes long because nc does not give any output unless given the flag -q 1. wtf.
+switch($#*){
+case '0'
+	cutoff=''
+case '1'
+	cutoff=$1
+case *
+	echo 'plng [CUTOFF]' >[2=1]
+	exit 1
+}
 
 ae=''
 pbs=''
 oggproc=`{ps -A | grep 'ogg123' | field 1}
-pbs=`{test -S /tmp/sad-sock && echo 'status playback' | nc -q 1 -U /tmp/sad-sock | awk '{ print($2) }'}
+pbs=`{test -S /tmp/sad-sock && echo 'status playback' | nc -N -U /tmp/sad-sock | awk '{ print($2) }'}
 
 if(! ~ $oggproc ''){
 	cd /proc/$oggproc/fd;
@@ -16,11 +24,11 @@ if(! ~ $oggproc ''){
 	ae='1'
 }
 if(! ~ $pbs '' && ! ~ $pbs 'stop' && ! ~ $pbs 'pause' && ! ~ $ae '1'){
-	id=`{echo 'status songid' | nc -q 1 -U /tmp/sad-sock | awk 'NR==1 { print($2) }'}
+	id=`{echo 'status songid' | nc -N -U /tmp/sad-sock | awk 'NR==1 { print($2) }'}
 	echo 'playlist' |
-	nc -q 1 -U /tmp/sad-sock |
+	nc -N -U /tmp/sad-sock |
 	awk ' /^'$id':/ { gsub(".ogg$", ""); gsub("(/[^/]+)+/", "", $2); print($2) }' |
-	ell 30
+	{ test $cutoff && ell $cutoff || cat }
 	ae='1'
 }
 if(! ~ $ae '1')
