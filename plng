@@ -28,7 +28,7 @@ if(! ~ $pbs '' && ! ~ $pbs 'stop' && ! ~ $pbs 'pause' && ! ~ $ae '1'){
 	echo 'playlist' |
 	nc -N -U /tmp/sad-sock |
 	awk ' /^'$id':/ { gsub(".ogg$", ""); gsub("(/[^/]+)+/", "", $2); print($2) }' |
-	{ test $cutoff && ell $cutoff || cat }
+	{test $cutoff && ell $cutoff || cat}
 	ae='1'
 }
 if(! ~ $ae '1')

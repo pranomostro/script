@@ -21,12 +21,12 @@ if(~ $win ''){
 	exit 3
 }
 
-w=`{ wattr w $win }
-h=`{ wattr h $win }
-x=`{ wattr x $win }
-y=`{ wattr y $win }
-nw=`{ echo $scale'*'$w | bc | sed 's/\..*//' }
-nh=`{ echo $scale'*'$h | bc | sed 's/\..*//' }
+w=`{wattr w $win}
+h=`{wattr h $win}
+x=`{wattr x $win}
+y=`{wattr y $win}
+nw=`{echo $scale'*'$w | bc | sed 's/\..*//'}
+nh=`{echo $scale'*'$h | bc | sed 's/\..*//'}
 
 nxp=`{echo $x'-('$nw'-'$w')/2' | bc}
 nyp=`{echo $y'-('$nh'-'$h')/2' | bc}

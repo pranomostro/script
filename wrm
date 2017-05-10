@@ -2,6 +2,13 @@
 
 #this script is not good because when rc receives sigint in `{read}, it crashes with a segfault.
 
+fn die{
+	kill $tp
+	exit 2
+}
+
+fn sigint{die}; fn sighup{die}; fn sigalrm{die}; fn sigfpe{die}; fn sigkill {die}; fn sigterm{die}
+
 if(! ~ $#* 2){
 	echo 'wrm OUT IN' >[1=2]
 	exit 1
@@ -10,13 +17,6 @@ if(! ~ $#* 2){
 tail -f $1 &
 
 tp=$apid
-
-fn die{
-	kill $tp
-	exit 2
-}
-
-fn sigint{ die }; fn sighup{ die }; fn sigalrm{ die }; fn sigfpe{ die }; fn sigkill { die }; fn sigterm{ die }
 
 while(true){
 	echo -n '= '

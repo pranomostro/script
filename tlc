@@ -5,7 +5,7 @@ fn die{
 	exit 2
 }
 
-fn sigint{ die }; fn sighup{ die }; fn sigalrm{ die }; fn sigfpe{ die }
+fn sigint{die}; fn sighup{die}; fn sigalrm{die}; fn sigfpe{die}; fn sigkill {die}; fn sigterm{die}
 
 switch($#*){
 case '1'
