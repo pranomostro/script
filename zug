@@ -1,8 +1,8 @@
 #!/usr/bin/env rc
 
 fn die{
-        rm $t
-        exit 2
+	rm $t
+	exit 2
 }
 
 fn sigint{die}; fn sighup{die}; fn sigalrm{die}; fn sigfpe{die}; fn sigkill {die}; fn sigterm{die}

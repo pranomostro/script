@@ -48,11 +48,11 @@ Some of the scripts depend on each other.
 Installation
 ------------
 
-    make
+	make
 
 and for uninstalling
 
-    make uninstall
+	make uninstall
 
 License
 =======

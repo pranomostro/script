@@ -24,7 +24,7 @@ case *
 
 for(i in `{ls | grep $from}){
 	j=`{echo $i | sed 's/'$from'/'$to'/'}
-        if(! ~ $trust '1' && test -e $j){
+	if(! ~ $trust '1' && test -e $j){
 		echo 'error: not replacing '$j' with '$i', exiting' >[1=2]
 		exit 3
 	}
