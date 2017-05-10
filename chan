@@ -4,7 +4,7 @@ ifs='
 '
 
 if(test $#* -le '2'){
-	echo 'chan FROM TO FILES' >[1=2]
+	echo 'chan from to files' >[1=2]
 	exit 1
 }
 

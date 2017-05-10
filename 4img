@@ -8,7 +8,7 @@ fn die{
 fn sigint{die}; fn sighup{die}; fn sigalrm{die}; fn sigfpe{die}; fn sigkill {die}; fn sigterm{die}
 
 if(test $#* -gt 1){
-	echo '4img [BOARD]' >[1=2]
+	echo '4img [board]' >[1=2]
 	exit 1
 }
 

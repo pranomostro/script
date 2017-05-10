@@ -24,7 +24,7 @@ while(~ $1 -*){
 		fil=''
 	case '-f'
 		if(test $#* -lt 2){
-			echo 'the flag -f needs a FILE argument, exiting.' >[1=2]
+			echo 'the flag -f needs a file argument, exiting.' >[1=2]
 			exit 1
 		}
 		fil=$2

@@ -10,7 +10,7 @@ fn die{
 fn sigint{die}; fn sighup{die}; fn sigalrm{die}; fn sigfpe{die}; fn sigkill {die}; fn sigterm{die}
 
 if(! ~ $#* 2){
-	echo 'wrm OUT IN' >[1=2]
+	echo 'wrm out in' >[1=2]
 	exit 1
 }
 

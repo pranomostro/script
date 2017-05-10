@@ -12,18 +12,18 @@ case '0'
 case '2'
 	win=$2
 	switch($1){
-	case 'w'
+	case '-w'
 		x=`{wattr 'w' $win}
 		y=`{gr $x}
-	case 'h'
+	case '-h'
 		y=`{wattr 'h' $win}
 		x=`{gr $y}
 	case *
-		echo $1' is not w or h, exiting' >[1=2]
+		echo $1' is not -w or -h, exiting' >[1=2]
 		exit 2
 	}
 case *
-	echo 'beau [w|h] [WIN]' >[1=2]
+	echo 'beau [-w|-h] [win]' >[1=2]
 	exit 1
 }
 

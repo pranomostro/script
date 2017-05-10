@@ -1,7 +1,7 @@
 #!/usr/bin/env rc
 
 if(test $#* -ne '3'){
-	echo 'gm ACTION SRCDIR SRCFILE' >[1=2]
+	echo 'gm action srcdir srcfile' >[1=2]
 	exit 1
 }
 

@@ -6,7 +6,7 @@ case '0'
 case '1'
 	cutoff=$1
 case *
-	echo 'plng [CUTOFF]' >[2=1]
+	echo 'plng [cutoff]' >[2=1]
 	exit 1
 }
 

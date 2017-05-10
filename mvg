@@ -6,7 +6,7 @@ if(~ $1 '-t'){
 }
 
 if(~ $#* 0){
-	echo 'mvg [-t] FILES' >[1=2]
+	echo 'mvg [-t] files' >[1=2]
 	exit 1
 }
 

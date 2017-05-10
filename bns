@@ -1,7 +1,7 @@
 #!/usr/bin/env rc
 
 if (! ~ $#* '1'){
-	echo 'bns NEW' >[1=2]
+	echo 'bns new' >[1=2]
 	exit 1
 }
 

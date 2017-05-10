@@ -6,7 +6,7 @@ case '0'
 case '1'
 	win=$1
 case *
-	echo 'big [WIN]' >[1=2]
+	echo 'big [win]' >[1=2]
 	exit 1
 }
 

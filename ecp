@@ -18,7 +18,7 @@ case 3
 		to=$3
 	}
 case *
-	echo 'ecp [-t] FROM TO' >[1=2]
+	echo 'ecp [-t] from to' >[1=2]
 	exit 1
 }
 

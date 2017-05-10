@@ -18,7 +18,7 @@ case 3
 		to=$3
 	}
 case *
-	echo 'emv [-t] FROM TO' >[1=2]
+	echo 'emv [-t] from to' >[1=2]
 	exit 1
 }
 

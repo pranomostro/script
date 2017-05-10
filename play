@@ -1,7 +1,7 @@
 #!/usr/bin/env rc
 
 if(test -z $"*){
-	echo 'play FILES' >[1=2]
+	echo 'play files' >[1=2]
 	exit 1
 }
 

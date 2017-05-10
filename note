@@ -9,7 +9,6 @@ w=`{echo `{wattr w `{lsw -r}}'-(2*'$SG'+2*'$SB')' | bc}
 y=`{echo `{wattr h `{lsw -r}}'-('$h'+'$SB'+'$SG')' | bc}
 
 lsw -a | sort >$before
-data=`{read}
 echo $"* | dzen2 -p 32 -bg '#ffffff' -fg '#000000' -fn $FONT -x `{echo $SG'+'$SB | bc} -y $y -w $w &
 sleep 0.1
 

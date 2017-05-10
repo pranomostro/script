@@ -4,7 +4,7 @@ ifs='
 '
 
 if(test -z $"*){
-	echo 'r FILES' >[1=2]
+	echo 'r files' >[1=2]
 	exit 1
 }
 

@@ -1,7 +1,7 @@
 #!/usr/bin/env rc
 
 if(test -lt $#* 2){
-	echo 'ircjoin NICK SERVER:CHANNEL[:CHANNEL]' >[1=2]
+	echo 'ircjoin nick server:channel[:channel]' >[1=2]
 	exit 1
 }
 

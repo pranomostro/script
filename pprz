@@ -1,7 +1,7 @@
 #!/usr/bin/env rc
 
 if(test $#* -ne 1){
-	echo 'pprz DIR' >[1=2]
+	echo 'pprz dir' >[1=2]
 	exit 1
 }
 

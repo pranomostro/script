@@ -1,7 +1,7 @@
 #!/usr/bin/env rc
 
 if(! ~ $#* '1' || ! expr $1 ':' '[+-][0-9]\+' >/dev/null){
-	echo 'chv [-+]NUM' >[1=2]
+	echo 'chv [-+]num' >[1=2]
 	exit 1
 }
 
