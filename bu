@@ -1,21 +1,28 @@
 #!/usr/bin/env rc
 
-cd /mnt/backup
+if(! test $BACKUPDIR)
+	BACKUPDIR=/mnt/backup
 
-name=`{date '+%Y-%m-%d'.tar.gz}
+cd $BACKUPDIR
+
+name=`{date '+%Y-%m-%d.tar.gz'}
 last=`{stat --format'=%Y %n' * | sort -n | awk 'END { print($2) }'}
 month=`{date '+%m'}
 lastmonth=`{echo $last | sed 's/^[0-9]\+-\([0-9]\+\).*/\1/'}
 
-if(test -f $name || test -d /mnt/backup/tmp)
+if(test -f $name)
 	exit 0
+if(test -d tmp/){
+	~ `{date '+%Y-%m-%d'} `{stat --format'=%y' | awk '{ print($1) }'} && exit 0
+	rm -rf tmp/
+}
 
 mkdir tmp
 
 if(! ~ $month $lastmonth)
-	cp -R $HOME/ tmp/
+	cp -R $HOME/* tmp/
 if not
-	cgdc $last $HOME/ /mnt/backup/tmp/
+	cgdc $last $HOME/ $BACKUPDIR/tmp/
 
 test -f tmp/.gnupg/random_seed && rm tmp/.gnupg/random_seed
 
