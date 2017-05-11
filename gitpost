@@ -6,7 +6,7 @@ for(i in `{ls}){
 	cd $i
 	for(j in `{ls}){
 		cd $j
-		echo -n $j': '
+		printf '%s: ' $j
 		git status --short --branch
 		cd ..
 	}

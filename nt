@@ -8,7 +8,7 @@ if(! ~ $1 '')
 
 searchdir=`{pwd}
 
-for(item in `{find . -type l -print}){
+for(item in `{find . -type l}){
 	file=`{basename $item}
 	dir=`{dirname $item}
 

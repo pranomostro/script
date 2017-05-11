@@ -19,7 +19,7 @@ tail -f $1 &
 tp=$apid
 
 while(true){
-	echo -n '= '
+	printf '= '
 	l=`{read}
 	if(test -n $l){
 		echo $l | sed 's/^/self: /' >> $1

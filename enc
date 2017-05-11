@@ -1,12 +1,18 @@
 #!/usr/bin/env rc
 
-rec=`{cts}
+if(! test $EMAIL)
+	EMAIL=pranomestro@gmail.com
 
-if(test -z $rec)
+rec=`{cts -m}
+
+if(test -z $"rec)
 	exit 1
 
-if(! gpg2 --fingerprint $rec >/dev/null >[2=1])
-	if(! st -e gpg2 --yes --keyserver pgp.mit.edu --search-keys $rec)
-		exit 2
+for(i in $rec)
+	if(! gpg2 --fingerprint $i >/dev/null >[2=1])
+		if(! st -e gpg2 --yes --keyserver pgp.mit.edu --search-keys $i)
+			exit 2
 
-gpg2 --yes -easq -r pranomestro@gmail.com -r $rec
+rec='-r '^$rec
+
+gpg2 --yes -easq -r $EMAIL $rec

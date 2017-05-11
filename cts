@@ -43,7 +43,7 @@ while(~ $1 -*){
 sort |
 {
 	if(test $mult){
-		save=`{mktemp '/tmp/cts.XXXXXX'}
+		save=`{mktemp '/tmp/XXXXXX.cts'}
 		echo 'end' >$save
 		cat >>$save
 		i=`{menu <$save}

@@ -41,9 +41,21 @@ Some of the scripts depend on each other.
 * [ratox](http://git.z3bra.org/ratox/log.html) is required for rat-frienddir and rat-log.
 * [sad](https://git.2f30.org/sad/log.html) is required for sad-pickup.
 * [sam](http://sam.cat-v.org/) is needed for sts.
+* [st](http://st.suckless.org) is needed for enc.
 * [wmutils core](https://github.com/wmutils/core) is required for barign, beau, big, cnt, note, wsch and zug.
 * [wmutils opt](https://github.com/wmutils/opt) is needed for barign and zug.
 * [xscreenshot](http://git.2f30.org/xscreenshot/log.html) is needed for ppprz.
+
+Utilities included in the GNU coreutils, but not specified by POSIX:
+* find with the `-maxdepth` flag for musconv.
+* mktemp for 4img, cgdc, cts, note, tlc, tmpimg, zug.
+* readlink for nt and plng.
+* sleep with floating point arguments for barign and note.
+* stat for bu and cgdc.
+* tac for tlc.
+
+Utilities included in util-linux, but not specified by POSIX:
+* eject for rip
 
 Installation
 ------------
