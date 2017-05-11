@@ -5,13 +5,10 @@ if(! ~ $#* 1){
 	exit 1
 }
 
-if(! test -d $1)
-	mkdir -p $1
-
 d=`{date '+%Y%m%d%H%M%S'}
 
 if(! test -d $1/$d)
-	mkdir $1/$d
+	mkdir -p $1/$d
 
 for(i in `{ls | grep '^[0-9A-F]\{64\}'})
 	gpg2 -r pranomestro@gmail.com -easq -o $1/$d/$i.asc $i/text_out

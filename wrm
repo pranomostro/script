@@ -26,5 +26,7 @@ while(true){
 		echo $l >$2
 	}
 	if(test -z $l)
-		die
+		break
 }
+
+kill $tp
