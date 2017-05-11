@@ -36,8 +36,8 @@ BIN= \
 	plng \
 	pprz \
 	r \
-	ratox-log \
-	ratox-frienddir \
+	rat-log \
+	rat-frienddir \
 	rip \
 	sad-pickup \
 	sal \

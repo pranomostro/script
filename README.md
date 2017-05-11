@@ -32,13 +32,13 @@ Some of the scripts depend on each other.
 * [ffmpeg](https://ffmpeg.org/) is needed for musconv.
 * [gen](https://github.com/pranomostro/gen) is required for mg.
 * [git](https://git-scm.com/) is required for gitpost, pfm, shp, taknot and tlc.
-* [gpg2](https://gnupg.org/) is needed by cts, dec, enc and ratox-log.
+* [gpg2](https://gnupg.org/) is needed by cts, dec, enc and rat-log.
 * [gzip](http://www.gzip.org/) is needed for bu.
 * [ii](http://git.suckless.org/ii) with the [ssl patch](http://tools.suckless.org/ii/patches/ssl) is needed by ircjoin.
 * [meh](https://github.com/jhawthorn/meh) is required for tmpimg.
 * [nc](http://nc110.sourceforge.net/) is needed for plng and sad-pickup.
 * [oggenc](https://xiph.org/downloads/) is also needed for rip.
-* [ratox](http://git.z3bra.org/ratox/log.html) is required for ratox-frienddir and ratox-log.
+* [ratox](http://git.z3bra.org/ratox/log.html) is required for rat-frienddir and rat-log.
 * [sad](https://git.2f30.org/sad/log.html) is required for sad-pickup.
 * [sam](http://sam.cat-v.org/) is needed for sts.
 * [wmutils core](https://github.com/wmutils/core) is required for barign, beau, big, cnt, note, wsch and zug.
