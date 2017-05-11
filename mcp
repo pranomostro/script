@@ -1,0 +1,12 @@
+#!/usr/bin/env rc
+
+if(test $#* -le 1){
+	echo 'multcp src dest1 ...' >[1=2]
+	exit 1
+}
+
+orig=$1
+shift
+
+for(i)
+	cp $orig $i
