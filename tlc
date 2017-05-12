@@ -15,7 +15,7 @@ case *
 	exit 1
 }
 
-t=`{mktemp '/tmp/XXXXXX.tlc'}
+t=`{mktemp '/tmp/tlc.XXXXXX'}
 
 for(i in `{git log --pretty'=oneline' | awk '{ print($1) }'}){
 	git show $i:$f >[2]/dev/null | wc -l

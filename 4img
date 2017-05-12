@@ -17,7 +17,7 @@ if(test $#* -eq 1)
 if not
 	board='b'
 
-imgs=`{mktemp '/tmp/XXXXXX.4img'}
+imgs=`{mktemp '/tmp/4img.XXXXXX'}
 
 for(i in `{curl 'https://boards.4chan.org/'$board'/' |
 		grep -o '<a href="[^"]*"' |

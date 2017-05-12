@@ -1,8 +1,8 @@
 #!/usr/bin/env rc
 
 curr=`{pfw}
-before=`{mktemp '/tmp/XXXXXX.note'}
-after=`{mktemp '/tmp/XXXXXX.note'}
+before=`{mktemp '/tmp/note.XXXXXX'}
+after=`{mktemp '/tmp/note.XXXXXX'}
 
 h=16
 w=`{echo `{wattr w `{lsw -r}}'-(2*'$SG'+2*'$SB')' | bc}
