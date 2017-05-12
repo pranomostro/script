@@ -1,10 +1,10 @@
 #!/usr/bin/env rc
 
-curr=$HOME/proj/begun/site/notes/`{date '+%Y%m.md'}
+curr=$HOME/proj/extra/site/notes/`{date '+%Y%m.md'}
 test -f $curr || printf '[up](./index.md), [top](../index.md)\n------------------------------------\n\n' >$curr
 
 $EDITOR $curr
 
-cd $HOME/proj/begun/site
+cd $HOME/proj/extra/site
 git commit -S -a -m 'n'
 git push
