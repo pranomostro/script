@@ -1,6 +1,6 @@
 #!/usr/bin/env rc
 
-if(test -lt $#* 2){
+if(test $#* -lt 2){
 	echo 'ircjoin nick server:channel[:channel]' >[1=2]
 	exit 1
 }
@@ -20,13 +20,13 @@ for(i){
 	server=`{echo $i | cut -d: -f 1}
 	ifs=':'
 	for(c in `{echo $i | cut -d: -f 4- | tr -d '\n'}){
-		echo '/j '$c >irc/$server/in
 		sleep 1
+		echo '/j '$c >irc/$server/in
 	}
 	ifs='
 '
 }
 
-sleep 1
+sleep 5
 
 tail -f `{echo $* | tr ' ' '\n' | awk -F: '{ for(i=4; i<=NF; i++) print("irc/" $1 "/" $i "/out") }'}
