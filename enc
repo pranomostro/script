@@ -1,7 +1,7 @@
 #!/usr/bin/env rc
 
 if(! test $EMAIL)
-	EMAIL=pranomestro@gmail.com
+	EMAIL=pranomostro@posteo.de
 
 rec=`{cts -m}
 
