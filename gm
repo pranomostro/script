@@ -11,7 +11,7 @@ curr=`{pwd}
 
 for(i in `{cat $3}){
 	cd $i
-	echo $i
+	printf '%s: ' $i
 	eval $1
 	cd $curr
 }
