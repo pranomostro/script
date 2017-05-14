@@ -6,7 +6,7 @@ if(! ~ $#* 1){
 }
 
 if(! test $EMAIL)
-	EMAIL=pranomostro@posteo.de
+	EMAIL=pranomostro@posteo.net
 
 d=`{date '+%Y%m%d%H%M%S'}
 
