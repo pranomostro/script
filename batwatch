@@ -1,0 +1,23 @@
+#!/usr/bin/env rc
+
+fn remind{
+	echo 'warning: battery at '$1 |
+	dzen2 -x 15 -y 15 -h 25 -w 160 -fn $FONT -p 16 -bg '#444444' -fg '#ffffff' &
+}
+
+while(true){
+	batval=`{acpi | sed 's/.*\([0-9][0-9]\)%.*/\1/'}
+	if(test $batval -le 5 && ! test $lt5){
+		remind $batval'%'
+		lt5='1'
+	}
+	if(test $batval -le 10 && ! test $lt5 && ! test $lt10){
+		remind $batval'%'
+		lt10='1'
+	}
+	if(test $batval -le 5 && ! test $lt5 && ! test $lt10 && ! test $lt15){
+		remind $batval'%'
+		lt15='1'
+	}
+	sleep 10
+}
