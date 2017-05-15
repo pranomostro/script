@@ -21,6 +21,7 @@ might not work with that one since it has some differences from the
 original plan9 version, which I prefer).
 Some of the scripts depend on each other.
 
+* [acpi](http://sourceforge.net/projects/acpiclient/) is needed for batwatch.
 * [amixer](https://linux.die.net/man/1/amixer) is needed for chv.
 * [awk](https://www.gnu.org/software/gawk/) is required for cgdc, chv, cts, field. ircjoin, note, pfm, plng, sal, tlc and zug.
 * [bc](https://www.gnu.org/software/bc/) is required for beau, big, chv, cnt, note, pprz and wsch.
@@ -28,7 +29,7 @@ Some of the scripts depend on each other.
 * [cdparanoia](https://xiph.org/paranoia/) is required for rip.
 * [curl](https://curl.haxx.se/) is required by 4img, tmping and up.
 * [dmenu](http://git.suckless.org/dmenu) is needed for cts and zug.
-* [dzen2](https://github.com/robm/dzen) is needed for note.
+* [dzen2](https://github.com/robm/dzen) is needed for batwatch and note.
 * [ffmpeg](https://ffmpeg.org/) is needed for musconv.
 * [gen](https://github.com/pranomostro/gen) is required for mg.
 * [git](https://git-scm.com/) is required for gitpost, pfm, shp, taknot and tlc.

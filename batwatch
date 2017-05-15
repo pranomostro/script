@@ -6,18 +6,27 @@ fn remind{
 }
 
 while(true){
-	batval=`{acpi | sed 's/.*\([0-9][0-9]\)%.*/\1/'}
+	batval=`{acpi | sed 's/.*[^0-9]\([0-9][0-9]\?[0-9]\?\)%.*/\1/'}
 	if(test $batval -le 5 && ! test $lt5){
 		remind $batval'%'
 		lt5='1'
+		lt10='1'
+		lt15='1'
 	}
-	if(test $batval -le 10 && ! test $lt5 && ! test $lt10){
+	if(test $batval -le 10 && ! test $lt10){
 		remind $batval'%'
 		lt10='1'
+		lt15='1'
 	}
-	if(test $batval -le 5 && ! test $lt5 && ! test $lt10 && ! test $lt15){
+	if(test $batval -le 15 && ! test $lt15){
 		remind $batval'%'
 		lt15='1'
 	}
+	if(test $batval -gt 5)
+		lt5=''
+	if(test $batval -gt 10)
+		lt10=''
+	if(test $batval -gt 15)
+		lt15=''
 	sleep 10
 }
