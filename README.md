@@ -9,7 +9,7 @@ Requirements
 ------------
 
 Generally, the standard base utilities
-([coreutils](https://www.gnu.org/software/coreutils/coreutils.html)
+([coreutils](https://www.gnu.org/software/coreutils/coreutils.html)/
 [sbase](http://git.suckless.org/sbase)
 and [ubase](http://git.suckless.org/ubase)) are required.
 Nearly all of these scripts are written in the rc
