@@ -1,7 +1,5 @@
 #!/usr/bin/env rc
 
-#this script is not good because when rc receives sigint in `{read}, it crashes with a segfault.
-
 fn die{
 	kill $tp
 	exit 2
