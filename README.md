@@ -33,7 +33,7 @@ Some of the scripts depend on each other.
 * [ffmpeg](https://ffmpeg.org/) is needed for musconv.
 * [gen](https://github.com/pranomostro/gen) is required for mg.
 * [git](https://git-scm.com/) is required for gitpost, pfm, shp, taknot and tlc.
-* [gpg2](https://gnupg.org/) is needed by cts, dec, enc and rat-log.
+* [gpg2](https://gnupg.org/) is needed by cts, dec, enc, dwpd and rat-log.
 * [gzip](http://www.gzip.org/) is needed for bu.
 * [ii](http://git.suckless.org/ii) with the [ssl patch](http://tools.suckless.org/ii/patches/ssl) is needed by ircjoin.
 * [meh](https://github.com/jhawthorn/meh) is required for tmpimg.
