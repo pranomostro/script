@@ -1,0 +1,37 @@
+.Dd May 11, 2017
+.Dt 4IMG 1
+.Os
+
+.Sh NAME
+.Nm 4img
+.Nd download current images from 4chan
+
+.Sh SYNOPSIS
+.Nm 4img
+.Op Ar board
+
+.Sh DESCRIPTION
+.Nm
+downloads pictures, gifs and webms from 4chan into the current
+directory, using
+.Op Ar board
+or /b/ by default.
+
+.Sh FILES
+.Bl -tag -width Ds
+.It Pa /tmp/4img.XXXXXX
+The temporary file for the links to the images.
+.El
+
+.Sh EXIT STATUS
+.Ex -std
+
+.Sh BUGS
+Damages your brain when examining the images.
+
+.Sh SEE ALSO
+.Xr curl 1 ,
+.Xr lynx 1 .
+
+.Sh AUTHORS
+.An pranomostro Aq Mt pranomostro@posteo.net
