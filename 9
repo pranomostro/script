@@ -5,6 +5,8 @@ if(test -z $"*){
 	exit 1
 }
 
+test $PLAN9 || PLAN9=/usr/local/plan9/
+
 a=$1; shift
-test -x $a || echo 'error: '$1' is not an executable file in /usr/local/plan9/bin, exiting' >[1=2] && exit 1
-exec '/usr/local/plan9/bin/'$a $*
+test -x $PLAN9/bin/$a || echo 'error: '$1' is not an executable file in '$PLAN9'/bin/, exiting' >[1=2] && exit 1
+exec $PLAN9'/bin/'$a $*

@@ -1,0 +1,41 @@
+.Dd May 11, 2017
+.Dt 9 1
+.Os
+
+.Sh NAME
+.Nm 9
+.Nd run a program in the plan9 directory
+
+.Sh SYNOPSIS
+.Nm
+.Ar program
+.Op Ar args
+
+.Sh DESCRIPTION
+.Nm
+runs a program in the systems plan9 directory (passed via an environment
+variable).
+
+.Sh ENVIRONMENT
+.Bl -tag -width Ds
+.It Ev PLAN9
+The local plan9 directory. A program is called from the
+.Dq bin/
+directory inside $PLAN9.  Defaults to
+.Dq /usr/local/plan9/ .
+.El
+
+.Sh EXAMPLES
+Use non-localized, byte-wise sorting:
+.Pp
+.Dl $ 9 sort <dict
+
+.Sh EXIT STATUS
+.Ex -std
+
+.Sh SEE ALSO
+.Xr exec 1 ,
+.Xr exec 3 .
+
+.Sh AUTHORS
+.An pranomostro Aq Mt pranomostro@posteo.net
