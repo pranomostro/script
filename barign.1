@@ -1,0 +1,36 @@
+.Dd May 11, 2017
+.Dt BARIGN 1
+.Os
+
+.Sh NAME
+.Nm barign
+.Nd let the window manager ignore all windows with the title \(dqbar\(dq
+
+.Sh SYNOPSIS
+.Nm
+
+.Sh DESCRIPTION
+.Nm
+calls
+.Xr ignw 1
+on each window with the title
+.Dq bar
+and changes its window border color to black and the window border
+thickness to the environment variable SB.
+
+.Sh ENVIRONMENT
+.Bl -tag -width Ds
+.It Ev SB
+The thickness of the width of the window border of the bar.
+.El
+
+.Sh EXIT STATUS
+.Ex -std
+
+.Sh SEE ALSO
+.Xr chwb 1 ,
+.Xr ignw 1 ,
+.Xr wname 1 .
+
+.Sh AUTHORS
+.An pranomostro Aq Mt pranomostro@posteo.net
