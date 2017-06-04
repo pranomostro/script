@@ -1,0 +1,32 @@
+.Dd June 04, 2017
+.Dt BATWATCH 1
+.Os
+
+.Sh NAME
+.Nm batwatch
+.Nd notify the user about low battery
+
+.Sh SYNOPSIS
+.Nm
+
+.Sh DESCRIPTION
+.Nm
+shows a small notification window in the left upper corner of the current
+screen every time the battery falls under 5%, 10% or 15%. The window is
+closed  after 16 seconds. It should be run as a daemon in the background,
+preferably starting with the window manager.
+
+.Sh EXIT STATUS
+.Ex -std
+
+.Sh BUGS
+The code probably sucks.
+.Pp
+It does not work.
+
+.Sh SEE ALSO
+.Xr acpi 1 ,
+.Xr dzen2 1 .
+
+.Sh AUTHORS
+.An pranomostro Aq Mt pranomostro@posteo.net
