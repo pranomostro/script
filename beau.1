@@ -1,0 +1,32 @@
+.Dd June 05, 2017
+.Dt BEAU 1
+.Os
+
+.Sh NAME
+.Nm beau
+.Nd resize a window after the golden ration
+
+.Sh SYNOPSIS
+.Nm
+.Op Fl wh Ar win
+
+.Sh DESCRIPTION
+.Nm
+resizes the current window or
+.Ar win
+after the golden ratio. When
+.Fl w
+or
+.Fl h
+is specified, the width/height is taken as a base and is not changed. When
+the window is specified, the base needs to be specified as well. The
+height is the base of the resize by default.
+
+.Sh EXIT STATUS
+.Ex -std
+
+.Sh SEE ALSO
+.Xr wmutils 1 .
+
+.Sh AUTHORS
+.An pranomostro Aq Mt pranomostro@posteo.net

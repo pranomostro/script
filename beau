@@ -23,7 +23,7 @@ case '2'
 		exit 2
 	}
 case *
-	echo 'beau [-w|-h] [win]' >[1=2]
+	echo 'beau [-wh win]' >[1=2]
 	exit 1
 }
 
