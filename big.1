@@ -1,0 +1,36 @@
+.Dd May 11, 2017
+.Dt BIG 1
+.Os
+
+.Sh NAME
+.Nm big
+.Nd make a window fill the screen
+
+.Sh SYNOPSIS
+.Nm big
+.Op Ar win
+
+.Sh DESCRIPTION
+.Nm
+positions
+.AR win
+or the current window so that it fills the screen leaving a gap at
+the border.
+
+.Sh ENVIRONMENT
+.Bl -tag -width Ds
+.It Ev GAP
+The gap left to the edge of the screen.
+.It Ev BW
+The border width (used for positioning the window exactly).
+.El
+
+.Sh EXIT STATUS
+.Ex -std
+
+.Sh SEE ALSO
+.Xr wmutils 1 ,
+.Xr wtp 1 .
+
+.Sh AUTHORS
+.An pranomostro Aq Mt pranomostro@posteo.net
