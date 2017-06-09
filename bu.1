@@ -1,0 +1,43 @@
+.Dd May 11, 2017
+.Dt BU 1
+.Os
+
+.Sh NAME
+.Nm bu
+.Nd create a backup
+
+.Sh SYNOPSIS
+.Nm
+
+.Sh DESCRIPTION
+.Nm
+creates an incremental backup of all the files that have changed since
+the last backup (if the date has changed) or creates a full backup every
+time the month changes of the home directory. The backup is a compressed
+tar archive named after the date it was created in ISO 8601.
+.Pp
+.Nm
+removes
+.Dq .gnupg/random_seed
+from the backup, for security reasons.
+
+.Sh ENVIRONMENT
+.Bl -tag -width Ds
+.It Ev BACKUPDIR
+The directory where the backup is saved, default /mnt/backup.
+.It Ev HOME
+The directory that is backed up.
+.El
+
+.Sh EXIT STATUS
+.Ex -std
+
+.Sh BUGS
+The backup is not encrypted.
+
+.Sh SEE ALSO
+.Xr cgdc 1 ,
+.Xr tar 1 .
+
+.Sh AUTHORS
+.An pranomostro Aq Mt pranomostro@posteo.net

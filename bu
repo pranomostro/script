@@ -1,7 +1,6 @@
 #!/usr/bin/env rc
 
-if(! test $BACKUPDIR)
-	BACKUPDIR=/mnt/backup
+test $BACKUPDIR || BACKUPDIR=/mnt/backup
 
 cd $BACKUPDIR
 
