@@ -1,0 +1,38 @@
+.Dd May 11, 2017
+.Dt CGDC 1
+.Os
+
+.Sh NAME
+.Nm cgdc
+.Nd copy files changed after another file
+
+.Sh SYNOPSIS
+.Nm
+.Ar file
+.Ar dir
+.Ar dest
+
+.Sh DESCRIPTION
+.Nm
+copies all files from
+.Ar dir
+that were modified after
+.Ar file
+to the directory
+.Ar dest .
+
+.Sh FILES
+.Bl -tag -width Ds
+.It Pa /tmp/cgdc.XXXXXX
+Two temporary files for saving intermediate results.
+.El
+
+.Sh EXIT STATUS
+.Ex -std
+
+.Sh SEE ALSO
+.Xr cp 1 ,
+.Xr stat 1 .
+
+.Sh AUTHORS
+.An pranomostro Aq Mt pranomostro@posteo.net
