@@ -1,0 +1,41 @@
+.Dd May 11, 2017
+.Dt CHAN 1
+.Os
+
+.Sh NAME
+.Nm chan
+.Nd change strings in files
+
+.Sh SYNOPSIS
+.Nm
+.Ar from
+.Ar to
+.Ar files
+
+.Sh DESCRIPTION
+.Nm
+changes every occurrence of
+.Ar from
+(an regular expression for
+.Xr ed 1 )
+to
+.Ar to
+(a substitution expression for
+.Xr ed 1 )
+in
+.Ar files .
+
+.Sh EXAMPLES
+Change the style of hexadecimal numbers in all assembly files:
+.Pp
+.Dl $ chan '\e<\e([0-9A-Fa-f]\e+\e)h' '0x\e1' *.asm
+
+.Sh EXIT STATUS
+.Ex -std
+
+.Sh SEE ALSO
+.Xr ed 1 ,
+.Xr regex 7 .
+
+.Sh AUTHORS
+.An pranomostro Aq Mt pranomostro@posteo.net
