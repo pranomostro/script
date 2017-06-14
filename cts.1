@@ -1,0 +1,79 @@
+.Dd May 11, 2017
+.Dt CTS 1
+.Os
+
+.Sh NAME
+.Nm cts
+.Nd select contacts with email addresses
+
+.Sh SYNOPSIS
+.Nm
+.Op Fl m
+.Op Fl M
+.Op Fl g
+.Op Fl f Ar file
+
+.Sh DESCRIPTION
+.Nm
+lets the user select one or several contacts (showing the name of the
+user and the email address) via
+.Xr dmenu 1
+and prints the email addresses of the selected contacts.
+
+.Sh OPTIONS
+.Nm
+uses following options:
+.Bl -tag -width Ds
+.It Fl m
+Allow the selection of multiple contacts, the selection is ended
+via selecting the option
+.Dq end .
+.It Fl M
+Deactivate selecting multiple contacts (this is the default).
+.It Fl g
+Use the output of
+.Dl gpg2 -k
+as a supply of users. This is useful for selecting recipients
+of an encrypted message.
+.It Fl f Ar file
+Use
+.Ar file
+as a supply of users. The file should be colon separated, the
+the first field being the name of the contact, the second
+field being a semicolon
+.Sq Li \&;
+separated list of email-adresses. It is exclusive with
+.Fl g .
+.El
+
+.Sh FILES
+.Bl -tag -width Ds
+.It Pa /tmp/cts.XXXXXX
+A temporary file for the contacts in
+.Fi m
+mode.
+.El
+
+.Sh ENVIRONMENT
+.Bl -tag -width Ds
+.It Ev FONT
+The font used for
+.Xr dmenu 1
+for the selection.
+.El
+
+.Sh EXIT STATUS
+.Ex -std
+
+.Sh BUGS
+The contact file should not contain email addresses
+with semicolons
+.Sq Li \&;
+in them.
+
+.Sh SEE ALSO
+.Xr dmmenu 1 ,
+.Xr gpg2 1 .
+
+.Sh AUTHORS
+.An pranomostro Aq Mt pranomostro@posteo.net
