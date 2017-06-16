@@ -1,0 +1,5 @@
+#!/usr/bin/env rc
+
+yesterday=`{date '+%d-1' | bc}
+filename=`{date '+%Y/%m'$yesterday'/TV-%Y%m'$yesterday'-2021-0101.webl.webm'}
+mpv 'http://download.media.tagesschau.de/video/'$filename
