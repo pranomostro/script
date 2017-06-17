@@ -1,0 +1,49 @@
+.Dd May 11, 2017
+.Dt ECP 1
+.Os
+
+.Sh NAME
+.Nm ecp
+.Nd extended cp
+
+.Sh SYNOPSIS
+.Nm program
+.Op Fl t
+.Ar from
+.Ar to
+
+.Sh DESCRIPTION
+.Nm
+is a simple wrapper for cp, using basic regular expressions.
+It takes two arguments:
+.Ar from
+is an expression that determines the files that should be copied,
+.Ar to
+is a sed-replacement expression for the target file.
+
+.Sh OPTIONS
+.Nm program
+uses following options:
+.Bl -tag -width Ds
+.It Fl t
+Overwrite existing files. This is not default.
+.El
+
+.Sh EXAMPLES
+Copy every file with the extension
+.Sq .sh
+to the corresponding file with the extension
+.Sq .1 .
+.Pp
+.Dl $ ecp '\e(.*\e)\e.sh$' '\e1.1'
+
+.Sh EXIT STATUS
+.Ex -std
+
+.Sh SEE ALSO
+.Xr emv 1 ,
+.Xr sed 1 ,
+.Xr regex 7 .
+
+.Sh AUTHORS
+.An pranomostro Aq Mt pranomostro@posteo.net
