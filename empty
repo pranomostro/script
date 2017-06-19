@@ -3,5 +3,7 @@
 ifs='
 '
 
+test -d $HOME/trash || echo '~/trash needs to be a directory' >[1=2] && exit
+
 cd $HOME/trash
 rm -rf *
