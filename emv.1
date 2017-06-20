@@ -1,0 +1,56 @@
+.Dd May 11, 2017
+.Dt EMV 1
+.Os
+
+.Sh NAME
+.Nm emv
+.Nd extended mv
+
+.Sh SYNOPSIS
+.Nm
+.Op Fl t
+.Ar from
+.Ar to
+
+.Sh DESCRIPTION
+.Nm
+renames files based on regular expressions.
+It takes two arguments:
+.Ar from
+is an expression that determines the files that should be moved,
+.Ar to
+is a sed-replacement expression for the target file.
+
+.Sh OPTIONS
+.Nm program
+uses following options:
+.Bl -tag -width Ds
+.It Fl t
+Overwrite existing files. This is not default.
+.El
+
+.Sh EXAMPLES
+Move every file match
+.Sq ^a
+to a file with same name with the prefix
+.Sq m_ ,
+so
+.Sq abaco.c
+becomes
+.Sq m_abaco.c .
+.Sq .1 .
+.Pp
+.Dl $ emv '^a' 'm_&'
+
+.Sh EXIT STATUS
+.Ex -std
+
+.Sh SEE ALSO
+.Xr ecp 1 ,
+.Xr rename 1 ,
+.Xr sed 1 ,
+.Xr zmv 1 ,
+.Xr regex 7 .
+
+.Sh AUTHORS
+.An pranomostro Aq Mt pranomostro@posteo.net
