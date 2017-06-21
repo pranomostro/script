@@ -10,7 +10,7 @@ if(test -z $"rec)
 
 for(i in $rec)
 	if(! gpg2 --fingerprint $i >/dev/null >[2=1])
-		if(! st -e gpg2 --yes --keyserver pgp.mit.edu --search-keys $i)
+		if(! gpg2 --yes --keyserver pgp.mit.edu --search-keys $i)
 			exit 2
 
 rec='-r '^$rec

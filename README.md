@@ -37,12 +37,12 @@ Some of the scripts depend on each other.
 * [gzip](http://www.gzip.org/) is needed for bu.
 * [ii](http://git.suckless.org/ii) with the [ssl patch](http://tools.suckless.org/ii/patches/ssl) is needed by ircjoin.
 * [meh](https://github.com/jhawthorn/meh) is required for tmpimg.
+* [mpv](https://mpv.io) is required for tagesschau.
 * [nc](http://nc110.sourceforge.net/) is needed for plng and sad-pickup.
 * [oggenc](https://xiph.org/downloads/) is also needed for rip.
 * [ratox](http://git.z3bra.org/ratox/log.html) is required for rat-frienddir and rat-log.
 * [sad](https://git.2f30.org/sad/log.html) is required for sad-pickup.
 * [sam](http://sam.cat-v.org/) is needed for sts.
-* [st](http://st.suckless.org) is needed for enc.
 * [wmutils core](https://github.com/wmutils/core) is required for barign, beau, big, cnt, note, wsch and zug.
 * [wmutils opt](https://github.com/wmutils/opt) is needed for barign and zug.
 * [xscreenshot](http://git.2f30.org/xscreenshot/log.html) is needed for ppprz.

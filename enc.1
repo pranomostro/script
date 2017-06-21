@@ -1,0 +1,34 @@
+.Dd June 21, 2017
+.Dt ENC 1
+.Os
+
+.Sh NAME
+.Nm enc
+.Nd encrypt standard input
+
+.Sh SYNOPSIS
+.Nm
+
+.Sh DESCRIPTION
+.Nm
+first prompts
+.Xr cts
+for selecting the recipients of the encryption. Then it attempts to
+download missing keys from a keyserver, and finally encrypts the standard
+input to the recipients and to the default email address.
+
+.Sh ENVIRONMENT
+.Bl -tag -width Ds
+.It Ev EMAIL
+The default recipient address (usually your own email address).
+.El
+
+.Sh EXIT STATUS
+.Ex -std
+
+.Sh SEE ALSO
+.Xr cts 1 ,
+.Xr gpg2 1 .
+
+.Sh AUTHORS
+.An pranomostro Aq Mt pranomostro@posteo.net
