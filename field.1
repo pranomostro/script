@@ -1,0 +1,33 @@
+.Dd May 11, 2017
+.Dt FIELD 1
+.Os
+
+.Sh NAME
+.Nm field
+.Nd print the nth field of the input
+
+.Sh SYNOPSIS
+.Nm
+.Ar num
+
+.Sh DESCRIPTION
+.Nm
+prints the
+.Ar numth
+field of every input line (default
+.Xr awk 1
+field delimiter).
+
+.Sh EXIT STATUS
+.Ex -std
+
+.Sh BUGS
+The field delimiter can't be changed.
+
+.Sh SEE ALSO
+.Xr awk 1 ,
+.Xr cut 1 ,
+.Xr sed 1 .
+
+.Sh AUTHORS
+.An pranomostro Aq Mt pranomostro@posteo.net
