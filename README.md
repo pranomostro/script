@@ -48,7 +48,7 @@ Some of the scripts depend on each other.
 * [xscreenshot](http://git.2f30.org/xscreenshot/log.html) is needed for ppprz.
 
 Utilities included in the GNU coreutils, but not specified by POSIX:
-* find with the `-maxdepth` flag for musconv.
+* find with the `-maxdepth` flag for gitpost and musconv.
 * mktemp for 4img, cgdc, cts, note, tlc, tmpimg, zug.
 * readlink for nt and plng.
 * sleep with floating point arguments for barign and note.
