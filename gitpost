@@ -1,13 +1,18 @@
 #!/usr/bin/env rc
 
+if(test $#* -ne '1'){
+	echo 'gitpost action' >[1=2]
+	exit 1
+}
+
 cd $HOME/proj
 
-for(i in `{ls}){
+for(i in `{find -maxdepth 1 -type d | grep -v '^\.$'}){
 	cd $i
-	for(j in `{ls}){
+	for(j in `{find -maxdepth 1 -type d | grep -v '^\.$'}){
 		cd $j
 		printf '%s: ' $j
-		git status --short --branch
+		eval $1
 		cd ..
 	}
 	cd ..

@@ -1,0 +1,43 @@
+.Dd May 11, 2017
+.Dt GITPOST 1
+.Os
+
+.Sh NAME
+.Nm gitpost
+.Nd execute a command for every git repo
+
+.Sh SYNOPSIS
+.Nm
+.Ar action
+
+.Sh DESCRIPTION
+.Nm
+executes
+.Ar action
+in every directory in a directory in
+.Dq $HOME/proj ,
+prefixing the output of
+.Ar action
+with the name of the directory and a colon.
+
+.Sh FILES
+.Bl -tag -width Ds
+.It Pa ~/proj
+The directory where the project directories are located.
+.El
+
+.Sh ENVIRONMENT
+.Bl -tag -width Ds
+.It Ev HOME
+The home directory of the user.
+.El
+
+.Sh EXIT STATUS
+.Ex -std
+
+.Sh SEE ALSO
+.Xr git 1 ,
+.Xr gm 1 .
+
+.Sh AUTHORS
+.An pranomostro Aq Mt pranomostro@posteo.net
