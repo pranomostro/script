@@ -1,0 +1,58 @@
+.Dd June 28, 2017
+.Dt IRCJOIN 1
+.Os
+
+.Sh NAME
+.Nm ircjoin
+.Nd join and show irc servers and channels
+
+.Sh SYNOPSIS
+.Nm
+.Ar nick
+.Ar server:port:crypt:channels
+.Op Ar \...
+
+.Sh DESCRIPTION
+.Nm
+starts
+.Xr ii 1
+for every
+.Ar server
+given with the nickname
+.Ar nick ,
+optionally with the encryption method
+.Ar crypt
+on the port
+.Ar port
+and joins the channels
+.Ar channels ,
+which are separated by colons.
+After connecting to the servers and joining the
+channels, it prints the output files of
+.Xr ii 1
+to stdout with
+.Xr tail 1 .
+
+.Sh FILES
+.Bl -tag -width Ds
+.It Pa ~/irc
+The default irc directory for
+.Xr ii 1 .
+.El
+
+.Sh EXAMPLES
+Example usage:
+.Pp
+.Bd -literal
+$ ircjoin pranomostro 'irc.oftc.net:::#suckless' 'irc.freenode.net:::#2f30:#plan9:#tox:#tox-dev:#toktok:#cat-v' 'irc.nixers.net:6697:ssl:#unix' | less
+.Ed
+
+.Sh EXIT STATUS
+.Ex -std
+
+.Sh SEE ALSO
+.Xr ii 1 ,
+.Xr tail 1 .
+
+.Sh AUTHORS
+.An pranomostro Aq Mt pranomostro@posteo.net
