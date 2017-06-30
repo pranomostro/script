@@ -1,7 +1,7 @@
 #!/usr/bin/env rc
 
 if(! ~ `{expr $#* '%' '2'} '0'){
-	echo 'paircp src1 dest1 [src2 dest2 ...]' >[1=2]
+	echo 'pcp src1 dest1 [src2 dest2] ...' >[1=2]
 	exit 1
 }
 

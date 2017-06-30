@@ -1,7 +1,7 @@
 #!/usr/bin/env rc
 
 if(test $#* -le 1){
-	echo 'multcp src dest1 ...' >[1=2]
+	echo 'mcp src dest1 ...' >[1=2]
 	exit 1
 }
 
