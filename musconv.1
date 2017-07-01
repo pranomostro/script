@@ -1,0 +1,39 @@
+.Dd July 2, 2017
+.Dt MUSCONV 1
+.Os
+
+.Sh NAME
+.Nm musconv
+.Nd bring music collections into a standartized hierarchy
+
+.Sh SYNOPSIS
+.Nm
+
+.Sh DESCRIPTION
+.Nm
+converts a music collection into ogg and reorganizes it.
+It replaces each filename with one without special characters
+(only using
+.Dq a-z0-9._ )
+for the resulting files. It converts all
+.Dq mp3 ,
+.Dq m4a ,
+.Dq flac
+and
+.Dq wav
+files to ogg using
+.Xr ffmpeg 1 .
+It moves all files in third-level directories to their second-level
+directory (i.e from the album directories into artist directories).
+
+.Sh EXIT STATUS
+.Ex -std
+
+.Sh BUGS
+Not 100% reliable. May fuckup.
+
+.Sh SEE ALSO
+.Xr ffmpeg 1 .
+
+.Sh AUTHORS
+.An pranomostro Aq Mt pranomostro@posteo.net
