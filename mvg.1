@@ -1,0 +1,37 @@
+.Dd July 2, 2017
+.Dt MVG 1
+.Os
+
+.Sh NAME
+.Nm mvg
+.Nd give files generic names
+
+.Sh SYNOPSIS
+.Nm
+.Op Fl t
+.Ar files
+
+.Sh DESCRIPTION
+.Nm
+renames
+.Ar files
+to names given by
+.Xr gen 1 .
+
+.Sh OPTIONS
+.Nm
+uses following options:
+.Bl -tag -width Ds
+.It Fl t
+Overwrite existing files. This is not default
+.El
+
+.Sh EXIT STATUS
+.Ex -std
+
+.Sh SEE ALSO
+.Xr gen 1 ,
+.Xr mv 1 .
+
+.Sh AUTHORS
+.An pranomostro Aq Mt pranomostro@posteo.net
