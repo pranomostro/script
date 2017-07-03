@@ -1,0 +1,47 @@
+.Dd May 11, 2017
+.Dt NOTE 1
+.Os
+
+.Sh NAME
+.Nm note
+.Nd show a notification
+
+.Sh SYNOPSIS
+.Nm
+.Ar message
+
+.Sh DESCRIPTION
+.Nm
+shows
+.Ar message
+using
+.Xr dzen 1
+for 32 seconds at the bottom of the screen. The
+note window is ignored.
+
+.Sh FILES
+.Bl -tag -width Ds
+.It Pa /tmp/note.XXXXXX
+Two files for storing and restoring the window state.
+.El
+
+.Sh ENVIRONMENT
+.Bl -tag -width Ds
+.It Ev SB
+The border width of windows.
+.It Ev SG
+The gap between windows.
+.It Ev FONT
+The font used for
+.Xr dzen2 1 .
+.El
+
+.Sh EXIT STATUS
+.Ex -std
+
+.Sh SEE ALSO
+.Xr dzen2 1 ,
+.Xr wmutils 1 .
+
+.Sh AUTHORS
+.An pranomostro Aq Mt pranomostro@posteo.net
