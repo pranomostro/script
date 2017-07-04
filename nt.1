@@ -1,0 +1,28 @@
+.Dd May 11, 2017
+.Dt NT 1
+.Os
+
+.Sh NAME
+.Nm nt
+.Nd find broken symlinks
+
+.Sh SYNOPSIS
+.Nm
+.Op Ar dir
+
+.Sh DESCRIPTION
+.Nm
+searches for broken symbolic links recursively in
+.Ar dir ,
+if not provided, the current directory, and prints
+them to stdout.
+
+.Sh EXIT STATUS
+.Ex -std
+
+.Sh SEE ALSO
+.Xr find 1 ,
+.Xr readlink 1 .
+
+.Sh AUTHORS
+.An pranomostro Aq Mt pranomostro@posteo.net
