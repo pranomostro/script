@@ -20,7 +20,7 @@ if(! ~ $oggproc ''){
 	readlink * |
 	sed -n '/\.ogg$/s/\.ogg$//p' |
 	xargs basename |
-	ell 42
+	{test $cutoff && ell $cutoff || cat}
 	ae='1'
 }
 if(! ~ $pbs '' && ! ~ $pbs 'stop' && ! ~ $pbs 'pause' && ! ~ $ae '1'){
