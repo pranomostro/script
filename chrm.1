@@ -1,0 +1,35 @@
+.Dd May 11, 2017
+.Dt CHRM 1
+.Os
+.Sh NAME
+.Nm chrm
+.Nd start chromium with a different configuration directory
+
+.Sh SYNOPSIS
+.Nm
+
+.Sh DESCRIPTION
+.Nm
+starts the web browser chromium with a configuration directory
+defined by an environmnte variable.
+
+.Sh FILES
+.Bl -tag -width Ds
+.It Pa /usr/local/config/chromium
+The default chromium configuration directory.
+.El
+
+.Sh ENVIRONMENT
+.Bl -tag -width Ds
+.It Ev CHROMEDIR
+The directory for chromium configuration.
+.El
+
+.Sh EXIT STATUS
+.Ex -std
+
+.Sh SEE ALSO
+.Xr chromium 1 .
+
+.Sh AUTHORS
+.An pranomostro Aq Mt pranomostro@posteo.net

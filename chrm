@@ -1,0 +1,5 @@
+#!/usr/bin/env rc
+
+test $CHROMEDIR || CHROMEDIR=/usr/local/config/chromium
+
+chromium --user-data-dir'='$CHROMEDIR &
