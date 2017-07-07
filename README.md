@@ -27,6 +27,7 @@ Some of the scripts depend on each other.
 * [bc](https://www.gnu.org/software/bc/) is required for beau, big, chv, cnt, note, pprz and wsch.
 * [bzip2](http://bzip.org/) is needed for pprz.
 * [cdparanoia](https://xiph.org/paranoia/) is required for rip.
+* [chromium](http://chromium.org/) is needed for chrm.
 * [curl](https://curl.haxx.se/) is required by 4img, tmping and up.
 * [dmenu](http://git.suckless.org/dmenu) is needed for cts and zug.
 * [dzen2](https://github.com/robm/dzen) is needed for batwatch and note.
