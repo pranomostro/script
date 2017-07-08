@@ -2,4 +2,4 @@
 
 test $CHROMEDIR || CHROMEDIR=/usr/local/config/chromium
 
-chromium --user-data-dir'='$CHROMEDIR &
+chromium --user-data-dir'='$CHROMEDIR $* &
