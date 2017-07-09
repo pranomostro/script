@@ -1,0 +1,59 @@
+.Dd May 11, 2017
+.Dt PLNG 1
+.Os
+
+.Sh NAME
+.Nm plng
+.Nd print the currently playing music
+
+.Sh SYNOPSIS
+.Nm
+.Op Fl f
+.Op Ar cutoff
+
+.Sh DESCRIPTION
+.Nm
+prints the name of the currently playing music file.
+If
+.Ar cutoff
+is given, only the first
+.Ar cutoff
+characters of the filename are printed, the rest is
+replaced with the string
+.Dq ... .
+.Nm
+currently works with
+.Xr ogg123 1
+and
+.Xr sad 1 .
+
+.Sh OPTIONS
+.Nm
+uses following options:
+.Bl -tag -width Ds
+.It Fl f
+Print the full path of the currently playing file.
+The default is to only print the basename.
+.El
+
+.Sh FILES
+.Bl -tag -width Ds
+.It Pa /proc/$oggproc/fd
+The files currently opened by a
+.Xr ogg123 1
+process.
+.It Pa /tmp/sad-sock
+The socket which is used to communicate
+with
+.Xr sad 1 .
+.El
+
+.Sh EXIT STATUS
+.Ex -std
+
+.Sh SEE ALSO
+.Xr ogg123 1 ,
+.Xr sad 1 .
+
+.Sh AUTHORS
+.An pranomostro Aq Mt pranomostro@posteo.net
