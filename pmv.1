@@ -1,31 +1,31 @@
-.Dd July 7, 2017
-.Dt PCP 1
+.Dd July 10, 2017
+.Dt PMV 1
 .Os
 
 .Sh NAME
-.Nm pcp
-.Nd pairwise copy
+.Nm pmv
+.Nd rename files pairwise
 
 .Sh SYNOPSIS
 .Nm
 .Op Ar src1 dest1
-.Op Ar ...
+.Op ...
 .Op Ar srcn destn
 
 .Sh DESCRIPTION
 .Nm
-copies its arguments pairwise, for example
+renames its arguments pairwise, for example
 .Ar src1
-is copied to
+is moved to
 .Ar dest1 .
 
 .Sh EXIT STATUS
 .Ex -std
 
 .Sh SEE ALSO
-.Xr cp 1 ,
 .Xr mcp 1 ,
-.Xr pmv 1 .
+.Xr mv 1 ,
+.Xr pcp 1 .
 
 .Sh AUTHORS
 .An pranomostro Aq Mt pranomostro@posteo.net
