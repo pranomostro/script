@@ -1,0 +1,30 @@
+.Dd July 11, 2017
+.Dt PPRZ 1
+.Os
+
+.Sh NAME
+.Nm pprz
+.Nd save a screenshot in random intervals
+
+.Sh SYNOPSIS
+.Nm
+.Ar dir
+
+.Sh DESCRIPTION
+.Nm
+saves a compressed farbfeld
+.Xr bzip2 1
+compressed screenshot to
+.Ar dir
+every 5-15 minutes (exact interval is randomly determined).
+
+.Sh EXIT STATUS
+.Ex -std
+
+.Sh SEE ALSO
+.Xr bzip2 1 ,
+.Xr sleep 1 ,
+.Xr xscreenshot 1 .
+
+.Sh AUTHORS
+.An pranomostro Aq Mt pranomostro@posteo.net
