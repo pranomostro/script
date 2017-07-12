@@ -1,0 +1,42 @@
+.Dd july 12, 2017
+.Dt R 1
+.Os
+
+.Sh NAME
+.Nm r
+.Nd move files to ~/trash
+
+.Sh SYNOPSIS
+.Nm
+.Ar files
+
+.Sh DESCRIPTION
+.Nm
+moves its arguments to the trash directory in the home directory. If a
+directory with the same name already exists in the trash directory, it
+is deleted. Already existing files in the trash directory are overwritten.
+
+.Sh FILES
+.Bl -tag -width Ds
+.It Pa ~/trash
+The default trash directory.
+.El
+
+.Sh ENVIRONMENT
+.Bl -tag -width Ds
+.It Ev HOME
+The directory that contains the trash directory.
+.It Ev TRASHDIR
+The trash directory. Default
+.Dq trash/ .
+.El
+
+.Sh EXIT STATUS
+.Ex -std
+
+.Sh SEE ALSO
+.Xr mv 1 ,
+.Xr rm 1 .
+
+.Sh AUTHORS
+.An pranomostro Aq Mt pranomostro@posteo.net

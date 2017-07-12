@@ -8,8 +8,10 @@ if(test -z $"*){
 	exit 1
 }
 
+test $TRASHDIR || TRASHDIR=trash/
+
 for(i){
 	if(test -d $i)
-		/usr/bin/rm -rf $HOME/trash/$i
-	mv -f $i $HOME/trash
+		/usr/bin/rm -rf $HOME/$TRASHDIR/$i
+	mv -f $i $HOME/$TRASHDIR
 }
