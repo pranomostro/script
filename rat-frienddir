@@ -3,4 +3,4 @@
 mkdir friends
 
 for(i in `{ls | grep '^[0-9A-F]\{64\}'})
-	ln -s $i friends/`{cat $i/name}
+	test -f $i/name && ln -s $i friends/`{cat $i/name}
