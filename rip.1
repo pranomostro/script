@@ -1,0 +1,37 @@
+.Dd July 15, 2017
+.Dt RIP 1
+.Os
+
+.Sh NAME
+.Nm rip
+.Nd rip a cd into ogg
+
+.Sh SYNOPSIS
+.Nm
+.Ar name
+.Ar dir
+
+.Sh DESCRIPTION
+.Nm
+rips the current cd into a file with the name
+.Ar name
+in the directory
+.Ar dir .
+The cd is ejected after the ripping.
+
+.Sh FILES
+.Bl -tag -width Ds
+.It Pa ~/.profile
+The login profile. Yay.
+.El
+
+.Sh EXIT STATUS
+.Ex -std
+
+.Sh SEE ALSO
+.Xr cdparanoia 1 ,
+.Xr eject 1 ,
+.Xr oggenc 1 .
+
+.Sh AUTHORS
+.An pranomostro Aq Mt pranomostro@posteo.net
