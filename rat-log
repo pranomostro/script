@@ -8,7 +8,7 @@ if(! ~ $#* 1){
 if(! test $EMAIL)
 	EMAIL=pranomostro@posteo.net
 
-d=`{date '+%Y%m%d%H%M%S'}
+d=`{date '+%Y-%m-%dT%H:%M:%S'}
 
 if(! test -d $1/$d)
 	mkdir -p $1/$d

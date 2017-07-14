@@ -1,0 +1,49 @@
+.Dd May 11, 2017
+.Dt RAT-LOG 1
+.Os
+
+.Sh NAME
+.Nm rat-log
+.Nd archive ratox communications
+
+.Sh SYNOPSIS
+.Nm rat-log
+.Ar backupdir
+
+.Sh DESCRIPTION
+.Nm
+creates a directory in
+.Ar backupdir
+named after the current time (ISO 8601-ish). It then copies the current
+ratox conversations
+.Dq text_out
+to a file with the ID of the respective friend into
+.Ar backupdir.
+The file is then encrypted with
+.Xr gpg2 1 .
+
+.Sh ENVIRONMENT
+.Bl -tag -width Ds
+.It Ev EMAIL
+The email the file is encrypted to. Default is
+.Dq pranomostro@posteo.net .
+.El
+
+.Sh EXIT STATUS
+.Ex -std
+
+.Sh BUGS
+If you don't set the variable EMAIL, only I will be able to decrypt
+your conversations.
+.Pp
+POSIX
+.Xr date 1
+does not support ISO 8601. The current format is only a crude approximation.
+
+.Sh SEE ALSO
+.Xr date 1 ,
+.Xr gpg2 1 ,
+.Xr ratox 1 .
+
+.Sh AUTHORS
+.An pranomostro Aq Mt pranomostro@posteo.net
