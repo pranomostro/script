@@ -1,0 +1,36 @@
+.Dd July 16, 2017
+.Dt SAD-PICKUP 1
+.Os
+
+.Sh NAME
+.Nm sad-pickup
+.Nd add files to the sad playlist
+
+.Sh SYNOPSIS
+.Nme
+.Op Fl a Ar code
+.Ar files
+
+.Sh DESCRIPTION
+.Nm
+adds
+.Ar files
+to the current
+.Xr sad 1
+playlist.
+
+.Sh FILES
+.Bl -tag -width Ds
+.It Pa /tmp/sad-sock
+The socket used to communicate with
+.Xr sad 1 .
+.El
+
+.Sh EXIT STATUS
+.Ex -std
+
+.Sh SEE ALSO
+.Xr sad 1 .
+
+.Sh AUTHORS
+.An pranomostro Aq Mt pranomostro@posteo.net
