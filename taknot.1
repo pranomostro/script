@@ -1,0 +1,38 @@
+.Dd July 20, 2017
+.Dt TAKNOT
+.Os
+
+.Sh NAME
+.Nm taknot
+
+.Sh SYNOPSIS
+.Nm
+
+.Sh DESCRIPTION
+.Nm
+opens the note file for the current month in the
+note directory with the preferred editor, commits and
+pushes.
+
+.Sh FILES
+.Bl -tag -width Ds
+.It Pa $HOME/proj/extra/site/notes/
+The directory containing the note files.
+.El
+
+.Sh ENVIRONMENT
+.Bl -tag -width Ds
+.It Ev HOME
+The home directory where the note directory is located.
+.It Ev EDITOR
+The editor being used to edit the notes.
+.El
+
+.Sh EXIT STATUS
+.Ex -std
+
+.Sh SEE ALSO
+.Xr git 1 .
+
+.Sh AUTHORS
+.An pranomostro Aq Mt pranomostro@posteo.net
