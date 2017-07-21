@@ -1,0 +1,35 @@
+.Dd July 22, 2017
+.Dt TLC 1
+.Os
+
+.Sh NAME
+.Nm tlc
+.Nd time line count
+
+.Sh SYNOPSIS
+.Nm tlc
+.Ar file
+
+.Sh DESCRIPTION
+.Nm
+prints the length of
+.Ar file
+in lines for each commit, from the earliest to the latest.
+This output may be piped to
+.Xr stag 1
+to generate a pretty graph.
+
+.Sh FILES
+.Bl -tag -width Ds
+.It Pa /tmp/tlc.XXXXXX
+Temporary file for the file lengthts.
+.El
+.Sh EXIT STATUS
+.Ex -std
+
+.Sh SEE ALSO
+.Xr git 1 ,
+.Xr stag 1 .
+
+.Sh AUTHORS
+.An pranomostro Aq Mt pranomostro@posteo.net
