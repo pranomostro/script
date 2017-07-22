@@ -1,0 +1,35 @@
+.Dd June 22, 2017
+.Dt TMPIMG 1
+.Os
+
+.Sh NAME
+.Nm tmpimg
+.Nd show images from urls
+
+.Sh SYNOPSIS
+.Nm tmpimg
+.Op Ar urls
+
+.Sh DESCRIPTION
+.Nm
+downloads its arguments with
+.Xr curl 1
+and tries to display them with
+.Xr meh 1 .
+
+.Sh FILES
+.Bl -tag -width Ds
+.It Pa /tmp/tmpimg.XXXXXX
+The temporary file where the downloaded image is stored.
+.El
+
+.Sh EXIT STATUS
+.Ex -std
+
+
+.Sh SEE ALSO
+.Xr curl 1,
+.Xr meh 1 .
+
+.Sh AUTHORS
+.An pranomostro Aq Mt pranomostro@posteo.net
