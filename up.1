@@ -1,0 +1,28 @@
+.Dd July 23, 2017
+.Dt UP 1
+.Os
+
+.Sh NAME
+.Nm upload files to sprunge.us
+
+.Sh SYNOPSIS
+.Nm
+.Op Ar files
+
+.Sh DESCRIPTION
+.Nm
+uploads
+.Ar files
+to http://sprunge.us, if no
+.Ar files
+are given, it uploads stdin. After uploading the files, it prints the
+url of the files on http://sprunge.us.
+
+.Sh EXIT STATUS
+.Ex -std
+
+.Sh SEE ALSO
+.Xr curl 1 .
+
+.Sh AUTHORS
+.An pranomostro Aq Mt pranomostro@posteo.net
