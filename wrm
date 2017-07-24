@@ -19,10 +19,8 @@ tp=$apid
 while(true){
 	printf '= '
 	l=`{read}
-	if(test -n $l){
+	if(test -n $l)
 		echo $l | sed 's/^/self: /' >> $1
-		echo $l >$2
-	}
 	if(test -z $l)
 		break
 }

@@ -1,0 +1,34 @@
+.Dd July 24, 2017
+.Dt WRM 1
+.Os
+
+.Sh NAME
+.Nm wrm
+.Nd frontend for file based chat programs
+
+.Sh SYNOPSIS
+.Nm
+.Ar out
+.Ar in
+
+.Sh DESCRIPTION
+.Nm
+displays the prompt \(dq= \(dq, reads a line, and prints it
+to
+.Ar in .
+The output of
+.Ar out
+is printed with
+.Xr tail 1
+-f.
+
+.Sh EXIT STATUS
+.Ex -std
+
+.Sh SEE ALSO
+.Xr ii 1 ,
+.Xr ratox 1 ,
+.Xr tail 1 .
+
+.Sh AUTHORS
+.An pranomostro Aq Mt pranomostro@posteo.net
