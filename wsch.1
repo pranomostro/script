@@ -1,0 +1,37 @@
+.Dd July 25, 2017
+.Dt WSCH 1
+.Os
+
+.Sh NAME
+.Nm wsch
+.Nd shrink/grow a window
+
+.Sh SYNOPSIS
+.Nm
+.Op Ar factor
+.Op Ar win
+
+.Sh DESCRIPTION
+.Nm
+grows/shrinks a window by a certain factor. This factor is 1.2 by
+default, and
+.Ar factor
+if given. The window is
+.Ar win
+if it is given, and the current window if not.
+
+.Sh ENVIRONMENT
+.Bl -tag -width Ds
+.It Ev BW
+The border width of the windows.
+.El
+
+.Sh EXIT STATUS
+.Ex -std
+
+.Sh SEE ALSO
+.Xr wmutils 1 ,
+.Xr wtp 1 .
+
+.Sh AUTHORS
+.An pranomostro Aq Mt pranomostro@posteo.net

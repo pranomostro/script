@@ -12,7 +12,7 @@ case '2'
 	scale=$1
 	win=$2
 case *
-	echo $0' [size] [win]' >[1=2]
+	echo $0' [factor] [win]' >[1=2]
 	exit 2
 }
 
