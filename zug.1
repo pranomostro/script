@@ -1,0 +1,32 @@
+.Dd July 26, 2017
+.Dt ZUG 1
+.Os
+
+.Sh NAME
+.Nm zug
+.Nd select a window
+
+.Sh SYNOPSIS
+.Nm
+
+.Sh DESCRIPTION
+.Nm
+lets the user choose a  window after title and id, and then
+maps and toggles the chosen window.
+
+.Sh FILES
+.Bl -tag -width Ds
+.It Pa /tmp/zug.XXXXXX
+Temporary file for storing the window ids and their names.
+.El
+
+.Sh EXIT STATUS
+.Ex -std
+
+.Sh SEE ALSO
+.Xr dmenu 1 ,
+.Xr mapw 1 ,
+.Xr wmutils 1 .
+
+.Sh AUTHORS
+.An pranomostro Aq Mt pranomostro@posteo.net

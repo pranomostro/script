@@ -7,14 +7,9 @@ fn die{
 
 fn sigint{die}; fn sighup{die}; fn sigalrm{die}; fn sigfpe{die}; fn sigkill {die}; fn sigterm{die}
 
-fn allw{
-	lsw
-	lsw -u
-}
-
 fn selw{
 	t=`{mktemp '/tmp/zug.XXXXXX'}
-	for(i in `{allw}){
+	for(i in `{lsw; lsw -u}){
 		printf $i': ' >>$t
 		wname $i >>$t || printf '\n' >>$t
 	}
