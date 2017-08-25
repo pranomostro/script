@@ -24,7 +24,7 @@ if(! ~ $oggproc ''){
 	cd /proc/$oggproc/fd;
 	readlink * |
 	sed -n '/\.ogg$/s/\.ogg$//p' |
-	{test $path && cat || xargs basename} |
+	{test $full && cat || xargs basename} |
 	{test $cutoff && ell $cutoff || cat}
 	ae='1'
 }
