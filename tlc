@@ -19,7 +19,7 @@ t=`{mktemp '/tmp/tlc.XXXXXX'}
 
 for(i in `{git log --pretty'=oneline' | awk '{ print($1) }'}){
 	git show $i:$f >[2]/dev/null | wc -l
-} | grep -v 0 >>$t
+} | grep -v '^0$' >>$t
 
 tac <$t
 
