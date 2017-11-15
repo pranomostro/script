@@ -6,5 +6,6 @@ test -f $curr || printf '[up](./index.md), [top](../index.md)\n-----------------
 $EDITOR $curr
 
 cd $HOME/proj/extra/site
-git commit -S -a -m 'n'
+git add .
+git commit -Sa -m 'n'
 git push
