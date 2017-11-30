@@ -5,15 +5,8 @@ if(test $#* -ne '1'){
 	exit 1
 }
 
-cd $HOME/proj
-
-for(i in `{find -maxdepth 1 -type d | grep -v '^\.$'}){
-	cd $i
-	for(j in `{find -maxdepth 1 -type d | grep -v '^\.$'}){
-		cd $j
-		printf '%s: ' $j
-		eval $1
-		cd ..
-	}
-	cd ..
+for(i in `{find $HOME -name .git -type d}){
+	printf '%s: ' `{basename `{dirname $i}}
+	cd `{dirname $i}
+	eval $1
 }
