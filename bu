@@ -9,7 +9,7 @@ last=`{stat --format'=%Y %n' * | sort -n | awk 'END { print($2) }'}
 month=`{date '+%m'}
 lastmonth=`{echo $last | sed 's/^[0-9]\+-\([0-9]\+\).*/\1/'}
 
-if(test -f $name)
+if(test -f $name.enc)
 	exit 0
 if(test -d tmp/){
 	~ `{date '+%Y-%m-%d'} `{stat --format'=%y' tmp/ | awk '{ print($1) }'} && exit 0
@@ -31,3 +31,5 @@ mv $name ..
 cd ..
 rm -rf tmp
 chmod 0600 $name
+fenc e '+' $name $name.enc
+rm $name
