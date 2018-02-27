@@ -45,6 +45,7 @@ Some of the scripts depend on each other.
 * [ratox](http://git.z3bra.org/ratox/log.html) is required for rat-frienddir and rat-log.
 * [sad](https://git.2f30.org/sad/log.html) is required for sad-pickup.
 * [sam](http://sam.cat-v.org/) is needed for sts.
+* [scp](https://linux.die.net/man/1/scp) is needed for bu.
 * [wmutils core](https://github.com/wmutils/core) is required for barign, beau, big, cnt, note, wsch and zug.
 * [wmutils opt](https://github.com/wmutils/opt) is needed for barign and zug.
 * [xscreenshot](http://git.2f30.org/xscreenshot/log.html) is needed for ppprz.

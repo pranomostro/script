@@ -1,6 +1,7 @@
 #!/usr/bin/env rc
 
 test $BACKUPDIR || BACKUPDIR=/mnt/backup
+test $BACKUPDEST || BACKUPDEST=regenfus@lxhalle.in.tum.de:/u/halle/regenfus/home_at/backup
 
 cd $BACKUPDIR
 
@@ -33,3 +34,4 @@ rm -rf tmp
 chmod 0600 $name
 fenc e '+' $name $name.enc
 rm $name
+scp $name.enc $BACKUPDEST
