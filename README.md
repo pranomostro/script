@@ -19,11 +19,12 @@ available in [9base](http://git.suckless.org/9base),
 reimplementation](https://github.com/rakitzis/rc) (although some scripts
 might not work with that one since it has some differences from the
 original plan9 version, which I prefer).
+
 Some of the scripts depend on each other.
 
 * [acpi](http://sourceforge.net/projects/acpiclient/) is needed for batwatch.
 * [amixer](https://linux.die.net/man/1/amixer) is needed for chv.
-* [awk](https://www.gnu.org/software/gawk/) is required for cgdc, chv, cts, field. ircjoin, note, pfm, plng, sal, tlc and zug.
+* [awk](https://www.gnu.org/software/gawk/) is required for cgdc, chv, cts, field. ircjoin, note, partsum, pfm, plng, sal, tflt and zug.
 * [bc](https://www.gnu.org/software/bc/) is required for beau, big, chv, cnt, note, pprz and wsch.
 * [bzip2](http://bzip.org/) is needed for pprz.
 * [cdparanoia](https://xiph.org/paranoia/) is required for rip.
@@ -34,7 +35,7 @@ Some of the scripts depend on each other.
 * [dzen2](https://github.com/robm/dzen) is needed for batwatch and note.
 * [ffmpeg](https://ffmpeg.org/) is needed for musconv.
 * [gen](https://github.com/pranomostro/gen) is required for mg.
-* [git](https://git-scm.com/) is required for gitpost, pfm, shp, taknot and tlc.
+* [git](https://git-scm.com/) is required for gitpost, pfm, shp, taknot and tflt.
 * [gpg2](https://gnupg.org/) is needed by cts, dec, enc, dwpd and rat-log.
 * [gzip](http://www.gzip.org/) is needed for bu.
 * [ii](http://git.suckless.org/ii) with the [ssl patch](http://tools.suckless.org/ii/patches/ssl) is needed by ircjoin.
@@ -51,14 +52,16 @@ Some of the scripts depend on each other.
 * [xscreenshot](http://git.2f30.org/xscreenshot/log.html) is needed for ppprz.
 
 Utilities included in the GNU coreutils, but not specified by POSIX:
+
 * find with the `-maxdepth` flag for gitpost and musconv.
-* mktemp for 4img, cgdc, cts, note, tlc, tmpimg, zug.
+* mktemp for 4img, cgdc, cts, note, tflt, tmpimg, zug.
 * readlink for nt and plng.
 * sleep with floating point arguments for barign and note.
 * stat for bu and cgdc.
-* tac for tlc.
+* tac for tflt.
 
 Utilities included in util-linux, but not specified by POSIX:
+
 * eject for rip
 
 Installation

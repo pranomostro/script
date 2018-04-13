@@ -8,17 +8,18 @@ fn die{
 fn sigint{die}; fn sighup{die}; fn sigalrm{die}; fn sigfpe{die}; fn sigkill {die}; fn sigterm{die}
 
 switch($#*){
-case '1'
-	f=$1
+case '2'
+	flr=$1
+	f=$2
 case *
-	echo 'tlc file' >[1=2]
+	echo 'tflt filter file' >[1=2]
 	exit 1
 }
 
 t=`{mktemp '/tmp/tlc.XXXXXX'}
 
 for(i in `{git log --pretty'=oneline' | awk '{ print($1) }'}){
-	git show $i:$f >[2]/dev/null | wc -l
+	eval 'git show '$i:$f' >[2]/dev/null | '$flr
 } | grep -v '^0$' >>$t
 
 tac <$t
