@@ -12,6 +12,10 @@ lastmonth=`{echo $last | sed 's/^[0-9]\+-\([0-9]\+\).*/\1/'}
 
 if(test -f $name.enc)
 	exit 0
+if(test -f $name) {
+	~ `{date +'%Y-%m-%d'} `{stat --format'=%y' $name | awk '{ print($1) }'} && exit 0
+	rm $name
+}
 if(test -d tmp/){
 	~ `{date '+%Y-%m-%d'} `{stat --format'=%y' tmp/ | awk '{ print($1) }'} && exit 0
 	rm -rf tmp/
