@@ -2,7 +2,7 @@
 
 fn remind{
 	echo 'warning: battery at '$1 |
-	dzen2 -x 15 -y 15 -h 25 -w 160 -fn $FONT -p 16 -bg '#444444' -fg '#ffffff' &
+	dzen2 -x 15 -y 15 -h 50 -w 320 -fn $FONT -p 16 -bg '#444444' -fg '#ffffff' &
 }
 
 while(true){
