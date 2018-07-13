@@ -1,6 +1,6 @@
 #!/usr/bin/env rc
 
-curr=$HOME/proj/misc/site/notes/`{date '+%Y%m.md'}
+curr=$HOME/proj/misc/site/quips/`{date '+%Y%m.md'}
 test -f $curr || printf '[up](./index.md), [top](../index.md)\n------------------------------------\n\n' >$curr
 
 $EDITOR $curr
