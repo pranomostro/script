@@ -43,7 +43,7 @@ BIN= \
 	sal \
 	shp \
 	sts \
-	taknot \
+	takquip \
 	tlc \
 	tmpimg \
 	up \

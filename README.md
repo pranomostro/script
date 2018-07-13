@@ -35,7 +35,7 @@ Some of the scripts depend on each other.
 * [dzen2](https://github.com/robm/dzen) is needed for batwatch and note.
 * [ffmpeg](https://ffmpeg.org/) is needed for musconv.
 * [gen](https://github.com/pranomostro/gen) is required for mg.
-* [git](https://git-scm.com/) is required for gitpost, pfm, shp, taknot and tflt.
+* [git](https://git-scm.com/) is required for gitpost, pfm, shp, takquip and tflt.
 * [gpg2](https://gnupg.org/) is needed by cts, dec, enc, dwpd and rat-log.
 * [gzip](http://www.gzip.org/) is needed for bu.
 * [ii](http://git.suckless.org/ii) with the [ssl patch](http://tools.suckless.org/ii/patches/ssl) is needed by ircjoin.
