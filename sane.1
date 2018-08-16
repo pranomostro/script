@@ -1,0 +1,31 @@
+.Dd August 2018
+.Dt SANE 1
+.Os
+
+.Sh NAME
+.Nm sane
+.Nd convert the input strings to snake case
+
+.Sh SYNOPSIS
+.Nm
+
+.Sh DESCRIPTION
+.Nm
+reads its input linewise and converts it to snake case,
+removing trailing digits.
+
+.Sh EXAMPLES
+Rename papers to make them more easily processable.
+.Pp
+.Dl $ for i in $(ls papers); do mv \&"$i\&" $(echo \&"$i\&" | sane); done
+.Pp
+
+.Sh EXIT STATUS
+.Ex -std
+
+.Sh SEE ALSO
+.Xr tr 1 ,
+.Xr sed 1 .
+
+.Sh AUTHORS
+.An pranomostro Aq Mt pranomostro@posteo.net

@@ -41,6 +41,7 @@ BIN= \
 	rip \
 	sad-pickup \
 	sal \
+	sane \
 	shp \
 	sts \
 	takquip \
