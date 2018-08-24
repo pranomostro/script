@@ -4,7 +4,7 @@ t=`{mktemp '/tmp/tmpimg.XXXXXX'}
 
 for(i){
 	curl $i >$t
-	meh $t
+	sxiv $t
 }
 
 rm $t

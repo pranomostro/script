@@ -14,7 +14,8 @@
 creates an incremental backup of all the files that have changed since
 the last backup (if the date has changed) or creates a full backup every
 time the month changes of the home directory. The backup is a compressed
-tar archive named after the date it was created in ISO 8601.
+tar archive named after the date it was created in ISO 8601. It also encrypts
+the backup with fenc.
 .Pp
 .Nm
 removes

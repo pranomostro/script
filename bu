@@ -36,6 +36,6 @@ mv $name ..
 cd ..
 rm -rf tmp
 chmod 0600 $name
-fenc e '+' $name $name.enc
+fenc e '!'^`{spm show backup} $name $name.enc
 rm $name
 scp $name.enc $BACKUPDEST
