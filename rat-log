@@ -5,13 +5,12 @@ if(! ~ $#* 1){
 	exit 1
 }
 
-if(! test $EMAIL)
-	EMAIL=pranomostro@posteo.net
-
 d=`{date '+%Y-%m-%dT%H:%M:%S'}
 
 if(! test -d $1/$d)
 	mkdir -p $1/$d
 
+recipient=`{gpg2 -K --with-colons | awk -F: '$1=="fpr" { print($10); exit(1) }'}
+
 for(i in `{ls | grep '^[0-9A-F]\{64\}'})
-	gpg2 -r $EMAIL -easq -o $1/$d/$i.asc $i/text_out
+	gpg2 -r $recipient -easq -o $1/$d/$i.asc $i/text_out
