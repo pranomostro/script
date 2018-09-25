@@ -9,19 +9,19 @@ nick=$1
 shift
 
 for(i){
-	server=`{echo $i | cut -d: -f 1}
-	port=`{echo $i | cut -d: -f 2}
-	crypt=`{echo $i | cut -d: -f 3}
+	server=`{printf '%s\n' $i | cut -d: -f 1}
+	port=`{printf '%s\n' $i | cut -d: -f 2}
+	crypt=`{printf '%s\n' $i | cut -d: -f 3}
 
 	ii -s $server -n $nick `{test $port && printf '-p %s' $port} `{test $crypt && printf '-e %s' $crypt} &
 }
 
 for(i){
-	server=`{echo $i | cut -d: -f 1}
+	server=`{printf '%s\n' $i | cut -d: -f 1}
 	ifs=':'
-	for(c in `{echo $i | cut -d: -f 4- | tr -d '\n'}){
+	for(c in `{printf '%s\n' $i | cut -d: -f 4- | tr -d '\n'}){
 		sleep 1
-		echo '/j '$c >irc/$server/in
+		printf '/j %s\n' $c >irc/$server/in
 	}
 	ifs='
 '
@@ -29,4 +29,4 @@ for(i){
 
 sleep 5
 
-tail -f `{echo $* | tr ' ' '\n' | awk -F: '{ for(i=4; i<=NF; i++) print("irc/" $1 "/" $i "/out") }'}
+tail -f `{printf '%s\n' $* | tr ' ' '\n' | awk -F: '{ for(i=4; i<=NF; i++) print("irc/" $1 "/" $i "/out") }'}

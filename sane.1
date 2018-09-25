@@ -17,7 +17,7 @@ removing trailing digits.
 .Sh EXAMPLES
 Rename papers to make them more easily processable.
 .Pp
-.Dl $ for i in $(ls papers); do mv \&"$i\&" $(echo \&"$i\&" | sane); done
+.Dl $ for i in $(ls papers); do mv \&"$i\&" $(printf \&'%s\en\&' \&"$i\&" | sane); done
 .Pp
 
 .Sh EXIT STATUS

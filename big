@@ -15,4 +15,4 @@ if(~ $win ''){
 	exit 2
 }
 
-wtp $GAP $GAP `{echo `{wattr w `{lsw -r}}'-2*('$GAP'+'$BW')' | bc} `{echo `{wattr h `{lsw -r}}'-2*('$GAP'+'$BW')' | bc} $win
+wtp $GAP $GAP `{printf '%d-2*(%d+%d)\n' `{wattr w `{lsw -r}} $GAP $BW | bc} `{printf '%d-2*(%d+%d)\n' `{wattr h `{lsw -r}} $GAP $BW | bc} $win

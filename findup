@@ -14,5 +14,4 @@ while(! test -e $1){
 		exit 2
 }
 
-fil='./'^$fil
-echo $fil
+printf './%s\n' $fil

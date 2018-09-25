@@ -8,10 +8,9 @@ if(test $#* -le '2'){
 	exit 1
 }
 
-from=`{echo $1 | sed 's/\\/\\\\/g; s/%/%%/g'}
-to=`{echo $2 | sed 's/\\/\\\\/g; s/%/%%/g'}
+from=`{printf '%s\n' $1 | sed 's/\\/\\\\/g; s/%/%%/g'}
+to=`{printf '%s\n' $2 | sed 's/\\/\\\\/g; s/%/%%/g'}
 shift 2
 
 for(file)
 	printf ',s/'$"from'/'$"to'/g\nw\nq\n' | ed $file
-

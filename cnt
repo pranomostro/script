@@ -20,4 +20,4 @@ rhgt=`{wattr h `{lsw -r}}
 cwid=`{wattr w $win}
 chgt=`{wattr h $win}
 
-wtp `{echo '('$rwid'/2)-(('$cwid'+2*'$BW')/2)' | bc} `{echo '('$rhgt'/2)-(('$chgt'+2*'$BW')/2)' | bc} `{wattr w $win} `{wattr h $win} $win
+wtp `{printf '(%d/2)-((%d+2*%d)/2)\n' $rwid $cdid $BW| bc} `{printf '(%d/2)-((%d+2*%d)/2)\n' $rhgt $chgt $BW | bc} `{wattr w $win} `{wattr h $win} $win

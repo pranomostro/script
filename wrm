@@ -20,7 +20,7 @@ while(true){
 	printf '= '
 	l=`{read}
 	if(test -n $l)
-		echo $l | sed 's/^/self: /' >> $1
+		printf '%s\n' $l | sed 's/^/self: /' >> $1
 	if(test -z $l)
 		break
 }

@@ -1,7 +1,7 @@
 #!/usr/bin/env rc
 
 fn gr{
-	echo 'gr=1.6180339887; gr*'$1 | bc | sed 's/\..*$//'
+	printf 'gr=1.6180339887; gr*%d\n' $1 | bc | sed 's/\..*$//'
 }
 
 switch($#*){
@@ -19,7 +19,7 @@ case '2'
 		y=`{wattr 'h' $win}
 		x=`{gr $y}
 	case *
-		echo $1' is not -w or -h, exiting' >[1=2]
+		printf '%s is not -w or -h, exiting\n' $1 >[1=2]
 		exit 2
 	}
 case *

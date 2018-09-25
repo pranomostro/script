@@ -48,7 +48,7 @@ sort |
 		cat >>$save
 		i=`{menu <$save}
 		while(! ~ $i 'end' && ! ~ $i ''){
-			echo $i
+			printf '%s\n' $i
 			i=`{menu <$save}
 		}
 		rm -f $save

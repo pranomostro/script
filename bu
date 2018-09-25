@@ -8,7 +8,7 @@ cd $BACKUPDIR
 name=`{date '+%Y-%m-%d.tar.gz'}
 last=`{stat --format'=%Y %n' * | sort -n | awk 'END { print($2) }'}
 month=`{date '+%m'}
-lastmonth=`{echo $last | sed 's/^[0-9]\+-\([0-9]\+\).*/\1/'}
+lastmonth=`{printf '%s\n' $last | sed 's/^[0-9]\+-\([0-9]\+\).*/\1/'}
 
 if(test -f $name.enc)
 	exit 0

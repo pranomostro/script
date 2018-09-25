@@ -39,4 +39,4 @@ if(! ~ $pbs '' && ! ~ $pbs 'stop' && ! ~ $pbs 'pause' && ! ~ $ae '1'){
 	ae='1'
 }
 if(! ~ $ae '1')
-	echo nothing
+	echo 'nothing'

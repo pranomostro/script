@@ -6,4 +6,4 @@ if(test -z $"*){
 }
 
 wd=`{pwd}
-echo $* | tr ' ' '\n' | sed 's#^#add '$wd'/#' | nc -N -U /tmp/sad-sock
+printf '%s\n' $* | tr ' ' '\n' | sed 's#^#add '$wd'/#' | nc -N -U /tmp/sad-sock

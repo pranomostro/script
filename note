@@ -5,11 +5,11 @@ before=`{mktemp '/tmp/note.XXXXXX'}
 after=`{mktemp '/tmp/note.XXXXXX'}
 
 h=16
-w=`{echo `{wattr w `{lsw -r}}'-(2*'$SG'+2*'$SB')' | bc}
-y=`{echo `{wattr h `{lsw -r}}'-('$h'+'$SB'+'$SG')' | bc}
+w=`{printf '%d-(2*%d+2*%d)\n' `{wattr w `{lsw -r}} $SG $SB | bc}
+y=`{printf '%d-(%d+%d+%d)\n' `{wattr h `{lsw -r}} $h $SB $SG | bc}
 
 lsw -a | sort >$before
-echo $"* | dzen2 -p 32 -bg '#ffffff' -fg '#000000' -fn $FONT -x `{echo $SG'+'$SB | bc} -y $y -w $w &
+printf '%s\n' $"* | dzen2 -p 32 -bg '#ffffff' -fg '#000000' -fn $FONT -x `{printf '%d+%d\n' $SG $SB | bc} -y $y -w $w &
 sleep 0.1
 
 lsw -a | sort >$after

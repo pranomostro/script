@@ -17,7 +17,7 @@ for(item in `{find . -type l}){
 	targ=`{readlink $file}
 
 	if(test ! -e $targ)
-		echo $item
+		printf '%s\n' $item
 
 	cd $searchdir
 }

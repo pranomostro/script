@@ -12,7 +12,7 @@ case '2'
 	scale=$1
 	win=$2
 case *
-	echo $0' [factor] [win]' >[1=2]
+	printf '%s [factor] [win]\n' $0 >[1=2]
 	exit 2
 }
 
@@ -25,14 +25,14 @@ w=`{wattr w $win}
 h=`{wattr h $win}
 x=`{wattr x $win}
 y=`{wattr y $win}
-nw=`{echo $scale'*'$w | bc | sed 's/\..*//'}
-nh=`{echo $scale'*'$h | bc | sed 's/\..*//'}
+nw=`{printf '%d*%d\n' $scale $w | bc | sed 's/\..*//'}
+nh=`{printf '%d*%d\n' $scale $h | bc | sed 's/\..*//'}
 
-nxp=`{echo $x'-('$nw'-'$w')/2' | bc}
-nyp=`{echo $y'-('$nh'-'$h')/2' | bc}
+nxp=`{printf '%d-(%d-%d)/2\n' $x $nw $w | bc}
+nyp=`{printf '%d-(%d-%d)/2\n' $y $nh $h | bc}
 
-rw=`{echo `{wattr w `{lsw -r}}'-2*'$BW | bc}
-rh=`{echo `{wattr h `{lsw -r}}'-2*'$BW | bc}
+rw=`{printf '%d-2*%d\n' `{wattr w `{lsw -r}} $BW | bc}
+rh=`{printf '%d-2*%d\n' `{wattr h `{lsw -r}} $BW | bc}
 
 if(test $nxp -lt 0) nxp=0
 if(test $nyp -lt 0) nyp=0
