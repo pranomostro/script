@@ -31,8 +31,8 @@ Some of the scripts depend on each other.
 * [chromium](http://chromium.org/) is needed for chrm.
 * [curl](https://curl.haxx.se/) is required by 4img, tmping and up.
 * [dmenu](http://git.suckless.org/dmenu) is needed for cts and zug.
-* [fenc](https://github.com/pranomostro/fenc) is needed for bu.
 * [dzen2](https://github.com/robm/dzen) is needed for batwatch and note.
+* [fenc](https://github.com/pranomostro/fenc) is needed for bu.
 * [ffmpeg](https://ffmpeg.org/) is needed for musconv.
 * [gen](https://github.com/pranomostro/gen) is required for mg.
 * [git](https://git-scm.com/) is required for gitpost, pfm, shp, takquip and tflt.
