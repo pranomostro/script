@@ -1,7 +1,7 @@
 #!/usr/bin/env rc
 
 fn remind{
-	printf 'warning: battery at %s%%\n' $1 |
+	printf 'warning: battery at %s\n' $1 |
 	dzen2 -x 15 -y 15 -h 50 -w 320 -fn $FONT -p 16 -bg '#444444' -fg '#ffffff' &
 }
 
