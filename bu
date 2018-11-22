@@ -26,7 +26,7 @@ mkdir tmp
 if(! ~ $month $lastmonth)
 	cp -R $HOME/* tmp/
 if not
-	cgdc $last $HOME/ $BACKUPDIR/tmp/
+	cgdc $BACKUPDIR/$last $HOME/ $BACKUPDIR/tmp/
 
 test -f tmp/.gnupg/random_seed && rm tmp/.gnupg/random_seed
 
