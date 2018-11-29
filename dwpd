@@ -16,6 +16,6 @@ cat >$save
 if(grep -q -- $pgps $save && grep -q -- $pgpe $save)
 	dec <$save
 if not
-	cat $save
+	fmt -s $save
 
 rm -f $save
