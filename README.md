@@ -34,15 +34,15 @@ Some of the scripts depend on each other.
 * [dzen2](https://github.com/robm/dzen) is needed for batwatch and note.
 * [fenc](https://github.com/pranomostro/fenc) is needed for bu.
 * [ffmpeg](https://ffmpeg.org/) is needed for musconv.
+* [fulgurate](https://github.com/theq629/fulgurate) is needed for fulg and fulgurate-add.
 * [gen](https://github.com/pranomostro/gen) is required for mg.
 * [git](https://git-scm.com/) is required for gitpost, pfm, shp, takquip and tflt.
-* [gpg2](https://gnupg.org/) is needed by cts, dec, enc, dwpd and rat-log.
+* [gpg2](https://gnupg.org/) is needed by cts, dec, enc, dwpd and.
 * [gzip](http://www.gzip.org/) is needed for bu.
 * [ii](http://git.suckless.org/ii) with the [ssl patch](http://tools.suckless.org/ii/patches/ssl) is needed by ircjoin.
 * [mpv](https://mpv.io) is required for tagesschau.
 * [nc](http://nc110.sourceforge.net/) is needed for plng and sad-pickup.
 * [oggenc](https://xiph.org/downloads/) is also needed for rip.
-* [ratox](http://git.z3bra.org/ratox/log.html) is required for rat-frienddir and rat-log.
 * [sad](https://git.2f30.org/sad/log.html) is required for sad-pickup.
 * [sam](http://sam.cat-v.org/) is needed for sts.
 * [scp](https://linux.die.net/man/1/scp) is needed for bu.

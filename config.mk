@@ -1,9 +1,9 @@
 PREFIX=/usr/local
 
-BIN= \
-	4img \
+BIN=4img \
 	9 \
 	barign \
+	batwatch \
 	beau \
 	big \
 	bns \
@@ -11,10 +11,12 @@ BIN= \
 	bu \
 	cgdc \
 	chan \
+	chrm \
 	chv \
 	cnt \
 	cts \
 	dec \
+	dwpd \
 	ecp \
 	ell \
 	empty \
@@ -23,29 +25,34 @@ BIN= \
 	fds \
 	field \
 	findup \
+	fulg \
+	fulgurate-add \
 	gitpost \
 	gm \
 	ircjoin \
 	lg \
+	mcp \
 	musconv \
 	mvg \
 	note \
 	nt \
+	partsum \
+	pcp \
 	pfm \
 	play \
 	plng \
+	pmv \
 	pprz \
 	r \
-	rat-log \
-	rat-frienddir \
 	rip \
 	sad-pickup \
 	sal \
 	sane \
 	shp \
 	sts \
+	tagesschau \
 	takquip \
-	tlc \
+	tflt \
 	tmpimg \
 	up \
 	wrm \

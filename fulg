@@ -1,0 +1,20 @@
+#!/usr/bin/env rc
+
+if(test -z $"*){
+	echo 'fulg add|run|imp|import|shsh|schowsched|schow-schedule' >[1=2]
+	exit 1
+}
+
+switch($1){
+case 'imp'
+	comm='import'
+case 'shsh'
+	comm='show-schedule'
+case 'schowsched'
+	comm='schow-schedule'
+case *
+	comm=$1
+}
+
+shift
+fulgurate-$comm $*

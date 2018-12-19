@@ -1,0 +1,3 @@
+Update ircjoin to new ii.
+Change error messages on call to print $0 instead of the literal program name.
+Add fulgurate-add manpage.

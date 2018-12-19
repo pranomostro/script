@@ -1,0 +1,22 @@
+#!/usr/bin/env rc
+
+fn die{
+	rm $tsv $crds
+	exit 2
+}
+
+fn sigint{die}; fn sighup{die}; fn sigalrm{die}; fn sigfpe{die}; fn sigkill {die}; fn sigterm{die}
+
+if(! ~ $#* '2' || ! test -f $1 || ! test -f $2){
+	echo $0^' tsv cards' >[1=2]
+	exit 1
+}
+
+tsv=`{mktemp '/tmp/fa.XXXXXX'}
+crds=`{mktemp '/tmp/fa.XXXXXX'}
+
+sort $1 >$tsv
+cut -d '	' -f 5- $2 | sort >$crds
+diff $tsv $crds | sed -n '/^< /s/^< \(.*\)$/'^`{date '+%Y-%m-%d'}^'	0	1	2.5	\1/p' >>$2
+
+rm $tsv $crds
