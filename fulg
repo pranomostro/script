@@ -1,7 +1,7 @@
 #!/usr/bin/env rc
 
 if(test -z $"*){
-	echo 'fulg add|run|imp|import|shsh|schowsched|schow-schedule' >[1=2]
+	echo 'fulg add|run|imp|import|shsh|showsched|show-schedule' >[1=2]
 	exit 1
 }
 
@@ -10,8 +10,8 @@ case 'imp'
 	comm='import'
 case 'shsh'
 	comm='show-schedule'
-case 'schowsched'
-	comm='schow-schedule'
+case 'showsched'
+	comm='show-schedule'
 case *
 	comm=$1
 }

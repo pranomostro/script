@@ -1,0 +1,41 @@
+.Dd January 08, 2018
+.Dt FULGURATE-ADD 1
+.Os
+
+.Sh NAME
+.Nm fulgurate-add
+.Nd update a card file from a tsv file
+
+.Sh SYNOPSIS
+.Nm
+.Ar tsv
+.Ar cards
+
+.Sh DESCRIPTION
+.Nm
+takes cards from
+.Ar tsv
+that are not already in
+.Ar cards
+and appends them to
+.cards ,
+setting them to useful default values (current date, not reviewed yet).
+
+.Sh FILES
+.Bl -tag -width Ds
+.It Pa /tmp/fa.XXXXXX
+Two temporary files, containing
+.Ar tsv
+and
+.Ar cards
+sorted.
+.El
+
+.Sh EXIT STATUS
+.Ex -std
+
+.Sh SEE ALSO
+.Xr fulgurate 1 .
+
+.Sh AUTHORS
+.An pranomostro Aq Mt pranomostro@posteo.net
