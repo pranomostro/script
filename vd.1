@@ -1,0 +1,36 @@
+.Dd January 30, 2019
+.Dt VD 1
+.Os
+
+.Sh NAME
+.Nm vd
+.Nd dmenu interface to vis-digraph
+
+.Sh SYNOPSIS
+.Nm
+
+.Sh DESCRIPTION
+.Nm
+starts
+.Xr dmenu 1
+with the output of
+.Xr vis-digraph 1
+and stores selected unicode character in the system clipboard via
+.Xr xsel 1 .
+
+.Sh EXIT STATUS
+.Ex -std
+
+.Sh BUGS
+.Xr vis-digraph 1
+does may not provide all desired digraphs.
+.Pp
+The descriptions of the codepoints are uppercase.
+
+.Sh SEE ALSO
+.Xr dmenu 1 ,
+.Xr vis-digraph 1 ,
+.Xr xsel 1 .
+
+.Sh AUTHORS
+.An pranomostro Aq Mt pranomostro@posteo.net

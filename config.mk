@@ -55,6 +55,7 @@ BIN=4img \
 	tflt \
 	tmpimg \
 	up \
+	vd \
 	wrm \
 	wsch \
 	zug \

@@ -30,7 +30,7 @@ Some of the scripts depend on each other.
 * [cdparanoia](https://xiph.org/paranoia/) is required for rip.
 * [chromium](http://chromium.org/) is needed for chrm.
 * [curl](https://curl.haxx.se/) is required by 4img, tmping and up.
-* [dmenu](http://git.suckless.org/dmenu) is needed for cts and zug.
+* [dmenu](http://git.suckless.org/dmenu) is needed for cts, vd and zug.
 * [dzen2](https://github.com/robm/dzen) is needed for batwatch and note.
 * [fenc](https://github.com/pranomostro/fenc) is needed for bu.
 * [ffmpeg](https://ffmpeg.org/) is needed for musconv.
@@ -48,8 +48,10 @@ Some of the scripts depend on each other.
 * [scp](https://linux.die.net/man/1/scp) is needed for bu.
 * [spm](https://notabug.org/kl3/spm) is needed for bu.
 * [sxiv](https://github.com/muennich/sxiv) is required for tmpimg.
+* [vis-digraph](https://github.com/martanne/vis) is needed for vd.
 * [wmutils core](https://github.com/wmutils/core) is required for barign, beau, big, cnt, note, wsch and zug.
 * [wmutils opt](https://github.com/wmutils/opt) is needed for barign and zug.
+* [xsel](http://www.kfish.org/software/xsel/) is needed for vd.
 * [xscreenshot](http://git.2f30.org/xscreenshot/log.html) is needed for ppprz.
 
 Utilities included in the GNU coreutils, but not specified by POSIX:
