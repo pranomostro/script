@@ -1,6 +1,6 @@
 #!/usr/bin/env rc
 
-test $BACKUPDIR || BACKUPDIR=/mnt/backup/$USER
+test $BACKUPDIR || BACKUPDIR=/usr/local/backup/$USER
 test $BACKUPDEST || BACKUPDEST=regenfus@lxhalle.in.tum.de:/u/halle/regenfus/home_at/backup
 
 cd $BACKUPDIR
