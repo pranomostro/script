@@ -16,10 +16,6 @@ fil=''
 
 while(~ $1 -*){
 	switch($1){
-	case '-m'
-		mult='1'
-	case '-M'
-		mult=''
 	case '-g'
 		fil=''
 	case '-f'
@@ -41,19 +37,5 @@ while(~ $1 -*){
 		awk -F: '/^uid/ { print($10) }'
 } |
 sort |
-{
-	if(test $mult){
-		save=`{mktemp '/tmp/cts.XXXXXX'}
-		echo 'end' >$save
-		cat >>$save
-		i=`{menu <$save}
-		while(! ~ $i 'end' && ! ~ $i ''){
-			printf '%s\n' $i
-			i=`{menu <$save}
-		}
-		rm -f $save
-	}
-	if not
-		menu
-} |
-sed 's/^[^<]\+ <\([^>]\+\)>/\1/'
+menu |
+sed '/^</s/^[^<]\+ <\([^>]\+\)>/\1/'

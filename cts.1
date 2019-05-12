@@ -8,8 +8,6 @@
 
 .Sh SYNOPSIS
 .Nm
-.Op Fl m
-.Op Fl M
 .Op Fl g
 .Op Fl f Ar file
 
@@ -24,12 +22,6 @@ and prints the email addresses of the selected contacts.
 .Nm
 uses following options:
 .Bl -tag -width Ds
-.It Fl m
-Allow the selection of multiple contacts, the selection is ended
-via selecting the option
-.Dq end .
-.It Fl M
-Deactivate selecting multiple contacts (this is the default).
 .It Fl g
 Use the output of
 .Dl gpg2 -k
@@ -44,14 +36,6 @@ field being a semicolon
 .Sq Li \&;
 separated list of email-adresses. It is exclusive with
 .Fl g .
-.El
-
-.Sh FILES
-.Bl -tag -width Ds
-.It Pa /tmp/cts.XXXXXX
-A temporary file for the contacts in
-.Fi m
-mode.
 .El
 
 .Sh ENVIRONMENT
