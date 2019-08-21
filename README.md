@@ -30,7 +30,7 @@ Some of the scripts depend on each other.
 * [cdparanoia](https://xiph.org/paranoia/) is required for rip.
 * [chromium](http://chromium.org/) is needed for chrm.
 * [curl](https://curl.haxx.se/) is required by 4img, tmping and up.
-* [dmenu](http://git.suckless.org/dmenu) is needed for cts, vd and zug.
+* [dmenu](http://git.suckless.org/dmenu) is needed for cts, sc, vd and zug.
 * [dzen2](https://github.com/robm/dzen) is needed for batwatch and note.
 * [fenc](https://github.com/pranomostro/fenc) is needed for bu.
 * [ffmpeg](https://ffmpeg.org/) is needed for musconv.
@@ -43,7 +43,7 @@ Some of the scripts depend on each other.
 * [mpv](https://mpv.io) is required for tagesschau.
 * [nc](http://nc110.sourceforge.net/) is needed for plng and sad-pickup.
 * [oggenc](https://xiph.org/downloads/) is also needed for rip.
-* [sad](https://git.2f30.org/sad/log.html) is required for sad-pickup.
+* [sad](https://git.2f30.org/sad/log.html) is required for sad-pickup and sc.
 * [sam](http://sam.cat-v.org/) is needed for sts.
 * [scp](https://linux.die.net/man/1/scp) is needed for bu.
 * [spm](https://notabug.org/kl3/spm) is needed for bu.

@@ -48,6 +48,7 @@ BIN=4img \
 	sad-pickup \
 	sal \
 	sane \
+	sc \
 	shp \
 	sts \
 	tagesschau \

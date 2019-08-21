@@ -1,0 +1,37 @@
+.Dd August 21, 2019
+.Dt SC 1
+.Os
+
+.Sh NAME
+.Nm sc
+.Nd dmenu interface to sad
+
+.Sh SYNOPSIS
+.Nm
+
+.Sh DESCRIPTION
+.Nm
+starts
+.Xr dmenu 1
+with the two options
+.Dq pause 1
+and
+.Dq pause 0 .
+The user can then write anything into dmenu, and the output is written
+to the file /tmp/sad-sock.
+
+.Sh FILES
+.Bl -tag -width Ds
+.It Pa /tmp/sad-sock
+The command file for sad.
+.El
+
+.Sh EXIT STATUS
+.Ex -std
+
+.Sh SEE ALSO
+.Xr dmenu 1 ,
+.Xr sad 1 .
+
+.Sh AUTHORS
+.An pranomostro Aq Mt pranomostro@posteo.net
