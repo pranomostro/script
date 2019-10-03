@@ -1,0 +1,6 @@
+#!/usr/bin/env rc
+
+{
+sleep `{printf '%d-%d\n' `{date -d $1 '+%s'} `{date '+%s'} | bc};
+note $2
+} &
