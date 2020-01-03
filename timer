@@ -1,6 +1,16 @@
 #!/usr/bin/env rc
 
 {
-sleep `{printf '%d-%d\n' `{date -d $1 '+%s'} `{date '+%s'} | bc};
-note $2
+	switch($1){
+	case *:*
+		sleep `{printf '%d-%d\n' `{date -d $1 '+%s'} `{date '+%s'} | bc}
+	case *s
+		sleep `{printf '%s\n' $1 | sed 's/s$//'}
+	case *m
+		 sleep `{printf '%s\n' $1 | sed 's/m$/*60/' | bc}
+	case *h
+		sleep `{printf '%s\n' $1 | sed 's/m$/*60*60/' | bc}
+	}
+
+	note $2
 } &
