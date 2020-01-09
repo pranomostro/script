@@ -12,5 +12,5 @@
 		sleep `{printf '%s\n' $1 | sed 's/m$/*60*60/' | bc}
 	}
 
-	note $2
+	eval $2
 } &
